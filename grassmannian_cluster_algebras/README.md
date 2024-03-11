@@ -12,8 +12,8 @@ One of the central objects of study is $\mathbb{C}[\text{Gr}(k,n)]$, the homogen
 It has been shown that $\mathbb{C}[\text{Gr}(k,n)]$ is in fact a cluster algebra of geometric type. In general, $\mathbb{C}[\text{Gr}(k,n)]$ has infinitely many cluster variables. There is a specific quotient $\mathbb{C}[\text{Gr}(k,n, \sim)]$ obtained by setting certain frozen variables to 1 which we will consider. It has been shown that cluster variables in $\mathbb{C}[\text{Gr}(k,n,\sim)]$ correspond with $\text{SSYT}(k,n,\sim)$, the rectangular SSYT with $k$ rows and entries in $[n]$, up to a quotient. Each equivalence class in $[T] \in \text{SSYT}(k,n,\sim)$ has a unique representative $\text{small}(T)$ which is a tableau with *small gaps*. That is, each column of $\text{small}(T)$ is of the form $[i, i+k] \setminus \{r\}$ for some $r \in [i+1, i+k-1]$. The primary questions we are interested in answering is:
 
 **Problems:**
-- *Characterize the tableaux $T$ where $[T]$ indexes a cluster variable in $\mathbb{C}[\text{Gr}(k,n)]$.*
-- *Identify conditions for when two tableaux $T_1, T_2$ are compatible (i.e. appear in the same cluster seed).*
+- Characterize the tableaux $T$ where $[T]$ indexes a cluster variable in $\mathbb{C}[\text{Gr}(k,n)]$.
+- Identify conditions for when two tableaux $T_1, T_2$ are compatible (i.e. appear in the same cluster seed).
 
 ### Baseline Model
 Coming soon...
