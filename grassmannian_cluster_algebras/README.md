@@ -16,7 +16,7 @@ It has been shown that $\mathbb{C}[\text{Gr}(k,n)]$ is in fact a cluster algebra
 - *Identify conditions for when two tableaux $T_1, T_2$ are compatible (i.e. appear in the same cluster seed).*
 
 ### Baseline Model
-TODO - mention result on gap size of 2?
+Coming soon...
 
 ### Additional References
 - [Clustering Cluster Algebras with Clusters](https://arxiv.org/pdf/2212.09771.pdf) by Cheung, Dechant, He, Heyes, Hirst, and Li: Prior ML work on this problem. Their GitHub is at [https://github.com/edhirst/GrassmanniansML](here).
