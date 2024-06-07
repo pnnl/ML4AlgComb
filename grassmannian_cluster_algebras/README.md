@@ -1,4 +1,4 @@
-# Grassmannian Cluster Algebras and SSYTs (open problem)
+# Grassmannian Cluster Algebras and Semistandard Young Tableau (open problem)
 
 The Grassmann manifold $\text{Gr}(k,n)$ is the set of full-rank $k \times n$ matrices up to equivalence of elementary row operations (equivalently the space whose points are $k$-dimensional subspaces in $\mathbb{R}^n$). Grassmannians are of fundamental geometric importance and are a central tool in a model of quantum field theory known as supersymmetric Yang-Mills theory. 
 
