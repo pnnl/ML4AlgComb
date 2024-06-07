@@ -1,34 +1,13 @@
-# Benchmarks in Algebraic Combinatorics
-## A Collection of Algebraic Combinatorics Benchmark Datasets for Scientific Discovery in Mathematics and the Evaluation of Reasoning in Machine Learning
+# Mutation equivalence of quivers (open problem)
 
-The challenge of sifting through large datasets with the goal of identifying structure and patterns is a common activity in research level mathematics. As an obvious example, entire careers have been spent looking for patterns in the set of prime numbers. Since modern machine learning is increasingly capable of pulling subtle patterns out of highly structured, complicated datasets at scale, there is hope that data-driven approaches may be able to accelerate the pace of research in mathematics.
+Quivers and quiver mutations are central to the combinatorial study of cluster algebras, algebraic structures with connections to Poisson Geometry, string theory, and Teichmuller theory. Quivers are directed graphs, and a quiver mutation is a local transformation of the graph involving certain vertices and arrows that produces a new quiver. A fundamental open problem in this area is to find an algorithm that determines whether two quivers are mutation equivalent. Currently, no such algorithm exists for quivers on more than three vertices.  
 
-From the other direction, mathematics offers a useful arena in which to study machine learning itself. Mathematics, unlike many other tasks that machine learning is applied to, tends to have objective solutions that can be rigorously checked. While there are now a number of benchmarks aimed at evaluating the performance of machine learning models in mathematics, they all tend to be oriented toward large language models and mostly fail to capture research level mathematics. But as any mathematician can attest, mathematics is not purely tied to language. Thus, there is value in making available the kinds of raw datasets where mathematicians build their intuition prior to the proof development stage.
+Recent work has explored whether deep learning models can learn to correctly predict if two quivers are mutation equivalent \[1\]. Our dataset aims to facilitate continuation of this work. In \[1\] and in our dataset, quivers are represented using adjacency matrices. 
 
-Motivated by this we introduce the **Benchmarks in Algebraic Combinatorics**, a collection of datasets drawn from the mathematical domain of algebraic combinatorics.
+**Dataset:** Adjacency matrices for seven quivers, each with $11$ vertices, labeled by mutation equivalence class.
 
-We have included two types of datasets in these benchmarks:
-- **Datasets that capture open problems in algebraic combinatorics:** Using machine learning to drive scientific discovery has been a fundamental goal within the AI-community since its inception. One challenge, particularly in mathematics, is that the data supporting such discovery is itself often complicated, requiring a domain expert to collect/generate, preprocess, and explain. To lower the barrier of entry to the machine learning community, we include datasets centered around open problems in algebraic combinatorics. We hope that use of these by the AI-community will translate into progress in mathematics. 
-- **Datasets that capture classical or foundational subjects and algorithms in algebraic combinatorics:** On the other hand, there are cases where it is valuable to be able to evaluate ML approaches to mathematics where a solution is known. It might be interesting to understand whether a particular ML algorithm rediscovers a known result and if not, whether there are other approaches that have been missed until now by the mathematical community. 
+**Task:** Classify which mutation equivalence class an adjacency matrix corresponds to.
 
-For both types of datasets we include the code for generating the dataset, the official train/test splits, background information which explains the dataset and problems associated with it, and some baseline performances of models trained and evaluated on splits.
+Datasets can be found [here]()
 
-**Contributors:**
-- Herman Chau (University of Washington)
-- Helen Jenne (Pacific Northwest National Laboratory)
-- Davis Brown (Pacific Northwest National Laboratory)
-- Sara Billey (University of Washington)
-- Jackson Warley (Pacific Northwest National Laboratory)
-
-Our datasets include:
-- Grassmannian cluster algebras
-
-Disclaimer:
-This material was prepared as an account of work sponsored by an agency of the United States Government.  Neither the United States Government nor the United States Department of Energy, nor the Contractor, nor any or their employees, nor any jurisdiction or organization that has cooperated in the development of these materials, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness or any information, apparatus, product, software, or process disclosed, or represents that its use would not infringe privately owned rights.
-Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof, or Battelle Memorial Institute. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.
-PACIFIC NORTHWEST NATIONAL LABORATORY
-operated by
-BATTELLE
-for the
-UNITED STATES DEPARTMENT OF ENERGY
-under Contract DE-AC05-76RL01830
+\[1\] Bao, Jiakang, et al. "Machine learning algebraic geometry for physics." arXiv preprint arXiv:2204.10334 (2022).
