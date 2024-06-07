@@ -1,34 +1,19 @@
-# Benchmarks in Algebraic Combinatorics
-## A Collection of Algebraic Combinatorics Benchmark Datasets for Scientific Discovery in Mathematics and the Evaluation of Reasoning in Machine Learning
+# The coefficients of Kazhdan-Lusztig polynomials (open problem)
 
-The challenge of sifting through large datasets with the goal of identifying structure and patterns is a common activity in research level mathematics. As an obvious example, entire careers have been spent looking for patterns in the set of prime numbers. Since modern machine learning is increasingly capable of pulling subtle patterns out of highly structured, complicated datasets at scale, there is hope that data-driven approaches may be able to accelerate the pace of research in mathematics.
+Kazhdan-Lusztig (KL) polynomials are integer polynomials in a variable $q$ that (for our purposes) are indexed by a pair of permutations \[1\]. We will write the KL polynomial associated with permutations $\sigma$ and $\nu$ as $P_{\sigma,\nu}(q)$. For example, the KL polynomial associated with permutations $\sigma = 1$ $4$ $3$ $2$ $7$ $6$ $5$ $10$ $9$ $8$ $11$ and $\nu = 4$ $6$ $7$ $8$ $9$ $10$ $1$ $11$ $2$ $3$ 5$ is
 
-From the other direction, mathematics offers a useful arena in which to study machine learning itself. Mathematics, unlike many other tasks that machine learning is applied to, tends to have objective solutions that can be rigorously checked. While there are now a number of benchmarks aimed at evaluating the performance of machine learning models in mathematics, they all tend to be oriented toward large language models and mostly fail to capture research level mathematics. But as any mathematician can attest, mathematics is not purely tied to language. Thus, there is value in making available the kinds of raw datasets where mathematicians build their intuition prior to the proof development stage.
+$P_{\sigma,\nu} = 1 + 16q + 103q^2 + 337q^3 + 566q^4 + 529q^5 + 275q^6 + 66q^7 + 3q^8.$
 
-Motivated by this we introduce the **Benchmarks in Algebraic Combinatorics**, a collection of datasets drawn from the mathematical domain of algebraic combinatorics.
+KL polynomials have deep connections throughout several areas of mathematics. For example, KL polynomials are related to the dimensions of intersection homology in Schubert calculus, the study of the Hecke algebra, and representation theory of the symmetric group. They can be computed via a recursive formula \[1\], nevertheless, in many ways they remain mysterious. For instance, there is no known closed formula for the degree of $P_{\sigma,\nu}(q)$.
 
-We have included two types of datasets in these benchmarks:
-- **Datasets that capture open problems in algebraic combinatorics:** Using machine learning to drive scientific discovery has been a fundamental goal within the AI-community since its inception. One challenge, particularly in mathematics, is that the data supporting such discovery is itself often complicated, requiring a domain expert to collect/generate, preprocess, and explain. To lower the barrier of entry to the machine learning community, we include datasets centered around open problems in algebraic combinatorics. We hope that use of these by the AI-community will translate into progress in mathematics. 
-- **Datasets that capture classical or foundational subjects and algorithms in algebraic combinatorics:** On the other hand, there are cases where it is valuable to be able to evaluate ML approaches to mathematics where a solution is known. It might be interesting to understand whether a particular ML algorithm rediscovers a known result and if not, whether there are other approaches that have been missed until now by the mathematical community. 
+One type of question of special interest is the value of coefficient on the terms of $q$ in $P_{\sigma,\nu}(q)$. Perhaps most well-known is the question of the coefficient on term $q^{\ell(\sigma) - \ell(\nu)-1/2}$ (where $\ell(x)$ is a statistic called the length of the permutation), which is known as the $\mu$-coefficient. Better understanding of this and other coefficients has the potential to shed considerable light on other aspects of this family of polynomials. 
 
-For both types of datasets we include the code for generating the dataset, the official train/test splits, background information which explains the dataset and problems associated with it, and some baseline performances of models trained and evaluated on splits.
+**Dataset:** Each instance in this dataset consists of a pair of permutations on $n$, $\sigma$ and $\nu$, along with the coefficients of $P_{\sigma,\nu}(q)$. We provide $n = 8,9,10$.
 
-**Contributors:**
-- Herman Chau (University of Washington)
-- Helen Jenne (Pacific Northwest National Laboratory)
-- Davis Brown (Pacific Northwest National Laboratory)
-- Sara Billey (University of Washington)
-- Jackson Warley (Pacific Northwest National Laboratory)
+**Task:** The task to predict the coefficients of $P_{\sigma,\nu}(q)$ given $\sigma$ and $\nu$.
 
-Our datasets include:
-- Grassmannian cluster algebras
+We link to datasets generated by Greg Warrington and associated with \[2\]. The datasets for $n = 8$ can be found [here](https://gswarrin.w3.uvm.edu/research/klc/eps-s8-klps) and the datasets for $n = 9$ can be found [here](https://gswarrin.w3.uvm.edu/research/klc/eps-s9-klps). 
 
-Disclaimer:
-This material was prepared as an account of work sponsored by an agency of the United States Government.  Neither the United States Government nor the United States Department of Energy, nor the Contractor, nor any or their employees, nor any jurisdiction or organization that has cooperated in the development of these materials, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness or any information, apparatus, product, software, or process disclosed, or represents that its use would not infringe privately owned rights.
-Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof, or Battelle Memorial Institute. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.
-PACIFIC NORTHWEST NATIONAL LABORATORY
-operated by
-BATTELLE
-for the
-UNITED STATES DEPARTMENT OF ENERGY
-under Contract DE-AC05-76RL01830
+\[1\] Kazhdan, David, and George Lusztig. "Representations of Coxeter groups and Hecke algebras." Inventiones mathematicae 53.2 (1979): 165-184.
+
+\[2\] Warrington, Gregory S. "Equivalence classes for the μ-coefficient of Kazhdan–Lusztig polynomials in Sn." Experimental Mathematics 20.4 (2011): 457-466.
