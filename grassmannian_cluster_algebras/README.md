@@ -1,34 +1,12 @@
-# Benchmarks in Algebraic Combinatorics
-## A Collection of Algebraic Combinatorics Benchmark Datasets for Scientific Discovery in Mathematics and the Evaluation of Reasoning in Machine Learning
+# Grassmannian Cluster Algebras and SSYTs (open problem)
 
-The challenge of sifting through large datasets with the goal of identifying structure and patterns is a common activity in research level mathematics. As an obvious example, entire careers have been spent looking for patterns in the set of prime numbers. Since modern machine learning is increasingly capable of pulling subtle patterns out of highly structured, complicated datasets at scale, there is hope that data-driven approaches may be able to accelerate the pace of research in mathematics.
+The Grassmann manifold $\Gr(k,n)$ is the set of full-rank $k \times n$ matrices up to equivalence of elementary row operations (equivalently the space whose points are $k$-dimensional subspaces in $\mathbb{R}^n$). Grassmannians are of fundamental geometric importance and are a central tool in a model of quantum field theory known as supersymmetric Yang-Mills theory. 
 
-From the other direction, mathematics offers a useful arena in which to study machine learning itself. Mathematics, unlike many other tasks that machine learning is applied to, tends to have objective solutions that can be rigorously checked. While there are now a number of benchmarks aimed at evaluating the performance of machine learning models in mathematics, they all tend to be oriented toward large language models and mostly fail to capture research level mathematics. But as any mathematician can attest, mathematics is not purely tied to language. Thus, there is value in making available the kinds of raw datasets where mathematicians build their intuition prior to the proof development stage.
+Among the many algebraic-combinatorial properties of Grassmannians is an algebraic structure on its coordinate ring making it a cluster algebra. A recent result of Chang, Duan, Fraser, and Li \[1\] parameterize cluster variables of the Grassmannian coordinate ring in terms of equivalence classes of semistandard Young tableaux. Not every semistandard Young tableaux indexes a cluster variable and a natural question to ask is which are valid cluster variable indices. A necessary condition is that the tableaux is of rectangular shape. We follow the set-up set up of \[2\] who first applied machine learning to this problem, though we choose a different method of sampling tableau that do not index cluster variables.
 
-Motivated by this we introduce the **Benchmarks in Algebraic Combinatorics**, a collection of datasets drawn from the mathematical domain of algebraic combinatorics.
+**Dataset:** A collection of rectangular semistandard Young tableau each with a label indicating whether they index a cluster variable or not.
 
-We have included two types of datasets in these benchmarks:
-- **Datasets that capture open problems in algebraic combinatorics:** Using machine learning to drive scientific discovery has been a fundamental goal within the AI-community since its inception. One challenge, particularly in mathematics, is that the data supporting such discovery is itself often complicated, requiring a domain expert to collect/generate, preprocess, and explain. To lower the barrier of entry to the machine learning community, we include datasets centered around open problems in algebraic combinatorics. We hope that use of these by the AI-community will translate into progress in mathematics. 
-- **Datasets that capture classical or foundational subjects and algorithms in algebraic combinatorics:** On the other hand, there are cases where it is valuable to be able to evaluate ML approaches to mathematics where a solution is known. It might be interesting to understand whether a particular ML algorithm rediscovers a known result and if not, whether there are other approaches that have been missed until now by the mathematical community. 
+**Task:** Predict whether a Young tableaux indexes a cluster variable.
 
-For both types of datasets we include the code for generating the dataset, the official train/test splits, background information which explains the dataset and problems associated with it, and some baseline performances of models trained and evaluated on splits.
+The datasets can be found at: 
 
-**Contributors:**
-- Herman Chau (University of Washington)
-- Helen Jenne (Pacific Northwest National Laboratory)
-- Davis Brown (Pacific Northwest National Laboratory)
-- Sara Billey (University of Washington)
-- Jackson Warley (Pacific Northwest National Laboratory)
-
-Our datasets include:
-- Grassmannian cluster algebras
-
-Disclaimer:
-This material was prepared as an account of work sponsored by an agency of the United States Government.  Neither the United States Government nor the United States Department of Energy, nor the Contractor, nor any or their employees, nor any jurisdiction or organization that has cooperated in the development of these materials, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness or any information, apparatus, product, software, or process disclosed, or represents that its use would not infringe privately owned rights.
-Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof, or Battelle Memorial Institute. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.
-PACIFIC NORTHWEST NATIONAL LABORATORY
-operated by
-BATTELLE
-for the
-UNITED STATES DEPARTMENT OF ENERGY
-under Contract DE-AC05-76RL01830
