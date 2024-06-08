@@ -3,12 +3,12 @@
 Schubert polynomials \[1,2,3\] are a family of polynomials indexed by permutations of $S_n$. Developed to study the cohomology ring of the flag variety, they have deep connections to algebraic geometry, Lie theory, and representation theory. Despite their geometric origins, Schubert polynomials can be described completely combinatorially \[4,5\], making them a well-studied object in algebraic combinatorics. An important open problem in the study of Schubert polynomials is understanding their *structure constants*. 
 
 When two Schubert polynomials are multiplied, their product is a linear combination of Schubert polynomials
-$S_{\beta} S_{\gamma} = \sum_{\alpha} c^{\alpha}\_{\beta \gamma} S_{\alpha}$
-The question is whether the $ c^{\alpha}\_{\beta \gamma}$ (the structure constants) have a combinatorial description or formula. To give an example of what we mean by combinatorial description, in the case of Schur polynomials (which can be viewed as specific case of Schubert polynomials), the coefficients in the product are equal to the number of semistandard tableaux satisfying certain properties.
+$\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma} = \sum\_{\alpha} c^{\alpha}\_{\beta \gamma} \mathfrak{S}\_{\alpha}$
+The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the structure constants) have a combinatorial description or formula. To give an example of what we mean by combinatorial description, in the case of Schur polynomials (which can be viewed as specific case of Schubert polynomials), the coefficients in the product are equal to the number of semistandard tableaux satisfying certain properties.
 
-**Dataset:** Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}_{\beta} \mathfrak{S}_{\gamma}$. Not all possible triples of permutations are included; the dataset consists of an approximately equal number of zero and nonzero coefficients. We provide datasets for $n = 4, 5, 6$.
+**Dataset:** Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}\_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}$. Not all possible triples of permutations are included; the dataset consists of an approximately equal number of zero and nonzero coefficients. We provide datasets for $n = 4, 5, 6$.
 
-**Task:** The task is to predict the coefficient $c^{\alpha}_{\beta \gamma}$.
+**Task:** The task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$.
 
 \[1\] Bernstein, IMGI N., Israel M. Gel'fand, and Sergei I. Gel'fand. "Schubert cells and cohomology of the spaces G/P." Russian Mathematical Surveys 28.3 (1973): 1.
 
