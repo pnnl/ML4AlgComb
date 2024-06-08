@@ -1,34 +1,16 @@
-# Benchmarks in Algebraic Combinatorics
-## A Collection of Algebraic Combinatorics Benchmark Datasets for Scientific Discovery in Mathematics and the Evaluation of Reasoning in Machine Learning
+# Symmetric group characters (classic result)
 
-The challenge of sifting through large datasets with the goal of identifying structure and patterns is a common activity in research level mathematics. As an obvious example, entire careers have been spent looking for patterns in the set of prime numbers. Since modern machine learning is increasingly capable of pulling subtle patterns out of highly structured, complicated datasets at scale, there is hope that data-driven approaches may be able to accelerate the pace of research in mathematics.
+One way to understand the algebraic structure of permutations (symmetric groups, $S_n$) is through their representation theory \[1\], which converts algebraic questions into linear algebra questions that are often easier to solve. 
+A *representation* of group $G$ on vector space $V$, is a map $\phi:G \rightarrow GL(V)$ converts elements of $g$ to invertible matrices on vector space $V$ and which respects the compositional structure of the group. A basic result in representation theory says that all representations of a finite group can be decomposed into atomic building blocks called *irreducible representations*. Amazingly, irreducible representations are themselves uniquely determined by the value of the trace, $\text{Tr}(\phi(g))$, where $g$ ranges over subsets of $G$ called conjugacy classes. These value are called *characters*. 
 
-From the other direction, mathematics offers a useful arena in which to study machine learning itself. Mathematics, unlike many other tasks that machine learning is applied to, tends to have objective solutions that can be rigorously checked. While there are now a number of benchmarks aimed at evaluating the performance of machine learning models in mathematics, they all tend to be oriented toward large language models and mostly fail to capture research level mathematics. But as any mathematician can attest, mathematics is not purely tied to language. Thus, there is value in making available the kinds of raw datasets where mathematicians build their intuition prior to the proof development stage.
+The representation theory of symmetric groups has rich combinatorial interpretations. Both irreducible representations of $S_n$ and the conjugacy classes of $S_n$ are indexed by partitions of $n$ and thus the characters of irreducible representations of $S_n$ are indexed by two partitions of $n$. For $\lambda,\mu \vdash n$ we write $\chi^\lambda_\mu$. This combinatorial connection is not superficial, there are algorithms (e.g., the Murnaghan-Nakayama rule), which allow calculation of irreducible characters via simple manipulation of the Young diagrams for $\lambda$ and $\mu$ without any reference to algebra. 
 
-Motivated by this we introduce the **Benchmarks in Algebraic Combinatorics**, a collection of datasets drawn from the mathematical domain of algebraic combinatorics.
+**Dataset:** Pairs of integer partitions of $n$, $\lambda, \mu$ and the corresponding symmetric group character $\chi^{\lambda}_{\mu}$.
 
-We have included two types of datasets in these benchmarks:
-- **Datasets that capture open problems in algebraic combinatorics:** Using machine learning to drive scientific discovery has been a fundamental goal within the AI-community since its inception. One challenge, particularly in mathematics, is that the data supporting such discovery is itself often complicated, requiring a domain expert to collect/generate, preprocess, and explain. To lower the barrier of entry to the machine learning community, we include datasets centered around open problems in algebraic combinatorics. We hope that use of these by the AI-community will translate into progress in mathematics. 
-- **Datasets that capture classical or foundational subjects and algorithms in algebraic combinatorics:** On the other hand, there are cases where it is valuable to be able to evaluate ML approaches to mathematics where a solution is known. It might be interesting to understand whether a particular ML algorithm rediscovers a known result and if not, whether there are other approaches that have been missed until now by the mathematical community. 
+**Task:** Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group character $\chi^{\lambda}_{\mu}$.
 
-For both types of datasets we include the code for generating the dataset, the official train/test splits, background information which explains the dataset and problems associated with it, and some baseline performances of models trained and evaluated on splits.
+Datasets can be found [here]().
 
-**Contributors:**
-- Herman Chau (University of Washington)
-- Helen Jenne (Pacific Northwest National Laboratory)
-- Davis Brown (Pacific Northwest National Laboratory)
-- Sara Billey (University of Washington)
-- Jackson Warley (Pacific Northwest National Laboratory)
+\[1\] Sagan, Bruce E. The symmetric group: representations, combinatorial algorithms, and symmetric functions. Vol. 203. Springer Science & Business Media, 2013.
 
-Our datasets include:
-- Grassmannian cluster algebras
 
-Disclaimer:
-This material was prepared as an account of work sponsored by an agency of the United States Government.  Neither the United States Government nor the United States Department of Energy, nor the Contractor, nor any or their employees, nor any jurisdiction or organization that has cooperated in the development of these materials, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness or any information, apparatus, product, software, or process disclosed, or represents that its use would not infringe privately owned rights.
-Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof, or Battelle Memorial Institute. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.
-PACIFIC NORTHWEST NATIONAL LABORATORY
-operated by
-BATTELLE
-for the
-UNITED STATES DEPARTMENT OF ENERGY
-under Contract DE-AC05-76RL01830
