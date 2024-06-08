@@ -9,7 +9,7 @@ The representation theory of symmetric groups has rich combinatorial interpretat
 
 **Task:** Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group character $\chi^{\lambda}\_{\mu}$.
 
-Datasets can be found [here]().
+Datasets can be found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing).
 
 \[1\] Sagan, Bruce E. The symmetric group: representations, combinatorial algorithms, and symmetric functions. Vol. 203. Springer Science & Business Media, 2013.
 
