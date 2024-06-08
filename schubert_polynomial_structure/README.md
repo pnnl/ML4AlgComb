@@ -10,6 +10,8 @@ The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the structure constant
 
 **Task:** The task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$.
 
+Datasets $can be found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing).
+
 \[1\] Bernstein, IMGI N., Israel M. Gel'fand, and Sergei I. Gel'fand. "Schubert cells and cohomology of the spaces G/P." Russian Mathematical Surveys 28.3 (1973): 1.
 
 \[2\] Demazure, Michel. "Désingularisation des variétés de Schubert généralisées." Annales scientifiques de l'École Normale Supérieure. Vol. 7. No. 1. 1974.
