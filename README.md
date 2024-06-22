@@ -19,6 +19,7 @@ For both types of datasets we (will eventually) include the code for generating 
 - Davis Brown (Pacific Northwest National Laboratory)
 - Sara Billey (University of Washington)
 - Jackson Warley (Pacific Northwest National Laboratory)
+- Jesse He (UCSB)
 
 **Maintainer:** Henry Kvinge (Pacific Northwest National Laboratory, University of Washington)
 
