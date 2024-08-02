@@ -24,10 +24,10 @@ For both types of datasets we (will eventually) include the code for generating 
 **Maintainer:** Henry Kvinge (Pacific Northwest National Laboratory, University of Washington)
 
 ### Datasets
-- [**Grassmannian cluster algebras:**](https://github.com/pnnl/ML4AlgComb/tree/master/grassmannian_cluster_algebras) Identify when a rectangular semistandard Young tableau corresponds to a cluster variable in a cluster algebra associated with the Grassmannian manifold.
-- [**Kazhdan-Lusztig polynomial coefficients:**](https://github.com/pnnl/ML4AlgComb/tree/master/kl-polynomial_coefficients) Kazhdan-Lusztig polynomials, which are parametrized by two permutations, are known to carry extensive combinatorial information yet in many ways remain mysterious. The goal of this task is to predict the coefficients on these polynomials from the indexing permutation alone.
+- [**Grassmannian cluster algebras:**](https://github.com/pnnl/ML4AlgComb/tree/master/grassmannian_cluster_algebras) Identify when a rectangular semistandard Young tableau corresponds to a cluster variable in a cluster algebra associated with a Grassmann manifold.
+- [**Kazhdan-Lusztig polynomial coefficients:**](https://github.com/pnnl/ML4AlgComb/tree/master/kl-polynomial_coefficients) Kazhdan-Lusztig polynomials, which are parametrized by two permutations, are known to carry extensive combinatorial information yet in many ways remain mysterious. The goal of this task is to predict the coefficients on these polynomials from the indexing permutations alone.
 - [**Lattice path posets:**](https://github.com/pnnl/ML4AlgComb/tree/master/lattice_path_posets) The set of lattice paths from $(0,0)$ to $(n,n-1)$ which only take steps east and north and never cross the diagonal $y = \frac{n}{n-1}x$ capture the combinatorics of a range of important phenomena in mathematics. One way to study the set of such paths is to impose a partial order on them. The task for this dataset involves predicting which of two poset structures a
-- [**The mHeight function:**](https://github.com/pnnl/ML4AlgComb/tree/master/mheight_function)
+- [**The mHeight function:**](https://github.com/pnnl/ML4AlgComb/tree/master/mheight_function) The 
 - [**Mutation equivalence of quivers:**](https://github.com/pnnl/ML4AlgComb/tree/master/quiver_mutation_equivalence)
 - [**The Robinson-Schensted-Knuth Correspondence:**](https://github.com/pnnl/ML4AlgComb/tree/master/rsk)
 - [**Schubert polynomial structure constants:**](https://github.com/pnnl/ML4AlgComb/tree/master/schubert_polynomial_structure)
