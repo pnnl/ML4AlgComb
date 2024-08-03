@@ -12,8 +12,6 @@ Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9
 
 # MLP
 
-93.1 %± 0.00% 96.9 %± 0.00% 97.2 %± 0.00%
-
 | Size | Accuracy | # of Layers |
 |----------|----------|----------|
 | $n= 10$ | $93.1 %± 0.00$ | 3 |
