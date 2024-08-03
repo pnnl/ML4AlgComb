@@ -19,12 +19,13 @@ For both types of datasets we (will eventually) include the code for generating 
 </center>
 
 **Contributors:**
-- Herman Chau (University of Washington)
-- Helen Jenne (Pacific Northwest National Laboratory)
-- Davis Brown (Pacific Northwest National Laboratory)
-- Sara Billey (University of Washington)
+- [Herman Chau](https://sites.math.washington.edu/~hchau/) (University of Washington)
+- [Helen Jenne](https://hjenne.github.io) (Pacific Northwest National Laboratory)
+- [Henry Kvinge](https://hkvinge.github.io) (Pacific Northwest National Laboratory, University of Washington)
+- [Davis Brown](https://davisrbrown.com) (Pacific Northwest National Laboratory)
+- [Sara Billey](https://sites.math.washington.edu/~billey/) (University of Washington)
 - Jackson Warley (Pacific Northwest National Laboratory)
-- Jesse He (UCSB)
+- [Jesse He](https://he-jesse.github.io) (UCSB)
 
 **Maintainer:** Henry Kvinge (Pacific Northwest National Laboratory, University of Washington)
 
