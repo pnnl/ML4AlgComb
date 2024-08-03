@@ -27,7 +27,7 @@ For both types of datasets we (will eventually) include the code for generating 
 - Jackson Warley (Pacific Northwest National Laboratory)
 - [Jesse He](https://he-jesse.github.io) (UCSB)
 
-**Maintainer:** Henry Kvinge (Pacific Northwest National Laboratory, University of Washington)
+**Point of contact:** Henry Kvinge, acbenchdataset@gmail.com
 
 ### Datasets
 - [**Grassmannian cluster algebras:**](https://github.com/pnnl/ML4AlgComb/tree/master/grassmannian_cluster_algebras) Identify when a rectangular semistandard Young tableau corresponds to a cluster variable in a cluster algebra associated with a Grassmann manifold.
