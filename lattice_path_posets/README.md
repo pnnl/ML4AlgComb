@@ -12,12 +12,14 @@ Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9
 
 # MLP
 
+93.1 %± 0.00% 96.9 %± 0.00% 97.2 %± 0.00%
+
 | Size | Accuracy | # of Layers |
 |----------|----------|----------|
-| $n= 10$ | Row 1 Col 2 | Row 1 Col 3 |
-| $n= 11$  | Row 2 Col 2 | Row 2 Col 3 |
-| $n= 12$  | Row 3 Col 2 | Row 3 Col 3 |
-| $n= 13$  | Row 3 Col 2 | Row 3 Col 3 |
+| $n= 10$ | $93.1 %± 0.00$ | 3 |
+| $n= 11$  | $96.9 %± 0.00$ | 4 |
+| $n= 12$  | $97.2 %± 0.00$ | 3 |
+| $n= 13$  | $98.1 %± 0.00$ | 3 |
 
 \[1\] Schiffler, Ralf. "Perfect matching problems in cluster algebras and number theory." arXiv preprint arXiv:2302.02185 (2023).
 
