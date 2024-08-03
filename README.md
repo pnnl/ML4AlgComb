@@ -14,9 +14,9 @@ We have included two types of datasets in these benchmarks:
 
 For both types of datasets we (will eventually) include the code for generating the dataset, the official train/test splits, background information which explains the dataset and problems associated with it, and some baseline performances of models trained and evaluated on splits.
 
-<div style="text-align: center;">
+<center>
 <img src="fig-data-visualization.png" alt="Alt text" width="750" height="762" style="display: block; margin-left: auto; margin-right: auto;">
-</div>
+</center>
 
 **Contributors:**
 - Herman Chau (University of Washington)
