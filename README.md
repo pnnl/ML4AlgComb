@@ -9,9 +9,12 @@ Motivated by this we introduce **Benchmarks in Algebraic Combinatorics (ACBench)
 
 We have included two types of datasets in these benchmarks:
 - **Datasets that capture open problems:** Using machine learning to drive scientific discovery has been a fundamental goal within the AI-community since its inception. One challenge, particularly in mathematics, is that the data supporting such discovery is itself often complicated, requiring a domain expert to collect/generate, preprocess, and explain. To lower the barrier of entry to the machine learning community, we include datasets centered around open problems in algebraic combinatorics. We hope that use of these by the AI-community will translate into progress in mathematics. 
-- **Datasets that capture classical or foundational subjects and algorithms in algebraic combinatorics:** On the other hand, there are cases where it is valuable to be able to evaluate ML approaches to mathematics where a solution is known. It might be interesting to understand whether a particular ML algorithm rediscovers a known result and if not, whether there are other approaches that have been missed until now by the mathematical community. 
+- **Datasets that capture classical or foundational subjects and algorithms in algebraic combinatorics:** On the other hand, there are cases where it is valuable to be able to evaluate ML approaches to mathematics where a solution is known. It might be interesting to understand whether a particular ML algorithm rediscovers a known result and if not, whether there are other approaches that have been missed until now by the mathematical community.
+
 
 For both types of datasets we (will eventually) include the code for generating the dataset, the official train/test splits, background information which explains the dataset and problems associated with it, and some baseline performances of models trained and evaluated on splits.
+
+[fig-data-visualization.pdf](https://github.com/user-attachments/files/16478087/fig-data-visualization.pdf)
 
 **Contributors:**
 - Herman Chau (University of Washington)
