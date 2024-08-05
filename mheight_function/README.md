@@ -10,6 +10,19 @@ Let $\sigma  = a_1 \ldots a_n \in S_n$ be a permutation containing at least one 
 
 The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4KzR9dVUaDhNtUPnumeuX/view?usp=sharing)
 
+## Baselines
+
+### MLP
+
+| Model Type | Accuracy | # of Layers |
+|----------|----------|----------|
+| #n = 8# | $85.8 %± 0.00%$ | $3$ |
+| $n = 9$ | $89.5 %± 0.00%$ | $4$ |
+| $n = 10$ | $99.4%± 0.00%$ | $4$ |
+| $n = 11$ | $99.2%± 0.00%$ | $4$ |
+| $n = 12$ | $98.6%± 0.00%$ | $4$ |
+
+
 \[1\] Gaetz, Christian, and Yibo Gao. "On the minimal power of $ q $ in a Kazhdan-Lusztig polynomial." arXiv preprint arXiv:2303.13695 (2023).
 
 \[2\] Billey, Sara, and Alexander Postnikov. "Smoothness of Schubert varieties via patterns in root subsystems." Advances in Applied Mathematics 34.3 (2005): 447-466.
