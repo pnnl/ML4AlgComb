@@ -22,6 +22,22 @@ Datasets can be found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3h
 | $n = 4$ | $93.3 %± 0.00%$ | $4$ |
 | $n = 5$ | $99.8 %± 0.00%$ | $2$ |
 
+### Logistic Regression
+
+| Size | Accuracy | 
+|----------|----------|
+| $n= 3$ | $76.5 \pm 0.00%$ |
+| $n= 4$  | $64.4 \pm 0.00$ |
+| $n= 5$  | $66.7 \pm 0.00%$ | 
+
+### Transformer
+
+| Size | Accuracy | 
+|----------|----------|
+| $n= 3$ | $72.9 \pm 0.03%$ |
+| $n= 4$  | $97.7 \pm 0.00%$ |
+| $n= 5$  | $97.3 \pm 0.00%$ | 
+
 \[1\] Bernstein, IMGI N., Israel M. Gel'fand, and Sergei I. Gel'fand. "Schubert cells and cohomology of the spaces G/P." Russian Mathematical Surveys 28.3 (1973): 1.
 
 \[2\] Demazure, Michel. "Désingularisation des variétés de Schubert généralisées." Annales scientifiques de l'École Normale Supérieure. Vol. 7. No. 1. 1974.
