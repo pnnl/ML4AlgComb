@@ -16,7 +16,7 @@ Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPI
 
 | Model Type | Accuracy | # of Layers |
 |----------|----------|----------|
-| MLP | $88.7 \pm 0.00\%$ | 3 |
+| MLP | $88.7 \pm 0.00\%$ | 5 |
 
 
 \[1\] Bao, Jiakang, et al. "Machine learning algebraic geometry for physics." arXiv preprint arXiv:2204.10334 (2022).
