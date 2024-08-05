@@ -10,4 +10,13 @@ Recent work has explored whether deep learning models can learn to correctly pre
 
 Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPIgciuGG9HfvrKWC/view?usp=sharing)
 
+## Baselines
+
+### MLP
+
+| Model Type | Accuracy | # of Layers |
+|----------|----------|----------|
+| MLP | $88.7 \pm 0.00\%$ | 3 |
+
+
 \[1\] Bao, Jiakang, et al. "Machine learning algebraic geometry for physics." arXiv preprint arXiv:2204.10334 (2022).
