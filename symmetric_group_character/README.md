@@ -11,6 +11,22 @@ The representation theory of symmetric groups has rich combinatorial interpretat
 
 Datasets can be found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing).
 
+### Logistic Regression
+
+| Size | Accuracy | 
+|----------|----------|
+| $n= 18$ | $40.6 \pm 0.00%$ |
+| $n= 20$  | $40.64 \pm 0.00%$ |
+| $n= 22$  | $41.01 \pm 0.00%$ | 
+
+### Transformer
+
+| Size | Accuracy | 
+|----------|----------|
+| $n= 18$ | $42.19 \pm 0.00%$ |
+| $n= 20$  | $41.92 \pm 0.00%$ |
+| $n= 22$  | $41.61 \pm 0.00$ | 
+
 \[1\] Sagan, Bruce E. The symmetric group: representations, combinatorial algorithms, and symmetric functions. Vol. 203. Springer Science & Business Media, 2013.
 
 
