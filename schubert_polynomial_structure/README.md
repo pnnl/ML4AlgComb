@@ -10,7 +10,7 @@ The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the structure constant
 
 **Task:** The task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$.
 
-Datasets $can be found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing).
+Datasets can be found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing).
 
 | Model Type | Accuracy | # of Layers |
 |----------|----------|----------|
