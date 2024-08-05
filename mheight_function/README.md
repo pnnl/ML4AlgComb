@@ -22,6 +22,21 @@ The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4Kz
 | $n = 11$ | $99.2%± 0.00%$ | $4$ |
 | $n = 12$ | $98.6%± 0.00%$ | $4$ |
 
+### Logistic Regression
+
+| Size | Accuracy | 
+|----------|----------|
+| $n= 8$ | $64.6 \pm 0.00$ |
+| $n= 9$  | $70.8 \pm 0.00%$ |
+| $n= 10$  | $94.2 \pm 0.00%$ | 
+
+### Transformer
+
+| Size | Accuracy | 
+|----------|----------|
+| $n= 8$ | $72.8 \pm 0.01%$ |
+| $n= 9$  | $83.7 \pm 0.00%$ |
+| $n= 10$  | $94.2 \pm 0.00%$ | 
 
 \[1\] Gaetz, Christian, and Yibo Gao. "On the minimal power of $ q $ in a Kazhdan-Lusztig polynomial." arXiv preprint arXiv:2303.13695 (2023).
 
