@@ -12,6 +12,12 @@ The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the structure constant
 
 Datasets $can be found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing).
 
+| Model Type | Accuracy | # of Layers |
+|----------|----------|----------|
+| #n = 3# | $82.4 %± 0.00%$ | $2$ |
+| $n = 4$ | $93.3 %± 0.00%$ | $4$ |
+| $n = 5$ | $99.8 %± 0.00%$ | $2$ |
+
 \[1\] Bernstein, IMGI N., Israel M. Gel'fand, and Sergei I. Gel'fand. "Schubert cells and cohomology of the spaces G/P." Russian Mathematical Surveys 28.3 (1973): 1.
 
 \[2\] Demazure, Michel. "Désingularisation des variétés de Schubert généralisées." Annales scientifiques de l'École Normale Supérieure. Vol. 7. No. 1. 1974.
