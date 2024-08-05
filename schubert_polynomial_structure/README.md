@@ -12,6 +12,10 @@ The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the structure constant
 
 Datasets can be found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing).
 
+## Baselines
+
+### MLP
+
 | Model Type | Accuracy | # of Layers |
 |----------|----------|----------|
 | $n = 3$ | $82.4 %± 0.00%$ | $2$ |
