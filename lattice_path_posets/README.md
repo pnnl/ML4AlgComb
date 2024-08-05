@@ -10,7 +10,7 @@ Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9
 
 ## Baselines
 
-# MLP
+### MLP
 
 | Size | Accuracy | # of Layers |
 |----------|----------|----------|
