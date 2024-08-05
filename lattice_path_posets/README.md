@@ -19,6 +19,24 @@ Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9
 | $n= 12$  | $97.2 %± 0.00$ | 3 |
 | $n= 13$  | $98.1 %± 0.00$ | 3 |
 
+### Logistic Regression
+
+| Size | Accuracy | 
+|----------|----------|
+| $n= 9$ | $66.2% ± 0.00%$ |
+| $n= 10$  | $66.3% ± 0.00%$ |
+| $n= 11$  | $66.5% ± 0.00%$ | 
+| $n= 12$  | $75% ± 0.00%$ | 
+
+### Transformer
+
+| Size | Accuracy | 
+|----------|----------|
+| $n= 9$ | $66.2 % ± 0.00%$ |
+| $n= 10$  | $66.3 % ± 0.00%$ |
+| $n= 11$  | $33.5% ± 0.00%$ | 
+| $n= 12$  | $33.4% ± 0.00%$ | 
+
 \[1\] Schiffler, Ralf. "Perfect matching problems in cluster algebras and number theory." arXiv preprint arXiv:2302.02185 (2023).
 
 \[2\] Apruzzese, P. J., and Kevin Cong. "On Two Orderings of Lattice Paths." arXiv preprint arXiv:2310.16963 (2023).
