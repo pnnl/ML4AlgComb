@@ -16,7 +16,7 @@ The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4Kz
 
 | Model Type | Accuracy | # of Layers |
 |----------|----------|----------|
-| #n = 8# | $85.8 %± 0.00%$ | $3$ |
+| $n = 8$ | $85.8 %± 0.00%$ | $3$ |
 | $n = 9$ | $89.5 %± 0.00%$ | $4$ |
 | $n = 10$ | $99.4%± 0.00%$ | $4$ |
 | $n = 11$ | $99.2%± 0.00%$ | $4$ |
