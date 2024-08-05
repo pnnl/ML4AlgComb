@@ -10,6 +10,15 @@ The goal of this benchmark is to see whether a model can learn the RSK algorithm
 
 The datasets can be downloaded [here](https://drive.google.com/file/d/1CfuxD_XgTefbEduxJnXgXoUOt-GY-smq/view?usp=sharing). 
 
+## Baselines
+
+### Transformer
+
+| Permutation Size | MSE | # of heads | hidden dimenson | 
+|----------|----------|----------|----------|
+| $n = 8$ | $0.0825 %± 0.00%$ | $4$ | 128
+| $n = 9$ | $0.076 %± 0.00%$ | $4$ | 128 
+
 \[1\] Robinson, G. de B. "On the representations of the symmetric group." American Journal of Mathematics (1938): 745-760.
 
 \[2\] Schensted, Craige. "Longest increasing and decreasing subsequences." Canadian Journal of mathematics 13 (1961): 179-191.
