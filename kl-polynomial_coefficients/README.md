@@ -8,7 +8,7 @@ KL polynomials have deep connections throughout several areas of mathematics. Fo
 
 One type of question of special interest is the value of coefficient on the terms of $q$ in $P_{\sigma,\nu}(q)$. Perhaps most well-known is the question of the coefficient on term $q^{\ell(\sigma) - \ell(\nu)-1/2}$ (where $\ell(x)$ is a statistic called the length of the permutation), which is known as the $\mu$-coefficient. Better understanding of this and other coefficients has the potential to shed considerable light on other aspects of this family of polynomials. 
 
-**Dataset:** Each instance in this dataset consists of a pair of permutations on $n$, $\sigma$ and $\nu$, along with the coefficients of $P_{\sigma,\nu}(q)$. We provide $n = 8,9,10$.
+**Dataset:** Each instance in this dataset consists of a pair of permutations on $n$, $\sigma$ and $\nu$, along with the coefficients of $P_{\sigma,\nu}(q)$. We provide $n = 8,9$.
 
 **Task:** The task to predict the coefficients of $P_{\sigma,\nu}(q)$ given $\sigma$ and $\nu$ (below, we only show results for predicting the coefficient on $q^2$).
 
