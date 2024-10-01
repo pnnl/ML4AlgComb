@@ -1,18 +1,15 @@
-# Benchmarks in Algebraic Combinatorics
-## A Collection of Algebraic Combinatorics Benchmark Datasets for Scientific Discovery in Mathematics and the Evaluation of Reasoning in Machine Learning
+# Machine Learning meets Algebraic Combinatorics
+## A Collection of Algebraic Combinatorics Datasets for Scientific Discovery in Mathematics
+The challenge of sifting through large datasets with the goal of identifying structure and patterns is a common activity in research level mathematics. As an obvious example, many careers have been spent looking for patterns in the set of prime numbers. Since modern machine learning is increasingly capable of pulling subtle patterns out of highly structured, complicated datasets at scale, there is hope that data-driven approaches may be able to accelerate the pace of research in mathematics.
 
-The challenge of sifting through large datasets with the goal of identifying structure and patterns is a common activity in research level mathematics. As an obvious example, entire careers have been spent looking for patterns in the set of prime numbers. Since modern machine learning is increasingly capable of pulling subtle patterns out of highly structured, complicated datasets at scale, there is hope that data-driven approaches may be able to accelerate the pace of research in mathematics.
-
-From the other direction, mathematics offers a useful arena in which to study machine learning itself. Mathematics, unlike many other tasks that machine learning is applied to, tends to have solutions which are formally understood and can be rigorously checked. While there are now a number of benchmarks aimed at evaluating the performance of machine learning models in mathematics, they all tend to be oriented toward large language models and mostly fail to capture the sophistication of research level mathematics. But as any mathematician can attest, mathematics is not purely tied to language. Thus, there is value in making available "raw" mathematics datasets which represent real problems in mathematics.
-
-Motivated by this we introduce **Benchmarks in Algebraic Combinatorics (ACBench)**, a collection of datasets drawn from the mathematical domain of algebraic combinatorics, an area of mathematics which studies discrete structures arising from the field of abstract algebra, including representation theory, algebraic geometry, etc.
+Motivated by this we introduce the **Algebraic Combinatorics Dataset Repository (ACD Repo)**, a collection of datasets drawn from the mathematical domain of algebraic combinatorics, an area of mathematics which studies discrete structures arising from the field of abstract algebra, including representation theory, algebraic geometry, etc.
 
 We have included two types of datasets in these benchmarks:
 - **Datasets that capture open problems:** Using machine learning to drive scientific discovery has been a fundamental goal within the AI-community since its inception. One challenge, particularly in mathematics, is that the data supporting such discovery is itself often complicated, requiring a domain expert to collect/generate, preprocess, and explain. To lower the barrier of entry to the machine learning community, we include datasets centered around open problems in algebraic combinatorics. We hope that use of these by the AI-community will translate into progress in mathematics. 
 - **Datasets that capture classical or foundational subjects and algorithms in algebraic combinatorics:** On the other hand, there are cases where it is valuable to be able to evaluate ML approaches to mathematics where a solution is known. It might be interesting to understand whether a particular ML algorithm rediscovers a known result and if not, whether there are other approaches that have been missed until now by the mathematical community.
 
 
-For both types of datasets we (will eventually) include the code for generating the dataset, the official train/test splits, background information which explains the dataset and problems associated with it, and some baseline performances of models trained and evaluated on splits.
+Along with the data, we provide official train/test splits, background information which explains the dataset and problems associated with it, and some baseline performances of models trained and evaluated on our splits. In many cases we was provide the code for generating more data.
 
 <center>
 <img src="fig-data-visualization.png" alt="Alt text" width="750" height="762" style="display: block; margin-left: auto; margin-right: auto;">
@@ -23,6 +20,7 @@ For both types of datasets we (will eventually) include the code for generating 
 - [Helen Jenne](https://hjenne.github.io) (Pacific Northwest National Laboratory)
 - [Henry Kvinge](https://hkvinge.github.io) (Pacific Northwest National Laboratory, University of Washington)
 - [Davis Brown](https://davisrbrown.com) (Pacific Northwest National Laboratory)
+- [Jesse He] (University of California, San Diego)
 - [Sara Billey](https://sites.math.washington.edu/~billey/) (University of Washington)
 - Jackson Warley (Pacific Northwest National Laboratory)
 - [Jesse He](https://he-jesse.github.io) (UCSB)
