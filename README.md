@@ -20,7 +20,6 @@ Along with the data, we provide official train/test splits, background informati
 - [Helen Jenne](https://hjenne.github.io) (Pacific Northwest National Laboratory)
 - [Henry Kvinge](https://hkvinge.github.io) (Pacific Northwest National Laboratory, University of Washington)
 - [Davis Brown](https://davisrbrown.com) (Pacific Northwest National Laboratory)
-- [Jesse He] (University of California, San Diego)
 - [Sara Billey](https://sites.math.washington.edu/~billey/) (University of Washington)
 - Jackson Warley (Pacific Northwest National Laboratory)
 - [Jesse He](https://he-jesse.github.io) (UCSB)
