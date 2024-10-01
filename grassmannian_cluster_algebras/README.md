@@ -24,6 +24,8 @@ We use braces $[$ and $]$ to demarcate rows of the dataset, so that
 
 corresponds to the tableau pictured in Figure below
 
+![image](fig-grassmannian-tableau-example.png) 
+
 \[1\] Chang, Wen, et al. "Quantum affine algebras and Grassmannians." Mathematische Zeitschrift 296.3 (2020): 1539-1583.
 
 \[2\] Cheung, Man-Wai, et al. "Clustering cluster algebras with clusters." arXiv preprint arXiv:2212.09771 (2022).
