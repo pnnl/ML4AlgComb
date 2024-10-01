@@ -16,7 +16,7 @@ The dataset we provide consists of tableau of shape $3 \times 4$, filled with va
 - ``3_4_12_invalid_train.txt``
 - ``3_4_12_invalid_test.txt``
 
-These contain tableau that do not correspond to cluster variables, `invalid examples'. Files containing the valid examples can be obtained at \url{https://github.com/edhirst/GrassmanniansML}. We will provide code at \url{https://github.com/pnnl/ML4AlgComb} to generate the full splits from the data obtained at these two sources.
+These contain tableau that do not correspond to cluster variables, `invalid examples'. Files containing the valid examples can be obtained at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). We will provide code at [https://github.com/pnnl/ML4AlgComb](https://github.com/pnnl/ML4AlgComb) to generate the full splits from the data obtained at these two sources.
 
 We use braces $[$ and $]$ to demarcate rows of the dataset, so that
 
