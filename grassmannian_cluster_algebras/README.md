@@ -22,7 +22,7 @@ We use braces $[$ and $]$ to demarcate rows of the dataset, so that
 
 ``[[2, 3, 4, 7], [3, 5, 6, 8], [4, 9, 11, 12]]``
 
-corresponds to the tableau pictured in Figure 
+corresponds to the tableau pictured in Figure below
 
 \[1\] Chang, Wen, et al. "Quantum affine algebras and Grassmannians." Mathematische Zeitschrift 296.3 (2020): 1539-1583.
 
