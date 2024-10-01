@@ -1,4 +1,4 @@
-# Machine Learning meets Algebraic Combinatorics
+# Algebraic Combinatorics Dataset Repository
 ## A Collection of Algebraic Combinatorics Datasets for Scientific Discovery in Mathematics
 The challenge of sifting through large datasets with the goal of identifying structure and patterns is a common activity in research level mathematics. As an obvious example, many careers have been spent looking for patterns in the set of prime numbers. Since modern machine learning is increasingly capable of pulling subtle patterns out of highly structured, complicated datasets at scale, there is hope that data-driven approaches may be able to accelerate the pace of research in mathematics.
 
