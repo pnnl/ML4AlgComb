@@ -10,7 +10,7 @@ Among the many algebraic-combinatorial properties of Grassmannians is an algebra
 
 The datasets can be found [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing)
 
-## Data itself
+## The data itself
 
 The dataset we provide consists of tableau of shape $3 \times 4$, filled with values from $1,2,\dots,12$. The files we provide are: 
 - ``3_4_12_invalid_train.txt``
