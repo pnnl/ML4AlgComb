@@ -16,13 +16,13 @@ The dataset we provide consists of tableau of shape $3 \times 4$, filled with va
 - ``3_4_12_invalid_train.txt``
 - ``3_4_12_invalid_test.txt``
 
-These contain tableau that do not correspond to cluster variables, `invalid examples'. Files containing the valid examples can be obtained at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). We will provide code at [https://github.com/pnnl/ML4AlgComb](https://github.com/pnnl/ML4AlgComb) to generate the full splits from the data obtained at these two sources.
+These contain tableau that do not correspond to cluster variables, 'invalid examples'. Files containing the valid examples can be obtained at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). We will provide code at [https://github.com/pnnl/ML4AlgComb](https://github.com/pnnl/ML4AlgComb) to generate the full splits from the data obtained at these two sources.
 
 We use braces $[$ and $]$ to demarcate rows of the dataset, so that
 
 ``[[2, 3, 4, 7], [3, 5, 6, 8], [4, 9, 11, 12]]``
 
-corresponds to the tableau pictured in Figure below
+corresponds to the tableau pictured in the Figure below
 
 <img src="fig-grassmannian-tableau-example.png" alt="drawing" width="200"/>
 
