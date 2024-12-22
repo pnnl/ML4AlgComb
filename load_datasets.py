@@ -127,12 +127,12 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
     elif data == "symmetric_group_char":
         assert n in {18, 20, 22}, f"Can't handle n={n}. n must be 18, 20, or 22."
 
-        if n == 18:
-            cutoff = 294
-        elif n == 20:
-            cutoff = 573
-        elif n == 22:
-            cutoff = 1144
+        #if n == 18:
+        #    cutoff = 294
+        #elif n == 20:
+        #    cutoff = 573
+        #elif n == 22:
+        #    cutoff = 1144
         train = [
                 ast.literal_eval(line)
                 for line in open( os.path.join(folder, f"symmetric_group_char/sym_grp_char_{n}_train.txt"), 'r')
@@ -142,16 +142,16 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
                 for line in open( os.path.join(folder, f"symmetric_group_char/sym_grp_char_{n}_test.txt"), 'r')
             ]
         input_size = 2*n
-        X_train = [  p1 + [0]*(n- len(p1) ) + p2 + [0]*(n- len(p2) )   for (p1, p2, char) in train if  -cutoff <= char <= cutoff ]
-        y_train = [char for (p1, p2, char) in train if  -cutoff <= char <= cutoff]
-        X_test = [ p1 + [0]*(n- len(p1) ) +   p2 + [0]*(n- len(p2) )  for (p1, p2, char) in test if  -cutoff <= char <= cutoff ]
-        y_test = [char for (p1, p2, char) in test if  -cutoff <= char <= cutoff]
+        X_train = [  p1 + [0]*(n- len(p1) ) + p2 + [0]*(n- len(p2) )   for (p1, p2, char) in train]
+        y_train = [char for (p1, p2, char) in train]
+        X_test = [ p1 + [0]*(n- len(p1) ) +   p2 + [0]*(n- len(p2) )  for (p1, p2, char) in test]
+        y_test = [char for (p1, p2, char) in test]
 
-        output_size = 2*cutoff + 1
+        output_size = 1
         num_tokens = max(np.max(X_train), np.max(X_test)) + 1
         X_train, y_train, X_test, y_test = np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test)
         min_val = min(np.min(y_train), np.min(y_test))
-        y_train, y_test = y_train + np.abs(min_val),  y_test + np.abs(min_val)
+        y_train, y_test = y_train,  y_test
         print(f"Train set has {len(X_train)} examples")
         print(f"Test set has {len(X_test)} examples")
         print(f"Inputs are sequences of length {input_size} with entries 0 through {num_tokens-1}, which represent two concatenated integer partitions of n={n}.")
