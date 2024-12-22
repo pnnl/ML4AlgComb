@@ -7,7 +7,7 @@ The enumeration of reduced decompositions up to commutation equivalence has been
 ## Dataset 
 For a given $n$, the dataset consists of a mixture of enriched weaving patterns and non-weaving pattern (i.e., matrices with $\{1, 2, \ldots, n\}$-entries). We provide $n = 6, 7, 8$ [here](https://drive.google.com/file/d/1HsWuHpTkCOtpyTG2dFH49jzkKIZYwKG8/view?usp=sharing). The statistics are as follows:
 
-### $n = 6$
+### Weaving patterns of size $6$
 || Weaving pattern | Non-weaving pattern | 
 |----------|----------|-----------|
 | Train | $70.4 \pm 0.00$ | |
