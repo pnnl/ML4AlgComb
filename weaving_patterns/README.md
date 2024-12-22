@@ -4,7 +4,14 @@ Weaving patterns are $n \times n-1$-matrices with $\{0,1\}$-entries introduced b
 
 The enumeration of reduced decompositions up to commutation equivalence has been studied by many including Knuth and Stanley. An exact formula is likely out of reach, so asymptotic upper and lower bounds are of great interest. ML models that can detect necessary or sufficient conditions for a matrix to be a valid weaving pattern have the potential to lead to substantial improvements in the upper bound.
 
-**Dataset:** A mixture of enriched weaving patterns and non-weaving pattern matrices with $\{1, 2, \ldots, n\}$-entries. We provide $n = 6, 7, 8$ [here](https://drive.google.com/file/d/1HsWuHpTkCOtpyTG2dFH49jzkKIZYwKG8/view?usp=sharing).
+## Dataset 
+For a given $n$, the dataset consists of a mixture of enriched weaving patterns and non-weaving pattern (i.e., matrices with $\{1, 2, \ldots, n\}$-entries). We provide $n = 6, 7, 8$ [here](https://drive.google.com/file/d/1HsWuHpTkCOtpyTG2dFH49jzkKIZYwKG8/view?usp=sharing). The statistics are as follows:
+
+### $n = 6$
+|| Weaving pattern | Non-weaving pattern | 
+|----------|----------|-----------|
+| Train | $70.4 \pm 0.00$ | |
+| Test  | $85.8 \pm 0.00$ | |
 
 **Task:** Classify whether a matrix in the dataset is a weaving pattern or not. 
 
