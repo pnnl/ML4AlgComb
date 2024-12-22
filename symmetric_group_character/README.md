@@ -58,19 +58,13 @@ Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group ch
 
 ### Logistic Regression
 
-| Size | Accuracy | 
-|----------|----------|
-| $n= 18$ | $40.6 \pm 0.00%$ |
-| $n= 20$  | $40.64 \pm 0.00%$ |
-| $n= 22$  | $41.01 \pm 0.00%$ | 
+| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
+|----------|----------|-----------|------------|------------|
+| $n= 18$ | $0.0 \pm 0.0%$ ||||
+| $n= 20$  | $0.0 \pm 0.0%$ ||||
+| $n= 22$  | $0.0 \pm 0.0%$ ||||
 
-### Transformer
 
-| Size | Accuracy | 
-|----------|----------|
-| $n= 18$ | $42.19 \pm 0.00%$ |
-| $n= 20$  | $41.92 \pm 0.00%$ |
-| $n= 22$  | $41.61 \pm 0.00$ | 
 
 \[1\] Sagan, Bruce E. The symmetric group: representations, combinatorial algorithms, and symmetric functions. Vol. 203. Springer Science & Business Media, 2013.
 
