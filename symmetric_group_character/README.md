@@ -24,7 +24,7 @@ folder = # provide the file path to the directory you chose here
 X = load_datasets.get_dataset('symmetric_group_char', n=22, folder = folder)
 ```
 
-We provide files for $n = 4, 5, 6$. These can be found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing). The statistics are as follows:
+We provide files for $n = 4, 5, 6$. These can be found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing). In all cases the characters are heavily concentrated around 0 with very long tails. This likely contributes to the difficulty of the task and could be overcome with some simple pre- and post-processing. We have not chosen to do this in our baselines.
 
 ### Characters of $S_{18}$
 
@@ -33,7 +33,7 @@ We provide files for $n = 4, 5, 6$. These can be found [here](https://drive.goog
 | Train | 118,580 |
 | Test  | 29,645 |
 
-Distribution of instances
+Maximum value 16,336,320, minimum value -1223040.
 
 ### Characters of $S_{20}$
 
