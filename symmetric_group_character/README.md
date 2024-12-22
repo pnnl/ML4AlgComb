@@ -33,7 +33,7 @@ We provide files for $n = 4, 5, 6$. These can be found [here](https://drive.goog
 | Train | 118,580 |
 | Test  | 29,645 |
 
-Maximum value 16,336,320, minimum value -1223040.
+Maximum character value 16,336,320, minimum character value -1,223,040.
 
 ### Characters of $S_{20}$
 
@@ -42,6 +42,8 @@ Maximum value 16,336,320, minimum value -1223040.
 | Train | 298,661 |
 | Test  | 74,819 |
 
+Maximum character value 249,420,600, minimum character value -17,592,960.
+
 ### Characters of $S_{22}$
 
 |  | Size | 
@@ -49,9 +51,10 @@ Maximum value 16,336,320, minimum value -1223040.
 | Train | 763,109 |
 | Test  | 190,726 |
 
+Maximum character value 5,462,865,408, minimum character value -279,734,796.
+
 ## Task 
 Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group character $\chi^{\lambda}\_{\mu}$.
-
 
 ### Logistic Regression
 
