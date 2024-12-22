@@ -16,6 +16,27 @@ says that the character $\chi^{3,1,1}_{2,2,1} = −2$.
 
 We provide files for $n = 4, 5, 6$. These can be found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing). The statistics are as follows:
 
+### Characters of $S_{18}$
+
+|  | Size | 
+|----------|----------|
+| Train | 112,630 |
+| Test  | 28,216 |
+
+### Characters of $S_{20}$
+
+|  | Size | 
+|----------|----------|
+| Train | 298,661 |
+| Test  | 74,819 |
+
+### Characters of $S_{22}$
+
+|  | Size | 
+|----------|----------|
+| Train | 763,109 |
+| Test  | 190,726 |
+
 ## Task 
 Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group character $\chi^{\lambda}\_{\mu}$.
 
