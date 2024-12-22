@@ -26,8 +26,8 @@ For a given $n$, the dataset consists of a mixture of enriched weaving patterns 
 ### Weaving patterns of size $8$
 || # Weaving patterns | # Non-weaving patterns | 
 |----------|----------|-----------|
-| Train | 17,388 | 96,012 |
-| Test  | 7,310 | 41,290 |
+| Train | - | - |
+| Test  | - | - |
 
 ## Task
 Classify whether a matrix in the dataset is a weaving pattern or not. 
