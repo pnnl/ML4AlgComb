@@ -14,14 +14,27 @@ Within each file, two integer partitions are provided followed by an integer cor
 
 says that the character $\chi^{3,1,1}_{2,2,1} = −2$. 
 
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (18,20, or 22), and then (3) running the following commands
+
+`
+import sys
+import os
+import numpy as np
+import load_datasets
+
+folder = # provide the file path to the directory you chose here
+X = load_datasets.get_dataset('symmetric_group_char', n=22, folder = folder)`
+
 We provide files for $n = 4, 5, 6$. These can be found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing). The statistics are as follows:
 
 ### Characters of $S_{18}$
 
-|  | Size | 
+|  | Number of instances | 
 |----------|----------|
-| Train | 112,630 |
-| Test  | 28,216 |
+| Train | 118,580 |
+| Test  | 29,645 |
+
+Distribution of instances
 
 ### Characters of $S_{20}$
 
