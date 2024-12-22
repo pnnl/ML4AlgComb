@@ -60,9 +60,9 @@ Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group ch
 
 | Size | Logistic regression | MLP | Transformer | Guessing 0 | 
 |----------|----------|-----------|------------|------------|
-| $n= 18$ | $0.0 \pm 0.0%$ ||||
-| $n= 20$  | $0.0 \pm 0.0%$ ||||
-| $n= 22$  | $0.0 \pm 0.0%$ ||||
+| $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 
 
