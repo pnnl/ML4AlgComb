@@ -14,7 +14,7 @@ Within each file, two integer partitions are provided followed by an integer cor
 
 says that the character $\chi^{3,1,1}_{2,2,1} = −2$. 
 
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (18,20, or 22), and then (3) running the following commands
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (18,20, or 22), and then (3) running the following commands (here we choose $n = 22$)
 
 ```
 import sys
