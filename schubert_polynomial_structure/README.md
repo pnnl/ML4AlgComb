@@ -47,10 +47,17 @@ All structure constants in this case are either 0, 1, or 2.
 
 All structure constants in this case are either 0, 1, 2, 3, 4, or 5. 
 
-|  | 0 | 1 | 2 |  Total number of instances | 
-|----------|----------|----------|----------|----------|
-| Train | 42,831 | 42,619 | 170 | 85,620 |
-| Test  | 10,681 | 10,680 | 44 | 21,405 |
+
+In train 0:1052062
+In train 1:1021898
+In train 2:27110
+In train 3:568
+In train 4:3
+
+|  | 0 | 1 | 2 | 3 | 4 | 5 |  Total number of instances | 
+|----------|----------|----------|----------|----------|----------|----------|----------|
+| Train | 4,202,040 | 4,093,033 | 109,217 | 2,262 | 9 | 9 | 8,406,564 |
+| Test  | 1,052,062 | 1,021,898 | 27,110 | 568 | 3 | 0 | 2,101,641 |
 
 ## Task 
 
@@ -66,11 +73,11 @@ The Sage notebook within this directory gives the code used to generate these da
 
 ## Small model performance
 
-| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
+| Size | Logistic regression | MLP | Transformer | Guessing majority class | 
 |----------|----------|-----------|------------|------------|
-| $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 4$ | $64.4\%$ | $89.5\% \pm 2.6\%$ | $96.7\% \pm 3.5\%$| $47.7\%$ |
+| $n= 5$ | $66.7\%$ | $99.8\% \pm 0.0\%$ | $81.0\% \pm 22.1\%$| $49.9\%$ |
+| $n= 6$ | $65.5\%$ | $99.8\% \pm 0.0\%$ | $85.0\% \pm 10.9\%$| $50.1\%$ |
 
 \[1\] Bernstein, IMGI N., Israel M. Gel'fand, and Sergei I. Gel'fand. "Schubert cells and cohomology of the spaces G/P." Russian Mathematical Surveys 28.3 (1973): 1.
 
