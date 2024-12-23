@@ -64,7 +64,7 @@ The Sage notebook within this directory gives the code used to generate these da
 - For each of these pairs, extract and add to the dataset all non-zero structure constants $c^{\alpha_1}\_{\beta,\gamma}, \dots, c^{\alpha_k}\_{\beta,\gamma}$
 - Furthermore, for each $c^{\alpha_i}\_{\beta,\gamma} \neq 0$, randomly permute $\alpha_i \mapsto \alpha_i'$ to find $c^{\alpha_i'}\_{\beta,\gamma} = 0$ and $c^{\alpha_i'}\_{\beta,\gamma}$ is not already in the dataset.
 
-## Baselines
+## Small model performance
 
 | Size | Logistic regression | MLP | Transformer | Guessing 0 | 
 |----------|----------|-----------|------------|------------|
