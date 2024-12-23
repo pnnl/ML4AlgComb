@@ -65,11 +65,11 @@ Histogram of $S_{22}$ characters within the interval $[-500,500]$.
 ## Task 
 Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group character $\chi^{\lambda}\_{\mu}$.
 
-| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
+| Size | Logistic regression | MLP | Transformer | Constant prediction of zero | 
 |----------|----------|-----------|------------|------------|
-| $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $26,451,200,738.0$ |
+| $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $6,133,318,404,306.3$ |
+| $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $508,765,704,145,379.9$ |
 
 
 
