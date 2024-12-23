@@ -10,7 +10,7 @@ The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the *structure constan
 Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}\_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}$. The datasets are organized so that $\beta$ and $\gamma$ are always drawn from the symmetric group on $n$ elements (we provide datasets for $n = 3$, $4$, and $5$), but $\alpha$ may belong to a strictly larger symmetric group. Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients (but they are not balanced between quantities of non-zero coefficients). We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing). 
 
 Each line in the file corresponds to a structure constant so that 
-`[1,2,3,5,4],[1,2,3,5,4],[1,2,3,6,4,5];1]`
+`([1,2,3,5,4],[1,2,3,5,4],[1,2,3,6,4,5];1)`
 means that $c^{1 2 3 6 4 5}_{1 2 3 5 4,1 2 3 5 4} = 1$ or that in the expansion of the product $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$, $\mathfrak{S}\_{\gamma}$ has a coefficient of 1. To the point above, this instance is from $n = 5$ but note that the third permutation actually belongs to $S_6$. 
 
 The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (18, 20, or 22), and then (3) running the following commands (here we choose $n = 5$)
