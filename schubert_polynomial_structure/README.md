@@ -9,9 +9,9 @@ The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the *structure constan
 ## Dataset 
 Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}\_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}.$ Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients. We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing).
 
-Each instance is a line in the corresponding file so that 
+Each line in the file corresponds to a structure constant so that 
 `[1,2,3,5,4],[1,2,3,5,4],[1,2,3,6,4,5];1]`
-means that the structure constant $c^{1\;2\;\;3\;6\;4\;5}_{1\;2\;3\;5\;4,1\;2\;3\;5\;4} = 1$.
+means that $c^{1 2 3 6 4 5}_{1 2 3 5 4,1 2 3 5 4} = 1$ or that in the expansion of the product $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$, $\mathfrak{S}\_{\gamma}$ has a coefficient of 1.
 
 **Task:** The task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$.
 
