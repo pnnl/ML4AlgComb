@@ -52,8 +52,15 @@ All structure constants in this case are either 0, 1, 2, 3, 4, or 5.
 | Train | 42,831 | 42,619 | 170 | 85,620 |
 | Test  | 10,681 | 10,680 | 44 | 21,405 |
 
-**Task:** The task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$.
+The task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$.
 
+## Data generation
+
+The Sage notebook within this directory gives the code used to generate these datasets. The process involves:
+
+- For a chosen $n$, compute the products $\mathfrak{S}_\beta \mathfrak{S}_\gamma$ for $\beta,\gamma \in S_n$.
+- For each of these pairs, extract and record all non-zero structure constants $c^{\alpha_1}_{\beta,\gamma}, \dots, c^{\alpha_k}_{\beta,\gamma}$
+- For each $c^{\alpha_i}_{\beta,\gamma} \neq 0$, randomly permute $\alpha_i \mapsto \alpha_i'$ to find $c^{\alpha_i'}_{\beta,\gamma} = 0$ and $c^{\alpha_i'}_{\beta,\gamma}$ is not already in the dataset.
 
 ## Baselines
 
