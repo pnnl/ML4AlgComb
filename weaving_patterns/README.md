@@ -14,7 +14,17 @@ Each $n \times n − 1$ matrix is stored on single line. For instance, the matri
 
 where the matrix is represented in row-major format. An integer representing whether the matrix corresponds to a weaving pattern ‘0’ or not ‘1’ is listed after the matrix.
 
-For a given $n$, the dataset consists of a mixture of enriched weaving patterns and non-weaving pattern (i.e., matrices with $\{1, 2, \ldots, n\}$-entries). We provide $n = 6, 7, 8$ [here](https://drive.google.com/file/d/1HsWuHpTkCOtpyTG2dFH49jzkKIZYwKG8/view?usp=sharing). The statistics are as follows:
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1HsWuHpTkCOtpyTG2dFH49jzkKIZYwKG8/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (6, 7, 8), and then (3) running the following commands (here we choose $n = 7$)
+
+```
+import numpy as np
+import load_datasets 
+
+folder = # provide the file path to the directory you chose here
+X = load_datasets.get_dataset('weaving', n=7, folder = folder)
+```
+
+The task is formulated as binary classification. Class statistics are as follows:
 
 ### Weaving patterns of size $6$
 || # Weaving patterns | # Non-weaving patterns | 
