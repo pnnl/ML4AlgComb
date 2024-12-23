@@ -56,4 +56,6 @@ The ML task is to learn predictive rules for whether a $\{1,\dots,n\}$-matrix is
 | $n= 6$ | $70.4$ | $86.1 \pm 0.2$ | $0.0 \pm 0.0$| $63.4$ |
 | $n= 7$ | $85.8$ | $99.3 \pm 0.2$ | $0.0 \pm 0.0$| $85.0$ |
 
+The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
+
 \[1\] Felsner, Stefan. "On the number of arrangements of pseudolines." Proceedings of the twelfth annual Symposium on Computational Geometry. 1996.
