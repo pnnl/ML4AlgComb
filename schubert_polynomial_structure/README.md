@@ -52,7 +52,7 @@ All structure constants in this case are either 0, 1, 2, 3, 4, or 5.
 | Train | 42,831 | 42,619 | 170 | 85,620 |
 | Test  | 10,681 | 10,680 | 44 | 21,405 |
 
-## task 
+## Task 
 
 The immediate machine learning task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$ given the triple $(\alpha,\beta,\gamma)$. The broader mathematical question is finding a combinatorial interpretation of these structure constants. We hope that analyzing performant models will yield insights that will help reach this goal.
 
