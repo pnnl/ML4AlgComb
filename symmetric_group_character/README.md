@@ -35,8 +35,8 @@ In all cases the characters are heavily concentrated around 0 with very long tai
 
 Maximum character value 16,336,320, minimum character value -1,223,040.
 
-<img src="histogram_symmetric_group_18.png" alt="Histogram of $S_{18}$ characters within the interval $[-500,500]$." width="400">
-![Histogram of $S_{18}$ characters within the interval $[-500,500]$.](histogram_symmetric_group_18.png)
+<img src="histogram_symmetric_group_18.png" alt="Histogram of $S_{18}$ characters within the interval $[-500,500]$." width="500">
+Histogram of $S_{18}$ characters within the interval $[-500,500]$.
 
 ### Characters of $S_{20}$
 
@@ -47,6 +47,9 @@ Maximum character value 16,336,320, minimum character value -1,223,040.
 
 Maximum character value 249,420,600, minimum character value -17,592,960.
 
+<img src="histogram_symmetric_group_20.png" alt="Histogram of $S_{20}$ characters within the interval $[-500,500]$." width="500">
+Histogram of $S_{20}$ characters within the interval $[-500,500]$.
+
 ### Characters of $S_{22}$
 
 |  | Size | 
@@ -55,6 +58,9 @@ Maximum character value 249,420,600, minimum character value -17,592,960.
 | Test  | 190,726 |
 
 Maximum character value 5,462,865,408, minimum character value -279,734,796.
+
+<img src="histogram_symmetric_group_22.png" alt="Histogram of $S_{22}$ characters within the interval $[-500,500]$." width="500">
+Histogram of $S_{22}$ characters within the interval $[-500,500]$.
 
 ## Task 
 Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group character $\chi^{\lambda}\_{\mu}$.
