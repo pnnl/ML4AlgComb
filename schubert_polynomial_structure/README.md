@@ -7,40 +7,61 @@ $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma} = \sum\_{\alpha} c^{\alpha}\_{\bet
 The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the *structure constants*) have a combinatorial interpretation. To give an example of what we mean by combinatorial interpretation, when Schur polynomials (which can be viewed as specific case of Schubert polynomials) are multiplied together, the coefficients in the resulting product are equal to the number of semistandard tableaux satisfying certain properties.
 
 ## Dataset 
-Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}\_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}$. The datasets are organized so that $\beta$ and $\gamma$ are always drawn from the symmetric group on $n$ elements (we provide datasets for $n = 3$, $4$, and $5$), but $\alpha$ may belong to a strictly larger symmetric group. Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients. We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing). 
+Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}\_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}$. The datasets are organized so that $\beta$ and $\gamma$ are always drawn from the symmetric group on $n$ elements (we provide datasets for $n = 3$, $4$, and $5$), but $\alpha$ may belong to a strictly larger symmetric group. Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients (but they are not balanced between quantities of non-zero coefficients). We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing). 
 
 Each line in the file corresponds to a structure constant so that 
 `[1,2,3,5,4],[1,2,3,5,4],[1,2,3,6,4,5];1]`
 means that $c^{1 2 3 6 4 5}_{1 2 3 5 4,1 2 3 5 4} = 1$ or that in the expansion of the product $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$, $\mathfrak{S}\_{\gamma}$ has a coefficient of 1. To the point above, this instance is from $n = 5$ but note that the third permutation actually belongs to $S_6$. 
+
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (18, 20, or 22), and then (3) running the following commands (here we choose $n = 5$)
+
+```
+import numpy as np
+import load_datasets 
+
+folder = # provide the file path to the directory you chose here
+X = load_datasets.get_dataset('schubert', n=5, folder = folder)
+```
+
+The basic statistics of the datasets are as follows
+
+### Permutations of size $4$
+
+All structure constants in this case are either 0 or 1 (so the classification problem is binary). 
+
+|  | 0 | 1 | Total number of instances | 
+|----------|----------|----------|----------|
+| Train | 851 | 833 | 1,684 |
+| Test  | 201 | 220 | 421 |
+
+### Permutations of size $5$
+
+All structure constants in this case are either 0, 1, or 2. 
+
+|  | 0 | 1 | 2 |  Total number of instances | 
+|----------|----------|----------|----------|----------|
+| Train | 42,831 | 42,619 | 170 | 85,620 |
+| Test  | 10,681 | 10,680 | 44 | 21,405 |
+
+### Permutations of size $6$
+
+All structure constants in this case are either 0, 1, 2, 3, 4, or 5. 
+
+|  | 0 | 1 | 2 |  Total number of instances | 
+|----------|----------|----------|----------|----------|
+| Train | 42,831 | 42,619 | 170 | 85,620 |
+| Test  | 10,681 | 10,680 | 44 | 21,405 |
 
 **Task:** The task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$.
 
 
 ## Baselines
 
-### MLP
-
-| Model Type | Accuracy | # of Layers |
-|----------|----------|----------|
-| $n = 3$ | $82.4 %± 0.00%$ | $2$ |
-| $n = 4$ | $93.3 %± 0.00%$ | $4$ |
-| $n = 5$ | $99.8 %± 0.00%$ | $2$ |
-
-### Logistic Regression
-
-| Size | Accuracy | 
-|----------|----------|
-| $n= 3$ | $76.5 \pm 0.00%$ |
-| $n= 4$  | $64.4 \pm 0.00$ |
-| $n= 5$  | $66.7 \pm 0.00%$ | 
-
-### Transformer
-
-| Size | Accuracy | 
-|----------|----------|
-| $n= 3$ | $72.9 \pm 0.03%$ |
-| $n= 4$  | $97.7 \pm 0.00%$ |
-| $n= 5$  | $97.3 \pm 0.00%$ | 
+| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
+|----------|----------|-----------|------------|------------|
+| $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 \[1\] Bernstein, IMGI N., Israel M. Gel'fand, and Sergei I. Gel'fand. "Schubert cells and cohomology of the spaces G/P." Russian Mathematical Surveys 28.3 (1973): 1.
 
