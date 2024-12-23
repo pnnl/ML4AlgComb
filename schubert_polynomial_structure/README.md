@@ -7,11 +7,11 @@ $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma} = \sum\_{\alpha} c^{\alpha}\_{\bet
 The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the *structure constants*) have a combinatorial interpretation. To give an example of what we mean by combinatorial interpretation, when Schur polynomials (which can be viewed as specific case of Schubert polynomials) are multiplied together, the coefficients in the resulting product are equal to the number of semistandard tableaux satisfying certain properties.
 
 ## Dataset 
-Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}\_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}.$ Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients. We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing).
+Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}\_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}$. The datasets are organized so that $\beta$ and $\gamma$ are always drawn from the symmetric group on $n$ elements (we provide datasets for $n = 3$, $4$, and $5$), but $\alpha$ may belong to a strictly larger symmetric group. Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients. We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing). 
 
 Each line in the file corresponds to a structure constant so that 
 `[1,2,3,5,4],[1,2,3,5,4],[1,2,3,6,4,5];1]`
-means that $c^{1 2 3 6 4 5}_{1 2 3 5 4,1 2 3 5 4} = 1$ or that in the expansion of the product $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$, $\mathfrak{S}\_{\gamma}$ has a coefficient of 1.
+means that $c^{1 2 3 6 4 5}_{1 2 3 5 4,1 2 3 5 4} = 1$ or that in the expansion of the product $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$, $\mathfrak{S}\_{\gamma}$ has a coefficient of 1. To the point above, this instance is from $n = 5$ but note that the third permutation actually belongs to $S_6$. 
 
 **Task:** The task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$.
 
