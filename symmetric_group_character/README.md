@@ -35,6 +35,8 @@ In all cases the characters are heavily concentrated around 0 with very long tai
 
 Maximum character value 16,336,320, minimum character value -1,223,040.
 
+![Histogram of $S_{18}$ characters within the interval $[-500,500]$.](histogram_symmetric_group_18.png)
+
 ### Characters of $S_{20}$
 
 |  | Size | 
