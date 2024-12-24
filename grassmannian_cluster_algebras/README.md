@@ -26,26 +26,13 @@ corresponds to the tableau pictured in the Figure below
 
 <img src="fig-grassmannian-tableau-example.png" alt="drawing" width="200"/>
 
-## Simple baselines
+## Small model performance
 
-### Logistic Regression
-
-| Dataset | Test Accuracy | 
-|----------|----------|
-| $3 \times 4$ | $78.2$% |
-
-### MLP
-
-| Dataset | Learning Rate | Hidden Dimension | Depth | Test Accuracy | 
-|----------|----------|----------|----------|----------|
-| $3 \times 4$ | 0.001 | 256 | 4 | $99.3$% | 
-
-
-### Transformer
-
-| Dataset | Learning Rate | Hidden Dimension | Depth | Heads | Test Accuracy | 
-|----------|----------|----------|----------|----------|----------|
-| $3 \times 4$ | 0.0005 | 80 | 6 | 4 | $99.6$% |
+| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
+|----------|----------|-----------|------------|------------|
+| $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 \[1\] Chang, Wen, et al. "Quantum affine algebras and Grassmannians." Mathematische Zeitschrift 296.3 (2020): 1539-1583.
 
