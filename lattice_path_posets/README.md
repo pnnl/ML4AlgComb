@@ -8,34 +8,14 @@
 
 Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9KtJ1T4RQaGsJNz/view?usp=sharing)
 
-## Baselines
+## Small model performance
 
-### MLP
-
-| Size | Accuracy | # of Layers |
-|----------|----------|----------|
-| $n= 10$ | $93.1 \pm 0.00$ | 3 |
-| $n= 11$  | $96.9 \pm 0.00$ | 4 |
-| $n= 12$  | $97.2 \pm 0.00$ | 3 |
-| $n= 13$  | $98.1 \pm 0.00$ | 3 |
-
-### Logistic Regression
-
-| Size | Accuracy | 
-|----------|----------|
-| $n= 9$ | $66.2 \pm 0.00%$ |
-| $n= 10$  | $66.3 \pm 0.00%$ |
-| $n= 11$  | $66.5 \pm 0.00%$ | 
-| $n= 12$  | $75 \pm 0.00%$ | 
-
-### Transformer
-
-| Size | Accuracy | 
-|----------|----------|
-| $n= 9$ | $66.2 \pm 0.00%$ |
-| $n= 10$  | $66.3 \pm 0.00%$ |
-| $n= 11$  | $33.5 \pm 0.00%$ | 
-| $n= 12$  | $33.4 \pm 0.00%$ | 
+| Size | Logistic regression | MLP | Transformer | TODO | 
+|----------|----------|-----------|------------|------------|
+| $n= 10$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 11$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 12$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 13$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 \[1\] Schiffler, Ralf. "Perfect matching problems in cluster algebras and number theory." arXiv preprint arXiv:2302.02185 (2023).
 
