@@ -10,14 +10,13 @@ The goal of this benchmark is to see whether a model can learn the RSK algorithm
 
 The datasets can be downloaded [here](https://drive.google.com/file/d/1CfuxD_XgTefbEduxJnXgXoUOt-GY-smq/view?usp=sharing). 
 
-## Baselines
+## Small model performance
 
-### Transformer
-
-| Permutation Size | MSE | # of heads | hidden dimenson | 
-|----------|----------|----------|----------|
-| $n = 8$ | $0.0825 %± 0.00%$ | $4$ | 128
-| $n = 9$ | $0.076 %± 0.00%$ | $4$ | 128 
+| Size | Logistic regression | MLP | Transformer | Guessing majority class | 
+|----------|----------|-----------|------------|------------|
+| $n= 8$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 9$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 10$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 \[1\] Robinson, G. de B. "On the representations of the symmetric group." American Journal of Mathematics (1938): 745-760.
 
