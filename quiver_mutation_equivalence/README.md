@@ -10,14 +10,12 @@ Recent work has explored whether deep learning models can learn to correctly pre
 
 Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPIgciuGG9HfvrKWC/view?usp=sharing)
 
-## Baselines
+## Small model performance
 
-### MLP
-
-| Model Type | Accuracy | 
+| Architecture  | Accuracy | 
 |----------|----------|
-| MLP | $88.7 \pm 0.00\%$ | 
-| Logistic regression | $65.7 \pm 0.00$ |
-| Transformer | $50.0 \pm 0.00$ | 
+| Logistic regression |  | 
+| MLP |  | 
+| Transformer |  |  
 
 \[1\] Bao, Jiakang, et al. "Machine learning algebraic geometry for physics." arXiv preprint arXiv:2204.10334 (2022).
