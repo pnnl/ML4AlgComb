@@ -18,6 +18,8 @@ but this one does not
 
 <img src="ssyt_invalid.png" alt="drawing" width="200"/>
 
+Note that both are genuine SSYT of shape $3 \times 4$ with entries from $\{1, \dots, 12\}$.
+
 ## Dataset 
 
 The dataset consists of a collection of rectangular SSYT each with a label indicating whether they index a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. The dataset we provide consists of tableau of shape $3 \times 4$, filled with values from $1,2,\dots,12$. The files we provide are: 
