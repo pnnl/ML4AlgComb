@@ -10,33 +10,13 @@ Let $\sigma  = a_1 \ldots a_n \in S_n$ be a permutation containing at least one 
 
 The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4KzR9dVUaDhNtUPnumeuX/view?usp=sharing)
 
-## Baselines
+## Small model performance
 
-### MLP
-
-| Model Type | Accuracy | # of Layers |
-|----------|----------|----------|
-| $n = 8$ | $85.8 %± 0.00%$ | $3$ |
-| $n = 9$ | $89.5 %± 0.00%$ | $4$ |
-| $n = 10$ | $99.4%± 0.00%$ | $4$ |
-| $n = 11$ | $99.2%± 0.00%$ | $4$ |
-| $n = 12$ | $98.6%± 0.00%$ | $4$ |
-
-### Logistic Regression
-
-| Size | Accuracy | 
-|----------|----------|
-| $n= 8$ | $64.6 \pm 0.00$ |
-| $n= 9$  | $70.8 \pm 0.00%$ |
-| $n= 10$  | $94.2 \pm 0.00%$ | 
-
-### Transformer
-
-| Size | Accuracy | 
-|----------|----------|
-| $n= 8$ | $72.8 \pm 0.01%$ |
-| $n= 9$  | $83.7 \pm 0.00%$ |
-| $n= 10$  | $94.2 \pm 0.00%$ | 
+| Size | Logistic regression | MLP | Transformer | TODO | 
+|----------|----------|-----------|------------|------------|
+| $n= 10$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 11$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 12$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 \[1\] Gaetz, Christian, and Yibo Gao. "On the minimal power of $ q $ in a Kazhdan-Lusztig polynomial." arXiv preprint arXiv:2303.13695 (2023).
 
