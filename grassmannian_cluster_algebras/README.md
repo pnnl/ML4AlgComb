@@ -28,11 +28,11 @@ corresponds to the tableau pictured in the Figure below
 
 ## Small model performance
 
-| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
-|----------|----------|-----------|------------|------------|
-| $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| Architecture  | Accuracy | 
+|----------|----------|
+| Logistic regression |  | 
+| MLP |  | 
+| Transformer |  | 
 
 \[1\] Chang, Wen, et al. "Quantum affine algebras and Grassmannians." Mathematische Zeitschrift 296.3 (2020): 1539-1583.
 
