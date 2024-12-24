@@ -24,28 +24,14 @@ The files we provide are:
 - ``processed_S5_train.txt``
 - ``processed_S6_test.txt``
 
-## Prediction of the coefficient on $q^2$
+## Small model performance
 
-### Logistic Regression
+### Prediction of the coefficient on $q^2$
 
-| Dataset Size | Test Accuracy | 
-|----------|----------|
-| $n= 8$ | $78.2$% |
-| $n= 9$  | $57.0$% |
-
-### MLP
-
-| Dataset Size | Learning Rate | Hidden Dimension | Depth | Test Accuracy | 
-|----------|----------|----------|----------|----------|
-| $n= 8$ | 0.001 | 256 | 4 | $87.2$% | 
-| $n= 9$  | 0.001 | 256 | 4 | $80.1$% |
-
-### Transformer
-
-| Dataset Size | Learning Rate | Hidden Dimension | Depth | Heads | Test Accuracy | 
-|----------|----------|----------|----------|----------|----------|
-| $n= 8$ | 0.0005 | 80 | 6 | 8 | $89.0$% |
-| $n= 9$  | 0.0001 | 80 | 6 | 4 | $96.9$% |
+| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
+|----------|----------|-----------|------------|------------|
+| $n= 5$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 6$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 \[1\] Kazhdan, David, and George Lusztig. "Representations of Coxeter groups and Hecke algebras." Inventiones mathematicae 53.2 (1979): 165-184.
 
