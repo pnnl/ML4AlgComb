@@ -20,13 +20,14 @@ but this one does not
 
 Note that both are genuine SSYT of shape $3 \times 4$ with entries from $\{1, \dots, 12\}$.
 
-## Dataset 
+## Dataset
 
-The dataset consists of a collection of rectangular SSYT each with a label indicating whether they index a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. The dataset we provide consists of tableau of shape $3 \times 4$, filled with values from $1,2,\dots,12$. The files we provide are: 
+The dataset consists of a collection of rectangular SSYT each with a label indicating whether it indexs a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. The dataset we provide consists of tableau of shape $3 \times 4$, filled with values from $1,2,\dots,12$. The files we provide are: 
 - ``3_4_12_invalid_train.txt``
 - ``3_4_12_invalid_test.txt``
+and can be found [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing).
 
-These contain tableau that do not correspond to cluster variables, 'invalid examples'. Files containing the valid examples can be obtained at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). We will provide code at [https://github.com/pnnl/ML4AlgComb](https://github.com/pnnl/ML4AlgComb) to generate the full splits from the data obtained at these two sources.
+These contain tableau that do not correspond to cluster variables, 'invalid examples'. Files containing the valid examples were computed by others in [\[2\]](https://arxiv.org/abs/2212.09771) and can be obtained at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML).  In this directory we provide code to generate the full splits from the data obtained from these two sources.
 
 We use braces $[$ and $]$ to demarcate rows of the dataset, so that
 
@@ -36,13 +37,20 @@ corresponds to the tableau pictured in the Figure below
 
 <img src="fig-grassmannian-tableau-example.png" alt="drawing" width="200"/>
 
+Dataset statistics are as follows
+
+|  | SSYT indexes a cluster variable | SSYT does not index a cluster variable | Total number of instances | 
+|----------|----------|----------|----------|
+| Train | 74,329 | 74,329 | 148,658 |
+| Test  | 18,582 | 18,582 | 37,164 |
+
 ## Task
 
-Predict whether a Young tableaux indexes a cluster variable.
-
-The datasets can be found [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing)
+The immediate machine learning task consists of predicting whether a SSYT indexes a cluster variable or not. The hope is that a performant model will have learned simple features that may lead to a concise characterization of those SSYT that index cluster variables. 
 
 ## Data generation
+
+The positive sampled for this dataset were generated for the paper [\[2\]](https://arxiv.org/abs/2212.09771). The code for this can be found at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). 
 
 ## Small model performance
 
