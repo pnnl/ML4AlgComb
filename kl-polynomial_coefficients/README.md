@@ -4,7 +4,7 @@ Kazhdan-Lusztig (KL) polynomials are polynomials in a variable $q$ and with inte
 
 $P_{\sigma,\nu} = 1 + 16q + 103q^2 + 337q^3 + 566q^4 + 529q^5 + 275q^6 + 66q^7 + 3q^8.$
 
-KL polynomials have deep connections throughout several areas of mathematics. For example, KL polynomials are related to the dimensions of intersection homology in Schubert calculus, the study of the Hecke algebra, and representation theory of the symmetric group. They can be computed via a recursive formula \[1\], nevertheless, in many ways they remain mysterious. For instance, there is no known closed formula for the degree of $P_{\sigma,\nu}(q)$.
+KL polynomials have deep connections throughout several areas of mathematics. For example, KL polynomials are related to the dimensions of intersection homology in Schubert calculus, the study of the Hecke algebra, and representation theory of the symmetric group. They can be computed via a recursive formula [\[1\]](https://link.springer.com/article/10.1007/BF01390031), nevertheless, in many ways they remain mysterious. For instance, there is no known closed formula for the degree of $P_{\sigma,\nu}(q)$.
 
 One type of question of special interest is the value of coefficient on the terms of $q$ in $P_{\sigma,\nu}(q)$. Perhaps most well-known is the question of the coefficient on term $q^{\ell(\sigma) - \ell(\nu)-1/2}$ (where $\ell(x)$ is a statistic called the length of the permutation), which is known as the $\mu$-coefficient. Better understanding of this and other coefficients has the potential to shed considerable light on other aspects of this family of polynomials. 
 
