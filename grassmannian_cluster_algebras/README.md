@@ -37,6 +37,16 @@ corresponds to the tableau pictured in the Figure below
 
 <img src="fig-grassmannian-tableau-example.png" alt="drawing" width="200"/>
 
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing) in your chosen `directory` and then running the following commands (here we choose $n = 5$)
+
+```
+import numpy as np
+import load_datasets 
+
+folder = # provide the file path to the directory you chose here
+X = load_datasets.get_dataset('grassmannian_cluster_algebras', n=6, folder = folder)
+```
+
 Dataset statistics are as follows
 
 |  | SSYT indexes a cluster variable | SSYT does not index a cluster variable | Total number of instances | 
