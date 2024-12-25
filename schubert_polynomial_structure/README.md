@@ -52,13 +52,6 @@ All structure constants in this case are either 0, 1, or 2.
 
 All structure constants in this case are either 0, 1, 2, 3, 4, or 5. 
 
-
-In train 0:1052062
-In train 1:1021898
-In train 2:27110
-In train 3:568
-In train 4:3
-
 |  | 0 | 1 | 2 | 3 | 4 | 5 |  Total number of instances | 
 |----------|----------|----------|----------|----------|----------|----------|----------|
 | Train | 4,202,040 | 4,093,033 | 109,217 | 2,262 | 9 | 9 | 8,406,564 |
