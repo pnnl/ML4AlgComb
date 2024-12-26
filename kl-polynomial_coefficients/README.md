@@ -30,8 +30,8 @@ The files we provide are:
 
 | Size | Logistic regression | MLP | Transformer | Guessing 0 | 
 |----------|----------|-----------|------------|------------|
-| $n= 5$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 6$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 8$ | 78.2% | 87.0 $\pm$ 0.5 | $86.1 \pm 2.2$| TO ADD |
+| $n= 9$ | 57.0% | 87.9 $\pm$ 0.5% | TO ADD | TO ADD |
 
 \[1\] Kazhdan, David, and George Lusztig. "Representations of Coxeter groups and Hecke algebras." Inventiones mathematicae 53.2 (1979): 165-184.
 
