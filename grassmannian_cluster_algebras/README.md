@@ -66,9 +66,9 @@ The positive sampled for this dataset were generated for the paper [\[2\]](https
 
 | Architecture  | Accuracy | 
 |----------|----------|
-| Logistic regression |  | 
-| MLP |  | 
-| Transformer |  | 
+| Logistic regression | 65.7% | 
+| MLP | 99.3% $\pm$ 0.1% | 
+| Transformer | 99.5% $\pm$ 0.1% | 
 
 \[1\] Chang, Wen, et al. "Quantum affine algebras and Grassmannians." Mathematische Zeitschrift 296.3 (2020): 1539-1583.
 
