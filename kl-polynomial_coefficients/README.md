@@ -2,27 +2,71 @@
 
 Kazhdan-Lusztig (KL) polynomials are polynomials in a variable $q$ and with integer coefficients that (for our purposes) are indexed by a pair of permutations \[1\]. We will write the KL polynomial associated with permutations $\sigma$ and $\nu$ as $P_{\sigma,\nu}(q)$. For example, the KL polynomial associated with permutations $\sigma = 1$ $4$ $3$ $2$ $7$ $6$ $5$ $10$ $9$ $8$ $11$ and $\nu = 4$ $6$ $7$ $8$ $9$ $10$ $1$ $11$ $2$ $3$ $5$ is
 
-$P_{\sigma,\nu} = 1 + 16q + 103q^2 + 337q^3 + 566q^4 + 529q^5 + 275q^6 + 66q^7 + 3q^8.$
+$P_{\sigma,\nu}(q) = 1 + 16q + 103q^2 + 337q^3 + 566q^4 + 529q^5 + 275q^6 + 66q^7 + 3q^8.$
 
-KL polynomials have deep connections throughout several areas of mathematics. KL polynomials are related to the dimensions of intersection homology in Schubert calculus, the study of the Hecke algebra, and representation theory of the symmetric group. They can be computed via a recursive formula [\[1\]](https://link.springer.com/article/10.1007/BF01390031), nevertheless, in many ways they remain mysterious. For instance, there is no known closed formula for the degree of $P_{\sigma,\nu}(q)$.
+KL polynomials have deep connections throughout several areas of mathematics. For example, KL polynomials are related to the dimensions of intersection homology in Schubert calculus, the study of the Hecke algebra, and representation theory of the symmetric group. They can be computed via a recursive formula [\[1\]](https://link.springer.com/article/10.1007/BF01390031), nevertheless, in many ways they remain mysterious. For instance, there is no known closed formula for the degree of $P_{\sigma,\nu}(q)$.
 
 One family of questions revolve around the coefficients of $P_{\sigma,\nu}(q)$. For instance, it has been hypothesized that the coefficient on the term $q^{\ell(\sigma) - \ell(\nu)-1/2}$ (where $\ell(x)$ is a statistic called the length of the permutation), which is known as the $\mu$-coefficient, has a combinatorial interpretation but currently this is not known. Better understanding of this and other coefficients would be of significant interest to mathematicians from a range of fields.
 
-**Dataset:** Each instance in this dataset consists of a pair of permutations on $n$, $\sigma$ and $\nu$, along with the coefficients of $P_{\sigma,\nu}(q)$. We provide $n = 8,9$.
+**Dataset:** Each instance in this dataset consists of a pair of permutations of $n$, $x$ and $w$, along with the coefficients of the polynomial $P_{x,w}(q)$. We provide full datasets for $n = 5,6$. Each instance corresponds to a line in the train/test files. So if $x =$ $1$ $2$ $3$ $4$ $5$ $6$ and $w=4$ $5$ $6$ $1$ $2$ $3$ and $P_{v,w}(q) = 1 + 4q + 4q^2 + q^3$ then this is written as the line
 
-**Task:** The task to predict the coefficients of $P_{\sigma,\nu}(q)$ given $\sigma$ and $\nu$ (below, we only show results for predicting the coefficient on $q^2$).
+``123456, 456123, 1, 4, 4, 1``
+
+Note that coefficients are listed by increasing degree of the power of $q$ (e.g., the coefficient on $1$ comes first, then the coefficient on $q$, then the coefficient on $q^2$, etc.)
+
+The files we provide are: 
+- ``kl_polynomials_5_train.txt``
+- ``kl_polynomials_5_test.txt``
+- ``kl_polynomials_6_train.txt``
+- ``kl_polynomials_6_test.txt``
+- ``kl_polynomials_7_train.txt``
+- ``kl_polynomials_7_test.txt``
+- ``kl_polynomials_8_train.txt``
+- ``kl_polynomials_8_test.txt``
+
+The datasets can be loaded by: (1) unzipping the file found ADD ME in your chosen `directory`, (2) choosing a value for $n$ (5 or 6), and then (3) running the following commands (here we choose $n = 6$)
+
+```
+import numpy as np
+import load_datasets 
+
+folder = # provide the file path to the directory you chose here
+X = load_datasets.get_dataset('schubert', n=5, folder = folder)
+```
+
+The basic statistics of the datasets are as follows
+
+### Permutations of size $4$
+
+All structure constants in this case are either 0 or 1 (so the classification problem is binary). 
+
+|  | 0 | 1 | Total number of instances | 
+|----------|----------|----------|----------|
+| Train | 851 | 833 | 1,684 |
+| Test  | 201 | 220 | 421 |
+
+### Permutations of size $5$
+
+All structure constants in this case are either 0, 1, or 2. 
+
+|  | 0 | 1 | 2 |  Total number of instances | 
+|----------|----------|----------|----------|----------|
+| Train | 42,831 | 42,619 | 170 | 85,620 |
+| Test  | 10,681 | 10,680 | 44 | 21,405 |
+
+### Permutations of size $6$
+
+All structure constants in this case are either 0, 1, 2, 3, 4, or 5. 
+
+|  | 0 | 1 | 2 | 3 | 4 | 5 |  Total number of instances | 
+|----------|----------|----------|----------|----------|----------|----------|----------|
+| Train | 4,202,040 | 4,093,033 | 109,217 | 2,262 | 9 | 9 | 8,406,564 |
+| Test  | 1,052,062 | 1,021,898 | 27,110 | 568 | 3 | 0 | 2,101,641 |
+
+**Task:** The ML task is to predict the coefficients of $P_{\sigma,\nu}(q)$ given $\sigma$ and $\nu$. We break this up into a separate task for each coefficient though one could choose to predict all simultaneously. 
 
 We link to datasets generated by Greg Warrington and associated with \[2\]. The dataset for $n = 8$ can be found [here](https://gswarrin.w3.uvm.edu/research/klc/eps-s8-klps) and the dataset for $n = 9$ can be found [here](https://gswarrin.w3.uvm.edu/research/klc/eps-s9-klps). We provide code to do formatting and make official train/test splits in the this repo.
 
-## Data itself
-
-If $v =$ $0$ $2$ $1$ $3$ $5$ $4$ $6$ $9$ $7$ $8$ and $w=2$ $3$ $0$ $5$ $9$ $6$ $7$ $8$ $1$ $4$ then $P_{v,w}(q) = 4q^4+12q^3+13q^2+6q+1$ and this is written as the line
-
-``0213546978 2305967814 1,6,13,12,4.``
-
-The files we provide are: 
-- ``processed_S5_train.txt``
-- ``processed_S6_test.txt``
 
 ## Small model performance
 
@@ -30,8 +74,8 @@ The files we provide are:
 
 | Size | Logistic regression | MLP | Transformer | Guessing 0 | 
 |----------|----------|-----------|------------|------------|
-| $n= 8$ | 78.2% | 87.0 $\pm$ 0.5 | $86.1 \pm 2.2$| TO ADD |
-| $n= 9$ | 57.0% | 87.9 $\pm$ 0.5% | TO ADD | TO ADD |
+| $n= 5$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 6$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 \[1\] Kazhdan, David, and George Lusztig. "Representations of Coxeter groups and Hecke algebras." Inventiones mathematicae 53.2 (1979): 165-184.
 
