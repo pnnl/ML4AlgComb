@@ -110,6 +110,8 @@ TODO
 
 Datasets were generated using SageMath. A SageMath notebook with the code to do this can be found in this repository.
 
+## References
+
 \[1\] Kazhdan, David, and George Lusztig. "Representations of Coxeter groups and Hecke algebras." Inventiones mathematicae 53.2 (1979): 165-184.
 
 \[2\] Warrington, Gregory S. "Equivalence classes for the μ-coefficient of Kazhdan–Lusztig polynomials in Sn." Experimental Mathematics 20.4 (2011): 457-466.
