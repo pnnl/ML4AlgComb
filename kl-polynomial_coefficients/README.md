@@ -99,6 +99,8 @@ The broader problem is establish a better understanding of the coefficients of K
 
 ### Prediction of the coefficient on $q^2$
 
+TODO
+
 | Size | Logistic regression | MLP | Transformer | Guessing 0 | 
 |----------|----------|-----------|------------|------------|
 | $n= 5$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
