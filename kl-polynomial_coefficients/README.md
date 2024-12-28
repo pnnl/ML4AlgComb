@@ -61,23 +61,37 @@ We summarize the different values of each of the coefficients in this case here
 | Train | 11,518 | 2 | 11,520 |
 | Test  | 2,878 | 2 | 2,880 |
 
-### Permutations of size $5$
+### Kazhdan-Lusztig Polynomials for Permutations of $6$ elements
 
-All structure constants in this case are either 0, 1, or 2. 
+We summarize the different values of each of the coefficients in this case here
 
-|  | 0 | 1 | 2 |  Total number of instances | 
-|----------|----------|----------|----------|----------|
-| Train | 42,831 | 42,619 | 170 | 85,620 |
-| Test  | 10,681 | 10,680 | 44 | 21,405 |
+**Constant Terms:**
 
-### Permutations of size $6$
+|  | 0 | 1 | Total number of instances | 
+|----------|----------|----------|----------|
+| Train | 335,976 | 78,744 | 414,720 |
+| Test  | 84,017 | 19,663 | 103,680 |
 
-All structure constants in this case are either 0, 1, 2, 3, 4, or 5. 
+**Coefficients on $q$:**
 
-|  | 0 | 1 | 2 | 3 | 4 | 5 |  Total number of instances | 
-|----------|----------|----------|----------|----------|----------|----------|----------|
-| Train | 4,202,040 | 4,093,033 | 109,217 | 2,262 | 9 | 9 | 8,406,564 |
-| Test  | 1,052,062 | 1,021,898 | 27,110 | 568 | 3 | 0 | 2,101,641 |
+|  | 0 | 1 | 2 | 3 | 4 | Total number of instances | 
+|----------|----------|----------|----------|----------|----------|----------|
+| Train | 396,951 | 13,646 | 3,524 | 542 | 57 | 414,720 |
+| Test  | 99,297 | 3,374 | 878 | 110 | 21 | 103,680 |
+
+**Coefficient on $q^2$:**
+
+|  | 0 | 1 | 2 | 3 | 4 | Total number of instances | 
+|----------|----------|----------|----------|----------|----------|----------|
+| Train | 413,068 | 1,383 | 211 | 32 | 26 | 414,720 |
+| Test  | 103,284 | 331 | 41 | 16 | 8 | 103,680 |
+
+**Coefficient on $q^3$:**
+
+|  | 0 | 1 | Total number of instances | 
+|----------|----------|----------|----------|
+| Train | 414,708 | 12 | 414,720 |
+| Test  | 103,674 | 6 | 103,680 |
 
 **Task:** The ML task is to predict the coefficients of $P_{\sigma,\nu}(q)$ given $\sigma$ and $\nu$. We break this up into a separate task for each coefficient though one could choose to predict all simultaneously. 
 
