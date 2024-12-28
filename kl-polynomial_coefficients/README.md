@@ -36,14 +36,30 @@ X = load_datasets.get_dataset('schubert', n=5, folder = folder)
 
 The basic statistics of the datasets are as follows
 
-### Permutations of size $4$
+### Kazhdan-Lusztig Polynomials for Permutations of $5$ elements
 
-All structure constants in this case are either 0 or 1 (so the classification problem is binary). 
+We summarize the different values of each of the coefficients in this case here
+
+**Constant Terms:**
 
 |  | 0 | 1 | Total number of instances | 
 |----------|----------|----------|----------|
-| Train | 851 | 833 | 1,684 |
-| Test  | 201 | 220 | 421 |
+| Train | 8,500 | 3,020 | 11,520 |
+| Test  | 2,119 | 761 | 2,880 |
+
+**Coefficients on $q$:**
+
+|  | 0 | 1 | 2 | Total number of instances | 
+|----------|----------|----------|----------|----------|
+| Train | 11,210 | 274 | 36 | 11,520 |
+| Test  | 2,796 | 76 | 8 | 2,880 |
+
+**Coefficient on $q^2$:**
+
+|  | 0 | 1 | Total number of instances | 
+|----------|----------|----------|----------|
+| Train | 11,518 | 2 | 11,520 |
+| Test  | 2,878 | 2 | 2,880 |
 
 ### Permutations of size $5$
 
