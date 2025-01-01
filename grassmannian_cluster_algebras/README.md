@@ -60,7 +60,7 @@ The immediate machine learning task consists of predicting whether a SSYT indexe
 
 ## Data generation
 
-The positive examples sampled for this dataset were generated using code from the paper [\[2\]](https://arxiv.org/abs/2212.09771). This code can be found at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). We generated our own negative examples because we found that the model learned some spurious correlations as a result of the sampling strategy used in [\[2\]](https://arxiv.org/abs/2212.09771). To sample random rectangular SSYT, we took advantage of the [`random_element()`](https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/tableau.html#sage.combinat.tableau.SemistandardTableaux_shape.random_element) method in `Tableaux` class in Sage.
+The positive examples sampled for this dataset were generated using code from the paper [\[2\]](https://arxiv.org/abs/2212.09771). This code can be found at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). We generated our own negative examples because we found that the model learned some spurious correlations as a result of the sampling strategy used in [\[2\]](https://arxiv.org/abs/2212.09771). To sample random rectangular SSYT, we took advantage of the [`random_element()`](https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/tableau.html#sage.combinat.tableau.SemistandardTableaux_shape.random_element) method in `Tableaux` in the class in Sage.
 
 ## Small model performance
 
