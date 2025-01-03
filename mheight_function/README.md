@@ -20,8 +20,8 @@ The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4Kz
 
 | Size | Logistic regression | MLP | Transformer | TODO | 
 |----------|----------|-----------|------------|------------|
-| $n= 9$ | $70.8\%$ | $92.1\% \pm 0.3\%$ | $82.8\% \pm 1.1\%$| $0.0$ |
-| $n= 10$ | $94.2\%$ | $99.9\% \pm 0.0\%$ | $99.9\% \pm 0.0\%$| $0.0$ |
+| $n= 9$ | $70.8\\%$ | $92.1\\% \pm 0.3\\%$ | $82.8\\% \pm 1.1\\%$| $0.0$ |
+| $n= 10$ | $94.2\\%$ | $99.9\\% \pm 0.0\\%$ | $99.9\\% \pm 0.0\\%$| $0.0$ |
 
 \[1\] Gaetz, Christian, and Yibo Gao. "On the minimal power of $ q $ in a Kazhdan-Lusztig polynomial." arXiv preprint arXiv:2303.13695 (2023).
 
