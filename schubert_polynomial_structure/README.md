@@ -70,7 +70,7 @@ The Sage notebook within this directory gives the code used to generate these da
 - Furthermore, for each $c^{\alpha_i}\_{\beta,\gamma} \neq 0$, randomly permute $\alpha_i \mapsto \alpha_i'$ to find $c^{\alpha_i'}\_{\beta,\gamma} = 0$ and $c^{\alpha_i'}\_{\beta,\gamma}$ is not already in the dataset.
 
 ## Small model performance
-
+Test
 | Size | Logistic regression | MLP | Transformer | Guessing majority class | 
 |----------|----------|-----------|------------|------------|
 | $n= 4$ | $64.4\%$ | $89.5\% \pm 2.6\%$ | $96.7\% \pm 3.5\%$| $47.7\%$ |
