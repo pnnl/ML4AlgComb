@@ -16,6 +16,41 @@ Permutations of size $n$ labeled by their mHeight. We provide datasets for $n = 
 
 The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4KzR9dVUaDhNtUPnumeuX/view?usp=sharing)
 
+### Permutations of size $9$
+
+For $n = 9$, mHeight takes values 0, 1, 2, 3, 4, 5. 
+
+| mHeight value  | 0 | 1 | 2 | 3 | 4 | 5 |  Total number of instances | 
+|----------|----------|----------|----------|----------|----------|----------|----------|
+| Train | 49,166 | 3,107 | 500 | 80 | 10 | 1 | |
+| Test  | 12,243 | 813 | 142 | 16 | 2 | |
+
+### Permutations of size $10$
+
+For $n = 10$, mHeight takes values 0, 1, 2, 3, 4, 5, 6. 
+
+| mHeight value  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | Total number of instances | 
+|----------|----------|----------|----------|----------|----------|----------|----------|
+| Train | 352,428 | 17,934 | 3,140 | 524 | 75 | 10 | 1 | |
+| Test  | 88,124 |  4,521 | 742 | 118 | 21 | 2 | 0 | |
+
+Train data statistics
+0: 352428
+1: 17934
+2: 3140
+3: 524
+4: 75
+6: 1
+5: 10
+
+Test data statistics
+0: 88124
+2: 742
+1: 4521
+3: 118
+4: 21
+5: 2
+
 ## Small model performance
 
 | Size | Logistic regression | MLP | Transformer | TODO | 
