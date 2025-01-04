@@ -34,6 +34,8 @@ For $n = 10$, mHeight takes values 0, 1, 2, 3, 4, 5, 6.
 | Train | 352,428 | 17,934 | 3,140 | 524 | 75 | 10 | 1 | |
 | Test  | 88,124 |  4,521 | 742 | 118 | 21 | 2 | 0 | |
 
+## Data Generation
+
 ## Small model performance
 
 | Size | Logistic regression | MLP | Transformer | TODO | 
