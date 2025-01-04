@@ -95,6 +95,10 @@ The ML task is to predict the coefficients of $P_{x,w}(q)$ given $x$ and $w$. We
 
 The broader problem is establish a better understanding of the coefficients of Kazhdan-Lusztig polynomials which known to carry rich geometric information and are assumed to hold a combinatorial interpretation as well (i.e., they count something). While the classification task as framed does not capture this more nuanced question, illuminating connections between $x$, $w$, and the coefficients of $P_{x,w}(q)$ has the potential to yield critical insights.
 
+## Data Generation
+
+Datasets were generated using SageMath. A SageMath notebook with the code to do this can be found in this repository.
+
 ## Small model performance
 
 ### Prediction of the coefficient on $q^2$
@@ -107,10 +111,6 @@ TODO
 | $n= 6$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
-
-## Data Generation
-
-Datasets were generated using SageMath. A SageMath notebook with the code to do this can be found in this repository.
 
 ## References
 
