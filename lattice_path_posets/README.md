@@ -8,6 +8,10 @@ NE lattice paths from $(0, 0)$ to $(a, b)$ are paths starting at $(0,0)$ and end
 
 Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9KtJ1T4RQaGsJNz/view?usp=sharing)
 
+## Data Generation
+
+Datasets were generated using SageMath. A SageMath notebook with the code to do this can be found in this repository.
+
 ## Small model performance
 
 | Size | Logistic regression | MLP | Transformer | TODO | 
@@ -18,6 +22,8 @@ Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9
 | $n= 13$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
+
+## References
 
 \[1\] Schiffler, Ralf. "Perfect matching problems in cluster algebras and number theory." arXiv preprint arXiv:2302.02185 (2023).
 
