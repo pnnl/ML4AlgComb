@@ -56,7 +56,8 @@ Dataset statistics are as follows
 
 ## Task
 
-The immediate machine learning task consists of predicting whether a SSYT indexes a cluster variable or not. The hope is that a performant model will have learned simple features that may lead to a concise characterization of those SSYT that index cluster variables. 
+**Math question:** Find a concise characterization of those SSYT that index cluster variables.
+**ML task:** Train a model that can predict whether a SSYT indexes a cluster variable or not. 
 
 ## Data generation
 
