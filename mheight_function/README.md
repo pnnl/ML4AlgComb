@@ -34,6 +34,12 @@ For $n = 10$, mHeight takes values 0, 1, 2, 3, 4, 5, 6.
 | Train | 352,428 | 17,934 | 3,140 | 524 | 75 | 10 | 1 | |
 | Test  | 88,124 |  4,521 | 742 | 118 | 21 | 2 | 0 | |
 
+## Task
+
+**Math question (solved):** Re-discover the notion of mheight.
+
+**ML task:** Given a permutation, predict the mheight. Since permutations of $n$ can only take mheight values $0,1,\dots,n-4$, we frame this as a classification problem.
+
 ## Data Generation
 
 ## Small model performance
