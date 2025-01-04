@@ -106,6 +106,8 @@ TODO
 | $n= 5$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 | $n= 6$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
+The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
+
 ## Data Generation
 
 Datasets were generated using SageMath. A SageMath notebook with the code to do this can be found in this repository.
