@@ -70,6 +70,9 @@ The positive examples sampled for this dataset were generated using code from th
 | MLP | 99.3% $\pm$ 0.1% | 
 | Transformer | 99.5% $\pm$ 0.1% | 
 
+The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training. 
+
+
 \[1\] Chang, Wen, et al. "Quantum affine algebras and Grassmannians." Mathematische Zeitschrift 296.3 (2020): 1539-1583.
 
 \[2\] Cheung, Man-Wai, et al. "Clustering cluster algebras with clusters." arXiv preprint arXiv:2212.09771 (2022).
