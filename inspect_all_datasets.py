@@ -9,20 +9,20 @@ Now, each task includes optional arguments:
  - use_chain_of_thought (bool): If True, inserts a meta-instruction requesting step-by-step reasoning.
 
 Usage example:
-   inspect eval inspect_all_datasets.py --task=kl_polynomial --model=openai/gpt-4 --cache-prompt=true
-   inspect eval inspect_all_datasets.py --task=symmetric_group_char --model=anthropic/claude-2 --cache-prompt=true
+   inspect eval inspect_all_datasets.py@combinatorics_classification -T --dataset=weaving -T --n=6 --model=openai/gpt-4 --cache-prompt=true
+   inspect eval inspect_all_datasets.py@weaving_program_synthesis -T --dataset=weaving -T --n=6 -T --model=anthropic/claude-2 --cache-prompt=true
 
    # To enable few-shot:
-   --task=schubert --few_shot_count=3
+   inspect eval inspect_all_datasets.py@combinatorics_classification -T --few_shot_count=3
    # To enable chain-of-thought:
-   --task=schubert --use_chain_of_thought=true
+   inspect eval inspect_all_datasets.py@combinatorics_classification -T --use_chain_of_thought=true
    # Use both:
-   --task=schubert --few_shot_count=3 --use_chain_of_thought=true
+   inspect eval inspect_all_datasets.py@combinatorics_classification -T --few_shot_count=3 --use_chain_of_thought=true
 
 Adjust --n (and/or other parameters) to pick valid values for each dataset. For instance:
-   --task=rsk --n=10
-   --task=mheight --n=11
-   --task=weaving --n=7
+   inspect eval inspect_all_datasets.py@combinatorics_classification --n=10
+   inspect eval inspect_all_datasets.py@mheight --n=11
+   inspect eval inspect_all_datasets.py@weaving --n=7
 etc.
 
 Refer to:
@@ -33,17 +33,13 @@ Refer to:
 """
 
 from inspect_ai.scorer import scorer
-import numpy as np
-import os
 from random import sample
-import textwrap
 
 from inspect_ai import Epochs, Task, task
 from inspect_ai.dataset import MemoryDataset, Sample
 from inspect_ai.solver import TaskState, chain, prompt_template, generate, chain_of_thought, system_message
 from inspect_ai.scorer import Score, Target, match, mean, stderr
 
-# Ensure load_datasets.py is in your PYTHONPATH or the same directory
 from load_datasets import get_dataset
 
 def build_inspect_dataset(X, y, max_samples=-1):
@@ -124,228 +120,84 @@ def build_few_shot_examples_str(X_train, y_train, few_shot_count: int):
     return "\n".join(examples_str_list)
 
 
-################################################################################
-# 1) KL Polynomial
-################################################################################
 @task
-def kl_polynomial(
+def combinatorics_classification(
+    dataset: str = "kl_polynomial",
     n: int = 8,
     folder: str = "./",
     few_shot_count: int = 0,
     use_chain_of_thought: bool = False,
-    max_samples: int = -1
+    max_samples: int = -1,
+    include_dataset_info: bool = False
 ):
     """
-    Evaluate 'kl_polynomial' dataset, with optional few-shot examples and/or chain-of-thought.
+    A single task entry point that evaluates one of several datasets
+    (non-program-synthesis) by specifying which dataset to load via a string.
 
     Args:
-      n (int): Dataset size parameter
-      folder (str): Folder path
-      few_shot_count (int): Number of few-shot training examples (0 = none).
-      use_chain_of_thought (bool): Whether to add chain-of-thought meta-prompt.
-      max_samples (int): # of samples from test set.
+        dataset (str): Must be either "weaving", "rsk", "schubert", "quiver", "mheight", "symmetric_group_char", "grassmannian_cluster_algebras", "kl_polynomial", or "lattice_path"
+        n (int): 
+            - n = 6, 7, or 8 for "weaving"
+            - n = 8, 9, or 10 for "rsk"
+            - n = 3, 4, 5, or 6 for "schubert"
+            - n = 10, 11, or 12 for "mheight"
+            - n = 18, 20, 22 for "symmetric_group_char"
+            - n = 8 or 9 for "kl_polynomial"
+            - n = 10, 11, 12, or 13 for "lattice_path"
+            - There are not multiple values of n for the "quiver" and "grassmannian_cluster_algebras" datasetes
+        n (int): Dataset size parameter (varies per dataset).
+        folder (str): Folder path.
+        few_shot_count (int): Number of few-shot training examples (0 = none).
+        use_chain_of_thought (bool): Whether to add chain-of-thought meta-prompt.
+        max_samples (int): # of samples from test set.
+        include_dataset_info (bool): Whether to include dataset information in the prompt.
     """
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="kl_polynomial", n=n, folder=folder
+    allowed_datasets = [
+        "kl_polynomial",
+        "schubert",
+        "rsk",
+        "lattice_path",
+        "mheight",
+        "quiver",
+        "symmetric_group_char",
+        "weaving"
+    ]
+    if dataset not in allowed_datasets:
+        raise ValueError(
+            f"Invalid dataset: '{dataset}'. Must be one of: {', '.join(allowed_datasets)}"
+        )
+
+    # Obtain the dataset and optionally the info string
+    result = get_dataset(data=dataset, n=n, folder=folder, info_str=include_dataset_info)
+    if include_dataset_info:
+        (X_train, y_train, X_test, y_test, input_size, output_size, num_tokens), dataset_info = result
+    else:
+        (X_train, y_train, X_test, y_test, input_size, output_size, num_tokens) = result
+        dataset_info = ""
+
+    # Build the Inspect dataset
+    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
+
+    # Build optional few-shot examples
+    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
+
+    # Add dataset info to the prompt if requested
+    prompt_with_info = (
+        (f"Here is information about the dataset:\n{dataset_info}\n\n" if dataset_info else "") +
+        f"{few_shot_str}"
+        "Now for the next input, please provide your answer (no extra explanation):\n\n"
+        "{prompt}"
     )
 
-    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
-    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-    solver_chain = build_solver_chain(few_shot_str, use_chain_of_thought)
+    # Build the solver with or without chain-of-thought
+    solver_chain = build_solver_chain(prompt_with_info, use_chain_of_thought)
 
+    # Return the Inspect Task
     return Task(dataset=ds, solver=solver_chain, scorer=match())
 
 
 ################################################################################
-# 2) Schubert
-################################################################################
-@task
-def schubert(
-    n: int = 3,
-    folder: str = "./",
-    few_shot_count: int = 0,
-    use_chain_of_thought: bool = False,
-    max_samples: int = -1
-):
-    """
-    Evaluate 'schubert' dataset, with optional few-shot examples and/or chain-of-thought.
-
-    Args:
-      n (int): Typically 3, 4, 5, or 6
-      folder (str): Folder path
-      few_shot_count (int): # of few-shot examples. 0 = none.
-      use_chain_of_thought (bool): If True, embed chain-of-thought prompt.
-      max_samples (int): # of test samples to evaluate.
-    """
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="schubert", n=n, folder=folder
-    )
-
-    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
-    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-    solver_chain = build_solver_chain(few_shot_str, use_chain_of_thought)
-
-    return Task(dataset=ds, solver=solver_chain, scorer=match())
-
-
-################################################################################
-# 3) RSK
-################################################################################
-@task
-def rsk(
-    n: int = 10,
-    folder: str = "./",
-    few_shot_count: int = 0,
-    use_chain_of_thought: bool = False,
-    max_samples: int = -1
-):
-    """
-    Evaluate 'rsk' dataset, with optional few-shot examples and/or chain-of-thought.
-    Valid n often in {8, 9, 10}.
-    """
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="rsk", n=n, folder=folder
-    )
-
-    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
-    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-    solver_chain = build_solver_chain(few_shot_str, use_chain_of_thought)
-
-    return Task(dataset=ds, solver=solver_chain, scorer=match())
-
-
-################################################################################
-# 4) Lattice Path
-################################################################################
-@task
-def lattice_path(
-    n: int = 6,
-    folder: str = "./",
-    few_shot_count: int = 0,
-    use_chain_of_thought: bool = False,
-    max_samples: int = -1
-):
-    """
-    Evaluate 'lattice_path' dataset, with optional few-shot and/or chain-of-thought.
-    n often in {6, 7, 8}.
-    """
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="lattice_path", n=n, folder=folder
-    )
-
-    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
-    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-    solver_chain = build_solver_chain(few_shot_str, use_chain_of_thought)
-
-    return Task(dataset=ds, solver=solver_chain, scorer=match())
-
-
-################################################################################
-# 5) mheight
-################################################################################
-@task
-def mheight(
-    n: int = 10,
-    folder: str = "./",
-    few_shot_count: int = 0,
-    use_chain_of_thought: bool = False,
-    max_samples: int = -1
-):
-    """
-    Evaluate 'mheight' dataset, with optional few-shot and/or chain-of-thought.
-    n often in {10, 11, 12}.
-    """
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="mheight", n=n, folder=folder
-    )
-
-    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
-    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-    solver_chain = build_solver_chain(few_shot_str, use_chain_of_thought)
-
-    return Task(dataset=ds, solver=solver_chain, scorer=match())
-
-
-################################################################################
-# 6) Quiver
-################################################################################
-@task
-def quiver(
-    n: int = 4,
-    folder: str = "./",
-    few_shot_count: int = 0,
-    use_chain_of_thought: bool = False,
-    max_samples: int = -1
-):
-    """
-    Evaluate 'quiver' dataset, with optional few-shot and/or chain-of-thought.
-    n often in {4, 5, 6}.
-    """
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="quiver", n=n, folder=folder
-    )
-
-    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
-    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-    solver_chain = build_solver_chain(few_shot_str, use_chain_of_thought)
-
-    return Task(dataset=ds, solver=solver_chain, scorer=match())
-
-
-################################################################################
-# 7) Symmetric Group Character
-################################################################################
-@task
-def symmetric_group_char(
-    n: int = 18,
-    folder: str = "./",
-    few_shot_count: int = 0,
-    use_chain_of_thought: bool = False,
-    max_samples: int = -1
-):
-    """
-    Evaluate 'symmetric_group_char' dataset, with optional few-shot and/or chain-of-thought.
-    n in {18, 20, 22} might be supported.
-    """
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="symmetric_group_char", n=n, folder=folder
-    )
-
-    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
-    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-    solver_chain = build_solver_chain(few_shot_str, use_chain_of_thought)
-
-    return Task(dataset=ds, solver=solver_chain, scorer=match())
-
-
-################################################################################
-# 8) Weaving
-################################################################################
-@task
-def weaving(
-    n: int = 6,
-    folder: str = "./",
-    few_shot_count: int = 0,
-    use_chain_of_thought: bool = False,
-    max_samples: int = -1
-):
-    """
-    Evaluate 'weaving' dataset, with optional few-shot and/or chain-of-thought.
-    n in {6, 7, 8} typically.
-    """
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="weaving", n=n, folder=folder
-    )
-
-    ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
-    few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-    solver_chain = build_solver_chain(few_shot_str, use_chain_of_thought)
-
-    return Task(dataset=ds, solver=solver_chain, scorer=match())
-
-
-################################################################################
-# 9) Weaving Program Synthesis
+# Weaving Program Synthesis
 ################################################################################
 @task
 def weaving_program_synthesis(
@@ -356,6 +208,7 @@ def weaving_program_synthesis(
     max_samples: int = -1,
     epochs: int = 1,
     timeout: int = 30,
+    include_dataset_info: bool = False,
 ):
     """
     Demonstration of program-synthesis style solver for the 'weaving' dataset
@@ -373,11 +226,16 @@ def weaving_program_synthesis(
         epochs (int): Number of times to re-run the generation process
                       (each epoch tries a single new program).
         timeout (int): Timeout for the program call.
+        include_dataset_info (bool): Whether to include dataset information in the prompt.
     """
-    # 1) Obtain dataset
-    X_train, y_train, X_test, y_test, input_size, output_size, num_tokens = get_dataset(
-        data="weaving", n=n, folder=folder
-    )
+    # 1) Obtain dataset and optionally the info string
+    result = get_dataset(data="weaving", n=n, folder=folder, info_str=include_dataset_info)
+    if include_dataset_info:
+        (X_train, y_train, X_test, y_test, input_size, output_size, num_tokens), dataset_info = result
+    else:
+        (X_train, y_train, X_test, y_test, input_size, output_size, num_tokens) = result
+        dataset_info = ""
+
     if max_samples > 0:
         X_test = X_test[:max_samples]
         y_test = y_test[:max_samples]
@@ -405,6 +263,7 @@ You will be given some examples of a classification problem from the 'weaving' d
 Write a function 'predict' that takes an input in a Python list (e.g. [3,1,2,2]) 
 and returns an integer (0 or 1) as the classification result.
 
+{f"Here is information about the dataset:\n{dataset_info}\n" if dataset_info else ""}
 Avoid using machine learning or model calls; rather, embed the logic in Python code.
 You may want to use numpy or sympy for math operations, however this is optional.
 
@@ -512,7 +371,6 @@ print(json.dumps(preds))
         system_message(system_msg),
         generate(
             max_tokens=1000,
-            temperature=0.5,
             stop=["```", "def predict", "# End of code"],
         ),
     ]
