@@ -57,6 +57,7 @@ Dataset statistics are as follows
 ## Task
 
 **Math question:** Find a concise characterization of those SSYT that index cluster variables.
+
 **ML task:** Train a model that can predict whether a SSYT indexes a cluster variable or not. 
 
 ## Data generation
