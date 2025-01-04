@@ -67,7 +67,8 @@ Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group ch
 
 ## Data generation
 
-### Mean squared error of various narrow models
+## Small model performance
+
 | Size | Logistic regression | MLP | Transformer | Constant prediction of zero | 
 |----------|----------|-----------|------------|------------|
 | $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $26,451,200,738.0$ |
