@@ -65,6 +65,8 @@ Histogram of $S_{22}$ characters within the interval $[-500,500]$.
 ## Task 
 Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group character $\chi^{\lambda}\_{\mu}$.
 
+## Data generation
+
 ### Mean squared error of various narrow models
 | Size | Logistic regression | MLP | Transformer | Constant prediction of zero | 
 |----------|----------|-----------|------------|------------|
@@ -72,7 +74,9 @@ Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group ch
 | $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $6,133,318,404,306.3$ |
 | $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $508,765,704,145,379.9$ |
 
+The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
+## References
 
 \[1\] Sagan, Bruce E. The symmetric group: representations, combinatorial algorithms, and symmetric functions. Vol. 203. Springer Science & Business Media, 2013.
 
