@@ -57,10 +57,6 @@ All structure constants in this case are either 0, 1, 2, 3, 4, or 5.
 | Train | 4,202,040 | 4,093,033 | 109,217 | 2,262 | 9 | 9 | 8,406,564 |
 | Test  | 1,052,062 | 1,021,898 | 27,110 | 568 | 3 | 0 | 2,101,641 |
 
-## Task 
-
-The immediate machine learning task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$ given the triple $(\alpha,\beta,\gamma)$. The broader mathematical question is finding a combinatorial interpretation of these structure constants. We hope that analyzing performant models will yield insights that will help reach this goal.
-
 ## Data generation
 
 The Sage notebook within this directory gives the code used to generate these datasets. The process involves:
@@ -68,6 +64,10 @@ The Sage notebook within this directory gives the code used to generate these da
 - For a chosen $n$, compute the products $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}$ for $\beta,\gamma \in S_n$.
 - For each of these pairs, extract and add to the dataset all non-zero structure constants $c^{\alpha_1}\_{\beta,\gamma}, \dots, c^{\alpha_k}\_{\beta,\gamma}$
 - Furthermore, for each $c^{\alpha_i}\_{\beta,\gamma} \neq 0$, randomly permute $\alpha_i \mapsto \alpha_i'$ to find $c^{\alpha_i'}\_{\beta,\gamma} = 0$ and $c^{\alpha_i'}\_{\beta,\gamma}$ is not already in the dataset.
+
+## Task 
+
+The immediate machine learning task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$ given the triple $(\alpha,\beta,\gamma)$. The broader mathematical question is finding a combinatorial interpretation of these structure constants. We hope that analyzing performant models will yield insights that will help reach this goal.
 
 ## Small model performance
 
