@@ -19,9 +19,11 @@ Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPI
 
 ## Task
 
-**Math question:** Find simple rules to determine whether or not a quiver belongs to a specific mutation equivalence class (out of several mutation classes of Lie type).
+**Math question:** Find simple rules to determine whether or not a quiver belongs to a specific mutation equivalence class (out of classes $A$, $D$, $\tilde{A}$, $\tilde{D}$, $E$, and $\tilde{E}$).
 
-**ML task:** Train a model that can predict whether a SSYT indexes a cluster variable or not. 
+**ML task:** Train a model that can predict a quiver's mutation equivalence class out of the 6 options above.
+
+See the work [\[2\]](https://arxiv.org/abs/2411.07467) for an example of how a model trained on this dataset can be used to re-discover known theorems.
 
 ## Small model performance
 
@@ -33,3 +35,5 @@ Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPI
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
 \[1\] Bao, Jiakang, et al. "Machine learning algebraic geometry for physics." arXiv preprint arXiv:2204.10334 (2022).
+
+\[2\] He, Jesse, et al. "Machines and Mathematical Mutations: Using GNNs to Characterize Quiver Mutation Classes." arXiv preprint arXiv:2411.07467 (2024).
