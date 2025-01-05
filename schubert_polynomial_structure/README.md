@@ -67,7 +67,9 @@ The Sage notebook within this directory gives the code used to generate these da
 
 ## Task 
 
-The immediate machine learning task is to predict the coefficient $c^{\alpha}\_{\beta \gamma}$ given the triple $(\alpha,\beta,\gamma)$. The broader mathematical question is finding a combinatorial interpretation of these structure constants. We hope that analyzing performant models will yield insights that will help reach this goal.
+**Math question:** The math question is better understanding the structure constants of Schubert polynomials, especially combinatorial interpretations in terms of the permutations that index them.
+
+**ML task:** Train a model that can given three permutations $\alpha, \beta, \gamma$, can predict the associated structure constant $c^{\alpha}\_{\beta,\gamma}$.
 
 ## Small model performance
 
