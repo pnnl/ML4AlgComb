@@ -56,11 +56,13 @@ Dataset statistics are as follows
 
 ## Task
 
-The immediate machine learning task consists of predicting whether a SSYT indexes a cluster variable or not. The hope is that a performant model will have learned simple features that may lead to a concise characterization of those SSYT that index cluster variables. 
+**Math question:** Find a concise characterization of those SSYT that index cluster variables.
+
+**ML task:** Train a model that can predict whether a SSYT indexes a cluster variable or not. 
 
 ## Data generation
 
-The positive sampled for this dataset were generated for the paper [\[2\]](https://arxiv.org/abs/2212.09771). The code for this can be found at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). 
+The positive examples sampled for this dataset were generated using code from the paper [\[2\]](https://arxiv.org/abs/2212.09771). This code can be found at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML). We generated our own negative examples because we found that the model learned some spurious correlations as a result of the sampling strategy used in [\[2\]](https://arxiv.org/abs/2212.09771). To sample random rectangular SSYT, we took advantage of the [`random_element()`](https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/tableau.html#sage.combinat.tableau.SemistandardTableaux_shape.random_element) method in `Tableaux` in the class in Sage.
 
 ## Small model performance
 
@@ -69,6 +71,10 @@ The positive sampled for this dataset were generated for the paper [\[2\]](https
 | Logistic regression | 65.7% | 
 | MLP | 99.3% $\pm$ 0.1% | 
 | Transformer | 99.5% $\pm$ 0.1% | 
+
+The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training. 
+
+## References
 
 \[1\] Chang, Wen, et al. "Quantum affine algebras and Grassmannians." Mathematische Zeitschrift 296.3 (2020): 1539-1583.
 
