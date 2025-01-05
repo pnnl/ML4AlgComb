@@ -18,11 +18,16 @@ ENV PATH="/opt/conda/bin:${PATH}"
 
 # Create and activate environment with sage
 RUN conda create -n sage -c conda-forge sage python=3.9 -y \
-    && conda run -n sage pip install --no-cache-dir numpy sympy
+    && conda run -n sage pip install --no-cache-dir numpy sympy \
+    && echo "conda activate sage" >> ~/.bashrc
+
+# Set the default shell to bash and ensure conda environment is activated
+SHELL ["/bin/bash", "--login", "-c"]
 
 # Set the default conda environment
 ENV CONDA_DEFAULT_ENV=sage
 ENV CONDA_PREFIX=/opt/conda/envs/sage
+ENV PATH="/opt/conda/envs/sage/bin:${PATH}"
 
 # Keep the container alive during Inspect's evaluation
 CMD ["tail", "-f", "/dev/null"] 
