@@ -12,6 +12,12 @@ The datasets can be downloaded [here](https://drive.google.com/file/d/1CfuxD_XgT
 
 ## Data generation
 
+## Task
+
+**Math question:** 
+
+**ML task:** 
+
 ## Small model performance
 
 | Size | Logistic regression | MLP | Transformer | Guessing majority class | 
