@@ -1,13 +1,11 @@
-import torch
 import os
 import random
-import pickle as pkl
 import numpy as np
 import math
 import ast
 from typing import Optional
 
-def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
+def get_dataset(data: str, n: Optional[int] = None, folder = "./", info_str: bool = False):
     """
     Parameters:
     ----------
@@ -22,10 +20,12 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         - n = 10, 11, 12, or 13 for "lattice_path"
         - There are not multiple values of n for the "quiver" and "grassmannian_cluster_algebras" datasetes
     folder (str, optional): Base directory for dataset files. Defaults to "./".
+    info_str (bool, optional): Also return a string with information about the dataset. Defaults to False.
 
     Returns:
     --------
     tuple: A tuple containing the following elements: X_train (np.array), y_train (np.array), X_test (np.array), y_test (np.array), input_size (int), output_size (int), num_tokens (int)
+    info_str (str, optional): A string with information about the dataset.
     """
 
     if data == "weaving":
@@ -54,7 +54,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Inputs are sequences of length {input_size} with entries between 0 and {num_tokens-1}, representing weaving patterns.")
         print(f"There are {output_size} classes. Weaving patterns are labeled 1, non-weaving patterns are labeled 0.")
-        return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens)
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInputs are sequences of length {input_size} with entries between 0 and {num_tokens-1}, representing weaving patterns.\nThere are {output_size} classes. Weaving patterns are labeled 1, non-weaving patterns are labeled 0."
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens)
 
     elif data == "rsk":
         assert n in {8, 9, 10}, f"Can't handle n={n}. n must be 8, 9, or 10."
@@ -88,7 +92,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Input sequence is length {max_input_length} with entries 0 through {num_tokens-1}, representing two concatenated SSYT, padded so that all inputs have the same length.")
         print(f"Outputs are binary sequences of length {len(y_train[0])}. Output is one permutation represented by its inversion sequence.")
-        return np.array(X_train_padded), np.array(y_train), np.array(X_test_padded), np.array(y_test), max_input_length, output_size, num_tokens
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInput sequence is length {max_input_length} with entries 0 through {num_tokens-1}, representing two concatenated SSYT, padded so that all inputs have the same length.\nOutputs are binary sequences of length {len(y_train[0])}. Output is one permutation represented by its inversion sequence."
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), max_input_length, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train_padded), np.array(y_train), np.array(X_test_padded), np.array(y_test), max_input_length, output_size, num_tokens)
 
     elif data == "schubert":
         assert n in {3, 4, 5, 6}, f"Can't handle n={n}. n must be 3, 4, 5, or 6."
@@ -121,7 +129,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Inputs are sequences of length {input_size}, which represent three concatenated permutations on the letters 1 through {num_tokens-1}.")
         print(f"There are {output_size} classes, which give the structure constant for the input permutations.")
-        return (np.array(X_train_flattened), np.array(y_train), np.array(X_test_flattened), np.array(y_test), input_size, output_size, num_tokens)
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInputs are sequences of length {input_size}, which represent three concatenated permutations on the letters 1 through {num_tokens-1}.\nThere are {output_size} classes, which give the structure constant for the input permutations."
+            return (np.array(X_train_flattened), np.array(y_train), np.array(X_test_flattened), np.array(y_test), input_size, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train_flattened), np.array(y_train), np.array(X_test_flattened), np.array(y_test), input_size, output_size, num_tokens)
 
 
     elif data == "symmetric_group_char":
@@ -156,8 +168,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Inputs are sequences of length {input_size} with entries 0 through {num_tokens-1}, which represent two concatenated integer partitions of n={n}.")
         print(f"There are {output_size} classes for n={n}.")
-        
-        return (X_train.reshape(X_train.shape[0], -1), y_train, X_test.reshape(X_test.shape[0], -1), y_test, input_size, output_size, num_tokens)
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInputs are sequences of length {input_size} with entries 0 through {num_tokens-1}, which represent two concatenated integer partitions of n={n}.\nThere are {output_size} classes for n={n}."
+            return (np.array(X_train.reshape(X_train.shape[0], -1)), np.array(y_train), np.array(X_test.reshape(X_test.shape[0], -1)), np.array(y_test), input_size, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train.reshape(X_train.shape[0], -1)), np.array(y_train), np.array(X_test.reshape(X_test.shape[0], -1)), np.array(y_test), input_size, output_size, num_tokens)
 
     elif data == "quiver":
         path_to_files = os.path.join(folder, "./cluster_algebra_quivers/")
@@ -180,7 +195,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Input sequences of length {input_size} are flattened adjacency matrices with entries 0 through {num_tokens-1}")
         print(f"There are {output_size} classes: A_11: 0, BD_11: 1, D_11: 2, BE_11: 3, BB_11: 4, E_11: 5, DE_11: 6")
-        return (X_train, np.array(y_train), X_test, np.array(y_test), input_size, output_size, num_tokens)
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInput sequences of length {input_size} are flattened adjacency matrices with entries 0 through {num_tokens-1}\nThere are {output_size} classes: A_11: 0, BD_11: 1, D_11: 2, BE_11: 3, BB_11: 4, E_11: 5, DE_11: 6"
+            return (np.array(X_train.reshape(X_train.shape[0], -1)), np.array(y_train), np.array(X_test.reshape(X_test.shape[0], -1)), np.array(y_test), input_size, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train.reshape(X_train.shape[0], -1)), np.array(y_train), np.array(X_test.reshape(X_test.shape[0], -1)), np.array(y_test), input_size, output_size, num_tokens)
 
     elif data == "mheight":
         assert n in {8, 9, 10, 11, 12}, f"Can't handle n={n}. n must be 8, 9, 10, 11 or 12."
@@ -203,7 +222,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Input sequences are permutations represented by their inversion sequence, which is a binary sequence of length ({n} choose 2)= {input_size}.")
         print(f"There are {output_size} classes; classes that contained less than 0.01% of the data were filtered.")
-        return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens)
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInput sequences are permutations represented by their inversion sequence, which is a binary sequence of length ({n} choose 2)= {input_size}.\nThere are {output_size} classes; classes that contained less than 0.01% of the data were filtered."
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens)
 
 
     elif data == "grassmannian_cluster_algebras":
@@ -241,7 +264,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Inputs are sequences of length {input_size}, with {num_tokens} tokens, which represent 3x4 SSYT")
         print(f"There are {output_size} classes. SSYT that index a valid cluster variable are labeled 1 and SSYT that do not are labeled 0.")
-        return (X_train.reshape(X_train.shape[0], -1), y_train, X_test.reshape(X_test.shape[0], -1), y_test, input_size, output_size, num_tokens)
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInputs are sequences of length {input_size}, with {num_tokens} tokens, which represent 3x4 SSYT\nThere are {output_size} classes. SSYT that index a valid cluster variable are labeled 1 and SSYT that do not are labeled 0."
+            return (np.array(X_train.reshape(X_train.shape[0], -1)), np.array(y_train), np.array(X_test.reshape(X_test.shape[0], -1)), np.array(y_test), input_size, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train.reshape(X_train.shape[0], -1)), np.array(y_train), np.array(X_test.reshape(X_test.shape[0], -1)), np.array(y_test), input_size, output_size, num_tokens)
 
     elif data == "kl_polynomial":
         assert n in {8, 9}, f"Can't handle n={n}. n must be 8, 9, or 10."
@@ -263,7 +290,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Inputs are sequences of length {input_size}, representing two permutations on the letters 0 through {num_tokens-1}")
         print(f"There are {output_size} classes, which each represent the fifth coefficient in the polynomial.")
-        return (X_train, y_train, X_test, y_test, input_size, output_size, num_tokens)
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInputs are sequences of length {input_size}, representing two permutations on the letters 0 through {num_tokens-1}\nThere are {output_size} classes, which each represent the fifth coefficient in the polynomial."
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens)
 
     elif data == "lattice_path":
         assert n in {10, 11, 12, 13}, f"Can't handle {n}"
@@ -292,8 +323,11 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         print(f"Test set has {len(X_test)} examples")
         print(f"Inputs are two concatenated binary sequences represented a lattice path and its cover. The input for n={n} is length {input_size}.")
         print(f"There are {output_size} classes. Lagrange covers are labeled 0, matching covers are labeled 1.")
-        
-        return np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens 
+        if info_str:
+            info_str = f"Train set has {len(X_train)} examples\nTest set has {len(X_test)} examples\nInputs are two concatenated binary sequences represented a lattice path and its cover. The input for n={n} is length {input_size}.\nThere are {output_size} classes. Lagrange covers are labeled 0, matching covers are labeled 1."
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens), info_str
+        else:
+            return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens)
 
     else:
         raise NotImplementedError(f'No {data}. Supported options are "weaving", "rsk", "schubert", "quiver", "mheight", "symmetric_group_char", "grassmannian_cluster_algebras", "kl_polynomial", or "lattice_path".')
