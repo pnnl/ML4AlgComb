@@ -6,12 +6,12 @@ Recent work has explored whether deep learning models can learn to correctly pre
 
 **Dataset:** Adjacency matrices for seven quivers, each with $11$ vertices, labeled by mutation equivalence class.
 
-[comment]: <All quivers of types A, D, A ̃, and D ̃ on 7, 8, 9, and 10 nodes.
-• All quivers of type E ̃. (Type E ̃ is only defined for 7, 8, and 9 nodes, corresponding to
+All quivers of types A, D, A ̃, and D ̃ on 7, 8, 9, and 10 nodes.
+- All quivers of type E ̃. (Type E ̃ is only defined for 7, 8, and 9 nodes, corresponding to
 extended versions of E6, E7, and E8, respectively. All quivers of type E ̃ are mutation-finite.)
-• All quivers of type E for n = 6, 7, 8. (The Dynkin diagram E9 is the same as the extended diagram E ̃8.) Type E is only mutation-finite for n = 6, 7, 8. and coincides with E ̃8 for n = 9.
-• Quivers of type E10 up to a mutation depth of 8, with respect to Sage’s standard orientation for E10 (Fig. 9). (While type E is mutation finite for n ≤ 9, E10 is mutation-infinite).
-The test set consists of quivers on 11 nodes. We use the full mutation classes of A11, A ̃10, D11 and D ̃10, and again generate quivers up to a mutation depth of 8 for E11. The number of quivers of each size from each class can be found in Table 1 in Appendix B.2. Note that type E ̃ is absent from the test set, because E ̃ is not defined for 11 nodes.> 
+- All quivers of type E for n = 6, 7, 8. (The Dynkin diagram E9 is the same as the extended diagram E ̃8.) Type E is only mutation-finite for n = 6, 7, 8. and coincides with E ̃8 for n = 9.
+- Quivers of type E10 up to a mutation depth of 8, with respect to Sage’s standard orientation for E10 (Fig. 9). (While type E is mutation finite for n ≤ 9, E10 is mutation-infinite).
+The test set consists of quivers on 11 nodes. We use the full mutation classes of A11, A ̃10, D11 and D ̃10, and again generate quivers up to a mutation depth of 8 for E11. The number of quivers of each size from each class can be found in Table 1 in Appendix B.2. Note that type E ̃ is absent from the test set, because E ̃ is not defined for 11 nodes.>
 
 Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPIgciuGG9HfvrKWC/view?usp=sharing)
 
