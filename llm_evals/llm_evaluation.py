@@ -18,6 +18,7 @@ Usage example for program synthesis, using both few-shot and chain-of-thought:
 """
 
 
+import json
 import sys
 sys.path.append('..')
 from load_datasets import get_dataset
@@ -44,12 +45,9 @@ def build_inspect_dataset(X, y, max_samples=-1):
         max_samples = len(X)
     N = min(len(X), max_samples)
     for i in range(N):
-        # Turn X[i] into a string
         xi_str = " ".join(map(str, X[i]))
-        # Turn y[i] into a string
         yi_str = str(y[i])
 
-        # Construct a prompt that requests only the label
         prompt_text = (
             "\n\nHere is an input sequence:\n"
             f"{xi_str}\n"
@@ -74,14 +72,12 @@ def build_solver_chain(
     few_shot_examples_str is either "" (empty) or a few-shot prompt block.
     use_chain_thought indicates if chain_of_thought() should be inserted.
     """
-    # If we have few-shot examples, incorporate them. If not, just use "{prompt}" directly.
     if few_shot_examples_str:
         prompt_str = (
             f"{few_shot_examples_str}\n"
-            # "{prompt}"
         )
     else:
-        # No few-shot examples
+        # no few-shot examples
         prompt_str = ""
 
     steps = [prompt_template(prompt_str)]
@@ -97,7 +93,7 @@ def build_solver_chain(
 
 def build_few_shot_examples_str(X_train, y_train, few_shot_count: int):
     """
-    Build a few-shot examples string, or return an empty string if few_shot_count <= 0.
+    Builds a few-shot examples string from the train set.
     """
     if few_shot_count <= 0:
         return ""
@@ -112,8 +108,8 @@ def build_few_shot_examples_str(X_train, y_train, few_shot_count: int):
 
 @task
 def algcomb_classification(
-    dataset: str = "kl_polynomial",
-    n: int = 8,
+    dataset: str = "weaving",
+    n: int = 6,
     folder: str = "../",
     few_shot_count: int = 0,
     max_samples: int = -1,
@@ -121,8 +117,7 @@ def algcomb_classification(
     include_dataset_info: bool = True
 ):
     """
-    A single task entry point that evaluates one of several datasets
-    (non-program-synthesis) by specifying which dataset to load via a string.
+    A single task that evaluates a LM on one of the ML4AlgComb datasets.
 
     Args:
         dataset (str): Must be either "weaving", "rsk", "schubert", "quiver", "mheight", "symmetric_group_char", "grassmannian_cluster_algebras", "kl_polynomial", or "lattice_path"
@@ -135,14 +130,14 @@ def algcomb_classification(
             - n = 8 or 9 for "kl_polynomial"
             - n = 10, 11, 12, or 13 for "lattice_path"
             - There are not multiple values of n for the "quiver" and "grassmannian_cluster_algebras" datasetes
-        n (int): Dataset size parameter (varies per dataset).
-        folder (str): Folder path.
+        folder (str): path to the dataset files.
         few_shot_count (int): Number of few-shot training examples (0 = none).
-        use_chain_of_thought (bool): Whether to add chain-of-thought meta-prompt.
+        use_chain_of_thought (bool): Use chain-of-thought meta-prompt.
         max_samples (int): # of samples from test set.
-        include_dataset_info (bool): Whether to include dataset information in the prompt.
+        include_dataset_info (bool): Include dataset information in the prompt.
     """
     allowed_datasets = [
+        "weaving",
         "kl_polynomial",
         "schubert",
         "rsk",
@@ -150,14 +145,12 @@ def algcomb_classification(
         "mheight",
         "quiver",
         "symmetric_group_char",
-        "weaving"
     ]
     if dataset not in allowed_datasets:
         raise ValueError(
             f"Invalid dataset: '{dataset}'. Must be one of: {', '.join(allowed_datasets)}"
         )
 
-    # Obtain the dataset and optionally the info string
     result = get_dataset(data=dataset, n=n, folder=folder, info_str=include_dataset_info)
     if include_dataset_info:
         (X_train, y_train, X_test, y_test, input_size, output_size, num_tokens), dataset_info = result
@@ -165,23 +158,16 @@ def algcomb_classification(
         (X_train, y_train, X_test, y_test, input_size, output_size, num_tokens) = result
         dataset_info = ""
 
-    # Build the Inspect dataset
     ds = build_inspect_dataset(X_test, y_test, max_samples=max_samples)
 
-    # Build optional few-shot examples
     few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
-
-    # Add dataset info to the prompt if requested
     prompt_with_info = (
         (f"Here is information about the dataset:\n{dataset_info}\n\n" if dataset_info else "") +
         f"{few_shot_str}"
         "{prompt}"
     )
-
-    # Build the solver with or without chain-of-thought
     solver_chain = build_solver_chain(prompt_with_info, use_chain_of_thought)
 
-    # Return the Inspect Task
     return Task(dataset=ds, solver=solver_chain, scorer=match())
 
 
@@ -200,12 +186,12 @@ def algcomb_program_synthesis(
     include_dataset_info: bool = True,
 ):
     """
-    Program synthesis solver that works for all combinatorics datasets.
+    Program synthesis solver that works for all ML4AlgComb datasets.
     In each epoch, the model attempts to generate a single Python function 
     that solves the classification problem. We then score the program by 
     running it within a sandboxed python() environment on the test samples.
 
-    Requires Docker and the Dockerfile in the same directory as this script.
+    See the README for more details. Requires Docker and the Dockerfile in the same directory as this script.
 
     Args:
         dataset (str): Must be one of: "weaving", "rsk", "schubert", "quiver", 
@@ -220,7 +206,6 @@ def algcomb_program_synthesis(
         timeout (int): Timeout for the program call.
         include_dataset_info (bool): Whether to include dataset information in the prompt.
     """
-    # Validate dataset (using same list as algcomb_classification)
     allowed_datasets = [
         "kl_polynomial",
         "schubert",
@@ -236,7 +221,6 @@ def algcomb_program_synthesis(
             f"Invalid dataset: '{dataset}'. Must be one of: {', '.join(allowed_datasets)}"
         )
 
-    # Get dataset (same as before but using dataset parameter)
     result = get_dataset(data=dataset, n=n, folder=folder, info_str=include_dataset_info)
     if include_dataset_info:
         (X_train, y_train, X_test, y_test, input_size, output_size, num_tokens), dataset_info = result
@@ -248,9 +232,6 @@ def algcomb_program_synthesis(
         X_test = X_test[:max_test_samples]
         y_test = y_test[:max_test_samples]
 
-    # 2) Build a minimal prompt from few-shot examples
-    #    We embed the training examples as commented code or docstring,
-    #    ensuring the model sees a small "training set".
     training_examples = ""
     few_shot_indices = range(min(few_shot_count, len(X_train)))
     for i in few_shot_indices:
@@ -258,8 +239,6 @@ def algcomb_program_synthesis(
             f"\n# Input: {X_train[i]},  Expected Output: {y_train[i]}"
         )
 
-    # You may optionally include instructions for chain-of-thought
-    # if use_chain_of_thought is set. For brevity we omit more details here.
     instructions = (
         "Before answering with your Python code, reason in a step-by-step manner as to get the right answer.\n\n"
         if use_chain_of_thought
@@ -321,7 +300,6 @@ print(json.dumps(preds))
                 from inspect_ai.tool import python as py_tool
 
                 result = await py_tool(timeout=timeout)(code=python_test_code)
-                import json
                 try:
                     preds = json.loads(result)
                 except json.JSONDecodeError:
