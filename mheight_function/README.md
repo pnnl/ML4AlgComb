@@ -38,7 +38,7 @@ For $n = 10$, mHeight takes values 0, 1, 2, 3, 4, 5, 6.
 
 **Math question (solved):** Re-discover the notion of mheight.
 
-**ML task:** Given a permutation, predict the mheight. Since permutations of $n$ can only take mheight values $0,1,\dots,n-4$, we frame this as a classification problem.
+**ML task:** Given a permutation, predict the mheight. Since for small permutations mheight can only take a limited number of values (for instance it is easy to see that it must be less that $n$ for permutations of $n$ elemets), we frame this as a classification problem.
 
 ## Data Generation
 
