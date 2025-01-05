@@ -73,6 +73,7 @@ The positive examples sampled for this dataset were generated using code from th
 | Logistic regression | 65.7% | 
 | MLP | 99.3% $\pm$ 0.1% | 
 | Transformer | 99.5% $\pm$ 0.1% | 
+| Guessing '0' or '1' | 50% |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training. 
 
