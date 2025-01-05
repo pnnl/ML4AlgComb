@@ -22,14 +22,14 @@ Note that both are genuine SSYT of shape $3 \times 4$ with entries from $\{1, \d
 
 ## Dataset
 
-The dataset consists of a collection of rectangular SSYT each with a label indicating whether it indexs a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. The dataset we provide consists of tableau of shape $3 \times 4$, filled with values from $1,2,\dots,12$. The files we provide are: 
+The dataset consists of a collection of rectangular SSYT each with a label indicating whether it indexes a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. The dataset we provide consists of tableau of shape $3 \times 4$, filled with values from $1,2,\dots,12$. The files we provide are: 
 - ``3_4_12_invalid_train.txt``
 - ``3_4_12_invalid_test.txt``
 and can be found [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing).
 
 These contain tableau that do not correspond to cluster variables, 'invalid examples'. Files containing the valid examples were computed by others in [\[2\]](https://arxiv.org/abs/2212.09771) and can be obtained at [https://github.com/edhirst/GrassmanniansML](https://github.com/edhirst/GrassmanniansML).  In this directory we provide code to generate the full splits from the data obtained from these two sources.
 
-We use braces $[$ and $]$ to demarcate rows of the dataset, so that
+In the files we use braces $[$ and $]$ to demarcate rows of the dataset, so that
 
 ``[[2, 3, 4, 7], [3, 5, 6, 8], [4, 9, 11, 12]]``
 
