@@ -89,6 +89,10 @@ We summarize the different values of each of the coefficients for all $P_{x,w}(q
 | Train | 414,708 | 12 | 414,720 |
 | Test  | 103,674 | 6 | 103,680 |
 
+## Data Generation
+
+Datasets were generated using SageMath. A SageMath notebook with the code to do this can be found in this repository.
+
 ## Task 
 
 **Math question:** Establish a better understanding of the coefficients of Kazhdan-Lusztig polynomials which are known to carry rich geometric information and are assumed to hold a combinatorial interpretation (i.e., they count something).
@@ -96,10 +100,6 @@ We summarize the different values of each of the coefficients for all $P_{x,w}(q
 **ML task:** The ML task is to predict the coefficients of $P_{x,w}(q)$ given $x$ and $w$. We break this up into a separate task for each coefficient though one could choose to predict all simultaneously. Since there are generally very few different integers that arise as coefficients (at least in this small examples), we frame this problem as one of classification.
 
 While the classification task as framed does not capture the broader math question exactly, illuminating connections between $x$, $w$, and the coefficients of $P_{x,w}(q)$ has the potential to yield critical insights.
-
-## Data Generation
-
-Datasets were generated using SageMath. A SageMath notebook with the code to do this can be found in this repository.
 
 ## Small model performance
 

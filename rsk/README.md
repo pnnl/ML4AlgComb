@@ -6,7 +6,10 @@ The goal of this benchmark is to see whether a model can learn the RSK algorithm
 
 **Dataset:** This dataset consists of triples: two standard Young tableau of size $n$ and their corresponding permutation (via the RSK algorithm). We include datasets for $n = 8,9,10$. 
 
-**Task:** Given pairs of standard Young tableau, predict the corresponding permutation.
+Unlike some of the other datasets where permutations are written in one-line notation, in this dataset we write them in terms of their inversion set. For a permutation $\sigma$ on $n$ elements, the inversion set gives all pairs of numbers $1 \leq i < j \leq n$ such that $\sigma(j) < \sigma(i)$. There are $\binom{n}{2}$ possible inversions for $\sigma$. We represent the inversion set as a binary code where $1$ means that $\sigma$ inverts $(i, j)$ and $0$ means that it does not. Note that an inversion set completely characterizes a permutation.
+
+We list permutations in lexicographical order so that the full list of inversions of $\{1, 2, 3\}$ is $(1,2)$, $(1,3)$, $(2,3)$.
+The permutation $213$, inverts $(1, 2)$ but not $(1, 3)$ or $(2, 3)$, so we would write it as ``1, 0, 0``.
 
 The datasets can be downloaded [here](https://drive.google.com/file/d/1CfuxD_XgTefbEduxJnXgXoUOt-GY-smq/view?usp=sharing). 
 
@@ -14,9 +17,11 @@ The datasets can be downloaded [here](https://drive.google.com/file/d/1CfuxD_XgT
 
 ## Task
 
-**Math question:** 
+**Math question (solved):** The RSK algorithm is important because it establishes a bijection between permutations of $n$ and a pair of standard Young tableaux. It is central to the field of algebraic combinatorics.
 
-**ML task:** 
+**ML task:** Given a pair of standard Young tableaux, predict the corresponding permutation. As noted above, output permutations are represented as a $\{0,1\}$-vector corresponding to their inversion set.
+
+The RSK algorithm is non-trivial. It would be a powerful proof-of-concept in the application of ML for math if a machine learning algorithm could re-discover it.
 
 ## Small model performance
 

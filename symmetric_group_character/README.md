@@ -62,10 +62,17 @@ Maximum character value 5,462,865,408, minimum character value -279,734,796.
 <img src="histogram_symmetric_group_22.png" alt="Histogram of $S_{22}$ characters within the interval $[-500,500]$." width="500">
 Histogram of $S_{22}$ characters within the interval $[-500,500]$.
 
-## Task 
-Given partitions $\lambda$ and $\mu$, predict the irreducible symmetric group character $\chi^{\lambda}\_{\mu}$.
+## Task
+
+**Math question (solved):** The [Murnaghan–Nakayama rule](https://en.wikipedia.org/wiki/Murnaghan–Nakayama_rule) is an example of an algorithm for calculating the character of an irreducible representation of the symmetric group using only elementary operations on the corresponding pair of partitions.
+
+**ML task:** Train a model that can take two partitions of $n$, $\lambda$ and $\mu$, and predict the corresponding character $\chi^{\lambda}\_{\mu}$.
+
+If a successful model is trained, it would be interesting to understand whether the model has learned an existing algorithm or whether it has discovered something new.
 
 ## Data generation
+
+
 
 ## Small model performance
 
