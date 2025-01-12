@@ -108,7 +108,7 @@ def build_few_shot_examples_str(X_train, y_train, few_shot_count: int):
 
 @task
 def algcomb_classification(
-    dataset: str = "weaving",
+    dataset: str = "schubert",
     n: int = 6,
     folder: str = "../",
     few_shot_count: int = 0,
@@ -138,7 +138,7 @@ def algcomb_classification(
     """
     allowed_datasets = [
         "weaving",
-        "kl_polynomial",
+        # "kl_polynomial",
         "schubert",
         "rsk",
         "lattice_path",
@@ -162,7 +162,7 @@ def algcomb_classification(
 
     few_shot_str = build_few_shot_examples_str(X_train, y_train, few_shot_count)
     prompt_with_info = (
-        (f"Here is information about the dataset:\n{dataset_info}\n\n" if dataset_info else "") +
+        (f"You are tasked with solving a classification problem. Here is high-level information about the dataset:\n{dataset_info}\n\n" if dataset_info else "") +
         f"{few_shot_str}"
         "{prompt}"
     )
@@ -173,8 +173,8 @@ def algcomb_classification(
 
 @task
 def algcomb_program_synthesis(
-    dataset: str = "kl_polynomial",
-    n: int = 8,
+    dataset: str = "schubert",
+    n: int = 6,
     folder: str = "../",
     few_shot_count: int = 0,
     use_chain_of_thought: bool = False,
@@ -245,7 +245,7 @@ def algcomb_program_synthesis(
         else ""
     )
 
-    system_msg = f"""You are a Python code synthesizer. 
+    system_msg = f"""Your job is to write a Python function that solves the classification problem. 
 You will be given some examples of a classification problem from the '{dataset}' dataset.
 Write a function 'predict' that takes an input in a Python list and returns an integer  as the classification result.
 
@@ -315,7 +315,7 @@ print(json.dumps(preds))
                 return Score(
                     value=acc,
                     answer=str(preds),
-                    explanation=f"Ran program in sandbox. Acc={acc:.3f}"
+                    explanation=f"Ran program in sandbox. Acc={acc:.3f}, {correct_count} correct out of {len(y_test)}"
                 )
             except ToolError as te:
                 return Score(value=0.0, explanation=f"ToolError: {te}")
