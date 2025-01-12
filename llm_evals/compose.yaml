@@ -5,4 +5,4 @@ services:
     command: tail -f /dev/null
     network_mode: none
     cpus: 1.0
-    mem_limit: 1gb 
+    mem_limit: 3gb 
