@@ -53,6 +53,6 @@ The $\pm$ signs indicate 95% confidence intervals from random weight initializat
 
 ## References
 
-\[1\] Gaetz, Christian, and Yibo Gao. "On the minimal power of $ q $ in a Kazhdan-Lusztig polynomial." arXiv preprint arXiv:2303.13695 (2023).
+\[1\] Gaetz, Christian, and Yibo Gao. "On the minimal power of $q$ in a Kazhdan-Lusztig polynomial." arXiv preprint arXiv:2303.13695 (2023).
 
 \[2\] Billey, Sara, and Alexander Postnikov. "Smoothness of Schubert varieties via patterns in root subsystems." Advances in Applied Mathematics 34.3 (2005): 447-466.
