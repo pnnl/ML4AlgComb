@@ -103,14 +103,23 @@ While the classification task as framed does not capture the broader math questi
 
 ## Small model performance
 
-#### Prediction of the coefficient on $q$
+### Kazhdan-Lusztig Polynomials for Permutations of $5$ elements
 
-#### Prediction of the coefficient on $q^2$
-
-| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
+| Coefficient | Logistic regression | MLP | Transformer | Guessing 0 | 
 |----------|----------|-----------|------------|------------|
-| $n= 5$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 6$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $1$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $q$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $q^2$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+
+
+### Kazhdan-Lusztig Polynomials for Permutations of $6$ elements
+
+| Coefficient | Logistic regression | MLP | Transformer | Guessing 0 | 
+|----------|----------|-----------|------------|------------|
+| $1$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $q$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $q^2$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $q^3$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
