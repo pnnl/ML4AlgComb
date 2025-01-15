@@ -22,10 +22,9 @@ Note that the ML task is far more specific that the math question. The idea is t
 
 | Size | Logistic regression | MLP | Transformer | TODO | 
 |----------|----------|-----------|------------|------------|
-| $n= 10$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 11$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 12$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 13$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 10$ | $66.2\%$ | $90.6 \pm 0.8$ | $65.3 \pm 0.0$| $0.0$ |
+| $n= 11$ | $66.3\%$ | $95.8 \pm 0.3$ | $69.4 \pm 6.0$| $0.0$ |
+| $n= 12$ | $66.5\%$ | $98.6 \pm 0.1$ | $86.2 \pm 14.2$| $0.0$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
