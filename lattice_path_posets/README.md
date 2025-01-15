@@ -14,7 +14,24 @@ Each line in a file is the concatenation of two $0$-$1$ sequences (one for each 
 ``1,1,1,0,0;1,1,0,1,0``
 corresponds to the two lattice paths in the figure above. The first is in red and second is in blue, with segments traversed by both paths colored red. 
 
-Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9KtJ1T4RQaGsJNz/view?usp=sharing).
+Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9KtJ1T4RQaGsJNz/view?usp=sharing). The file names are:
+
+- ``lagrange_covers_train_10_9.txt``
+- ``lagrange_covers_train_11_10.txt``
+- ``lagrange_covers_train_12_11.txt``
+- ``lagrange_covers_train_13_12.txt``
+- ``lagrange_covers_test_10_9.txt``
+- ``lagrange_covers_test_11_10.txt``
+- ``lagrange_covers_test_12_11.txt``
+- ``lagrange_covers_test_13_12.txt``
+- ``matching_covers_train_10_9.txt``
+- ``matching_covers_train_11_10.txt``
+- ``matching_covers_train_12_11.txt``
+- ``matching_covers_train_13_12.txt``
+- ``matching_covers_test_10_9.txt``
+- ``matching_covers_test_11_10.txt``
+- ``matching_covers_test_12_11.txt``
+- ``matching_covers_test_13_12.txt``
 
 ## Data Generation
 
