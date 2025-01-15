@@ -8,7 +8,13 @@ Pairs of NE lattice paths $(w,w')$ on a grid of size $n \times n-1$ where $w'$ c
 
 ## Dataset
 
-Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9KtJ1T4RQaGsJNz/view?usp=sharing)
+This dataset contains pairs of lattice paths starting at $(0,0)$ and ending at $(n,n-1)$ that are only allowed to take steps either north or east and must stay below the line $y = \frac{n}{n-1}x$. They are thus encoded by a sequence of $1$'s (for steps east) and $0$'s (for steps north) of length $(n+1) + n = 2n+1$. Each pair of lattice paths is a covering pair in exactly one of the two partial orders, the Lagrange order or the matching order.
+
+Each line in a file is the concatenation of two $0$-$1$ sequences (one for each path) for a length $4n+2$ row of $0$'s and $1$'s. The two lattice paths are separated by ``;``. For example, on a $3 \times 2$ grid, the sequence:
+``1,1,1,0,0;1,1,0,1,0``
+corresponds to the two lattice paths in the figure above. The first is in red and second is in blue, with segments traversed by both paths colored red. 
+
+Datasets can be found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9KtJ1T4RQaGsJNz/view?usp=sharing).
 
 ## Data Generation
 
