@@ -103,9 +103,9 @@ While the classification task as framed does not capture the broader math questi
 
 ## Small model performance
 
-### Prediction of the coefficient on $q^2$
+#### Prediction of the coefficient on $q$
 
-TODO
+#### Prediction of the coefficient on $q^2$
 
 | Size | Logistic regression | MLP | Transformer | Guessing 0 | 
 |----------|----------|-----------|------------|------------|
