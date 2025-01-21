@@ -20,7 +20,7 @@ The files we provide are:
 - ``kl_polynomials_6_train.txt``
 - ``kl_polynomials_6_test.txt``
 
-The datasets can be loaded by: (1) unzipping the file found ADD ME in your chosen `directory`, (2) choosing a value for $n$ (5 or 6), and then (3) running the following commands (here we choose $n = 6$)
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1A9swYSBVM4Y5KAFC52AzVRMVshVz4yyR/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (5 or 6), and then (3) running the following commands (here we choose $n = 6$)
 
 ```
 import numpy as np
@@ -97,43 +97,47 @@ We summarize the different values of each of the coefficients for all $P_{x,w}(q
 
 |  | 0 | 1 | Total number of instances | 
 |----------|----------|----------|----------|
-| Train | 17479910 | 2841370 | 20,321,280 |
-| Test  | 4370771 | 709549 | 5,080,320 |
+| Train | 17,479,910 | 2,841,370 | 20,321,280 |
+| Test  | 4,370,771 | 709,549 | 5,080,320 |
 
 **Coefficients on $q$:**
 
 |  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | Total number of instances | 
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| Train | 19291150 | 660600 | 266591 | 80173 | 18834 | 3221 | 711 | 20,321,280 |
-| Test  | 4822214 | 165768 | 66593 | 19963 | 4762 | 819 | 201 | 5,080,320 |
+| Train | 19,291,150 | 660,600 | 266,591 | 80,173 | 18,834 | 3,221 | 711 | 20,321,280 |
+| Test  | 4,822,214 | 165,768 | 66,593 | 19,963 | 4,762 | 819 | 201 | 5,080,320 |
 
 **Coefficient on $q^2$:**
 
 |  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | Total number of instances | 
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| Train | 20072738 | 170412 | 46226 | 16227 | 7621 | 4023 | 1287 | 1153 | 785 | 350 | 152 | 139 | 121 | 42 | 4 | 20,321,280 |
-| Test  | 5017962 | 42748 | 11568 | 4021 | 1905 | 1065 | 349 | 287 | 183 | 86 | 40 | 37 | 47 | 22 | 5,080,320 |
+| Train | 20,072,738 | 170,412 | 46,226 | 16,227 | 7,621 | 4,023 | 1,287 | 1,153 | 785 | 350 | 152 | 139 | 121 | 42 | 4 | 20,321,280 |
+| Test  | 5,017,962 | 42,748 | 11,568 | 4,021 | 1,905 | 1,065 | 349 | 287 | 183 | 86 | 40 | 37 | 47 | 22 | 5,080,320 |
 
 **Coefficient on $q^3$:**
 
 |  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 15 | Total number of instances | 
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| Train | 20291535 | 22094 | 4779 | 1660 | 590 | 195 | 206 | 115 | 34 | 26 | 24 | 18 | 4 | 20,321,280 |
-| Test  | 5072831 | 5498 | 1213 | 442 | 146 | 61 | 50 | 37 | 14 | 6 | 8 | 14 | 5,080,320 |
+| Train | 20,291,535 | 22,094 | 4,779 | 1,660 | 590 | 195 | 206 | 115 | 34 | 26 | 24 | 18 | 4 | 20,321,280 |
+| Test  | 507,2831 | 5,498 | 1,213 | 442 | 146 | 61 | 50 | 37 | 14 | 6 | 8 | 14 | 5,080,320 |
 
+**Coefficient on $q^4$:**
 
-
+|  | 0 | 1 | Total number of instances | 
+|----------|----------|----------|----------|
+| Train | 17,479,910 | 2,841,370 | 20,321,280 |
+| Test  | 4,370,771 | 709,549 | 5,080,320 |
 
 
 ## Data Generation
 
-Datasets were generated using SageMath. A SageMath notebook with the code to do this can be found in this repository.
+Datasets were generated using code from Greg Warrington's [website](https://gswarrin.w3.uvm.edu/research/klc/klc.html).
 
 ## Task 
 
 **Math question:** Establish a better understanding of the coefficients of Kazhdan-Lusztig polynomials which are known to carry rich geometric information and are assumed to hold a combinatorial interpretation (i.e., they count something).
 
-**ML task:** The ML task is to predict the coefficients of $P_{x,w}(q)$ given $x$ and $w$. We break this up into a separate task for each coefficient though one could choose to predict all simultaneously. Since there are generally very few different integers that arise as coefficients (at least in this small examples), we frame this problem as one of classification.
+**ML task:** The ML task is to predict the coefficients of $P_{x,w}(q)$ given $x$ and $w$. We break this up into a separate task for each coefficient though one could choose to predict all simultaneously. Since there are generally very few different integers that arise as coefficients (at least in this small examples), we frame this problem as one of classification. 
 
 While the classification task as framed does not capture the broader math question exactly, illuminating connections between $x$, $w$, and the coefficients of $P_{x,w}(q)$ has the potential to yield critical insights.
 
