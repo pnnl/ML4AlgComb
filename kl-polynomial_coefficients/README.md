@@ -36,7 +36,7 @@ The basic statistics of the datasets are as follows
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $5$ elements
 
-We summarize the different values of each of the coefficients for all $P_{x,w}(q)$ when $x, w \in S_5$. 
+We summarize the limited number of different values coefficients on $P_{x,w}(q)$ take when $x, w \in S_5$. 
 
 **Constant Terms:**
 
@@ -61,7 +61,7 @@ We summarize the different values of each of the coefficients for all $P_{x,w}(q
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $6$ elements
 
-We summarize the different values of each of the coefficients for all $P_{x,w}(q)$ when $x, w \in S_6$. 
+We summarize the limited number of different values coefficients on $P_{x,w}(q)$ take when $x, w \in S_6$.
 
 **Constant Terms:**
 
@@ -93,7 +93,7 @@ We summarize the different values of each of the coefficients for all $P_{x,w}(q
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $7$ elements
 
-We summarize the different values of each of the coefficients for all $P_{x,w}(q)$ when $x, w \in S_7$. 
+We summarize the limited number of different values coefficients on $P_{x,w}(q)$ take when $x, w \in S_7$. 
 
 **Constant Terms:**
 
@@ -133,7 +133,7 @@ We summarize the different values of each of the coefficients for all $P_{x,w}(q
 
 ## Data Generation
 
-Datasets were generated using code from Greg Warrington's [website](https://gswarrin.w3.uvm.edu/research/klc/klc.html).
+Datasets were generated using C code from Greg Warrington's [website](https://gswarrin.w3.uvm.edu/research/klc/klc.html) and adapting it for all pairs of permutations for $n = 5, 6, 7$.
 
 ## Task 
 
