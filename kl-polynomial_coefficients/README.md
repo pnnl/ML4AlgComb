@@ -139,7 +139,7 @@ Datasets were generated using C code from Greg Warrington's [website](https://gs
 
 **Math question:** Establish a better understanding of the coefficients of Kazhdan-Lusztig polynomials which are known to carry rich geometric information and are assumed to hold a combinatorial interpretation (i.e., they count something).
 
-**ML task:** The ML task is to predict the coefficients of $P_{x,w}(q)$ given $x$ and $w$. We break this up into a separate task for each coefficient though one could choose to predict all simultaneously. Since there are generally very few different integers that arise as coefficients (at least in this small examples), we frame this problem as one of classification. 
+**ML task:** The ML task is to predict the coefficients of $P_{x,w}(q)$ given $x$ and $w$. We break this up into a separate task for each coefficient though one could choose to predict all simultaneously. Since there are generally very few different integers that arise as coefficients (at least in these small examples), we frame this problem as one of classification. 
 
 While the classification task as framed does not capture the broader math question exactly, illuminating connections between $x$, $w$, and the coefficients of $P_{x,w}(q)$ has the potential to yield critical insights.
 
