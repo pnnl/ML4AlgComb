@@ -22,7 +22,7 @@ The files we provide are:
 - ``kl_polynomials_7_train.txt``
 - ``kl_polynomials_7_test.txt``
 
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1A9swYSBVM4Y5KAFC52AzVRMVshVz4yyR/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (5 or 6), and then (3) running the following commands (here we choose $n = 6$)
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1A9swYSBVM4Y5KAFC52AzVRMVshVz4yyR/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (5, 6, or 7), and then (3) running the following commands (here we choose $n = 6$)
 
 ```
 import numpy as np
