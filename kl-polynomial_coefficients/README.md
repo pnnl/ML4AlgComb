@@ -8,7 +8,7 @@ KL polynomials have deep connections throughout several areas of mathematics. Fo
 
 One family of questions revolve around the coefficients of $P_{\sigma,\nu}(q)$. For instance, it has been hypothesized that the coefficient on the term $q^{\ell(\sigma) - \ell(\nu)-1/2}$ (where $\ell(x)$ is a statistic called the length of the permutation), which is known as the $\mu$-coefficient, has a combinatorial interpretation but currently this is not known. Better understanding of this and other coefficients would be of significant interest to mathematicians from a range of fields.
 
-**Dataset:** Each instance in this dataset consists of a pair of permutations of $n$, $x$ and $w$, along with the coefficients of the polynomial $P_{x,w}(q)$. We provide full datasets for $n = 5,6$. Each instance corresponds to a line in the train/test files. So if $x =$ $1$ $2$ $3$ $4$ $5$ $6$ and $w=4$ $5$ $6$ $1$ $2$ $3$ and $P_{v,w}(q) = 1 + 4q + 4q^2 + q^3$ then this is written as the line
+**Dataset:** Each instance in this dataset consists of a pair of permutations of $n$, $x$ and $w$, along with the coefficients of the polynomial $P_{x,w}(q)$. We provide full datasets for $n = 5,6,7$. Each instance corresponds to a line in the train/test files. So if $x =$ $1$ $2$ $3$ $4$ $5$ $6$ and $w=4$ $5$ $6$ $1$ $2$ $3$ and $P_{v,w}(q) = 1 + 4q + 4q^2 + q^3$ then this is written as the line
 
 ``123456, 456123, 1, 4, 4, 1``
 
