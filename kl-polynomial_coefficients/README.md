@@ -29,7 +29,7 @@ import numpy as np
 import load_datasets 
 
 folder = # provide the file path to the directory you chose here
-X = load_datasets.get_dataset('schubert', n=5, folder = folder)
+X = load_datasets.get_dataset('schubert', n=6, folder = folder)
 ```
 
 The basic statistics of the datasets are as follows
