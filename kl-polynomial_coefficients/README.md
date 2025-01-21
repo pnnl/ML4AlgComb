@@ -145,6 +145,8 @@ While the classification task as framed does not capture the broader math questi
 
 ## Small model performance
 
+Since there are many possible tasks here, we did not run exhaustive hyperparameter searches, instead opting for the larger network sizes for our 
+
 ### Kazhdan-Lusztig Polynomials for Permutations of $5$ elements
 
 | Coefficient | Logistic regression | MLP | Transformer | Guessing 0 | 
