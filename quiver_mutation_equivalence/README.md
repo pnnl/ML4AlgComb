@@ -4,7 +4,7 @@ Quivers and quiver mutations are central to the combinatorial study of cluster a
 
 Recent work has explored whether deep learning models can learn to correctly predict if two quivers are mutation equivalent \[1\]. Our dataset aims to facilitate continuation of this work. In \[1\] and in our dataset, quivers are represented using adjacency matrices. 
 
-**Dataset:** The dataset consists of djacency matrices for 6 different equivalence classes of quivers (types $A$, $D$, $\tilde{A}$, $E$, $\tilde{E$}. In more detail, the training set consists of
+**Dataset:** The dataset consists of djacency matrices for 6 different equivalence classes of quivers (types $A$, $D$, $\tilde{A}$, $E$, $\tilde{E}$. In more detail, the training set consists of
 - All quivers of types $A$, $D$, $\tilde{A}$, and $\tilde{D}$ on 7, 8, 9, and 10 nodes.
 - All quivers of type $\tilde{E}$. (Type $\tilde{E}$ is only defined for 7, 8, and 9 nodes, corresponding to extended versions of $E\_6$, $E\_7$, and $E\_8$, respectively). All quivers of type $\tilde{E}$ are mutation-finite.)
 - All quivers of type $E$ for $n = 6, 7, 8$. (The Dynkin diagram $E\_9$ is the same as the extended diagram $\tilde{E}\_8$.) Type $E$ is only mutation-finite for $n = 6, 7, 8$ and coincides with $\tilde{E}$ for $n = 9$.
