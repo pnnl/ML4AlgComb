@@ -146,6 +146,7 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         X_train, y_train, X_test, y_test = np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test)
         min_val = min(np.min(y_train), np.min(y_test))
         y_train, y_test = y_train,  y_test
+        print(y_train[:10])
         print(f"Train set has {len(X_train)} examples")
         print(f"Test set has {len(X_test)} examples")
         print(f"Inputs are sequences of length {input_size} with entries 0 through {num_tokens-1}, which represent two concatenated integer partitions of n={n}.")
@@ -184,19 +185,22 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
         #We filtered out all classes that contained less than 0.01% of the data
         largest_class = 4
 
-        mheight_train = np.loadtxt(f"{base_path}_{n}_train.txt", dtype = str, delimiter = ",")
-        mheight_test = np.loadtxt(f"{base_path}_{n}_test.txt", dtype = str, delimiter = ",")
+        mheight_train = np.loadtxt(f"{base_path}_{n}_train.txt", dtype = str, delimiter = ";")
+        mheight_test = np.loadtxt(f"{base_path}_{n}_test.txt", dtype = str, delimiter = ";")
 
-        X_train, y_train = parse_mheight_data(mheight_train, largest_class = largest_class)
-        X_test, y_test = parse_mheight_data(mheight_test, largest_class = largest_class)
+        X_train, y_train = parse_mheight_data(mheight_train)
+        X_test, y_test = parse_mheight_data(mheight_test)
 
+        num_classes = len(set(y_train+y_test))
+        
         input_size = len(X_train[0])
-        output_size = largest_class +1
-        num_tokens = 2
+        output_size = num_classes
+        num_tokens = n
         print(f"Train set has {len(X_train)} examples")
         print(f"Test set has {len(X_test)} examples")
         print(f"Input sequences are permutations represented by their inversion sequence, which is a binary sequence of length ({n} choose 2)= {input_size}.")
-        print(f"There are {output_size} classes; classes that contained less than 0.01% of the data were filtered.")
+        print(f"There are {output_size} classes")
+        print(output_size)
         return (np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test), input_size, output_size, num_tokens)
 
 
@@ -308,9 +312,13 @@ def get_dataset(data: str, n: Optional[int] = None, folder = "./"):
 
 
 
-def parse_mheight_data(mheight_set, largest_class = 4):
-    sequences = [ [int(x) for _, x in enumerate(row.split(';')[0])] for _, row in enumerate(mheight_set) if int(row.split(';')[1]) <= largest_class ]
-    labels = [ int(row.split(';')[1]) for _, row in enumerate(mheight_set) if int(row.split(';')[1]) <= largest_class ]
+def parse_mheight_data(mheight_set):
+    #sequences = [ [int(x) for _, x in enumerate(row.split(';')[0])] for _, row in enumerate(mheight_set) if int(row.split(';')[1]) <= largest_class ]
+    #labels = [ int(row.split(';')[1]) for _, row in enumerate(mheight_set) if int(row.split(';')[1]) <= largest_class ]
+    sequences = [i[0].replace('(', '').replace(')', '') for i in mheight_set]
+    sequences = [i.split(",") for i in sequences]
+    sequences = [[int(j) for j in i] for i in sequences]
+    labels = [int(i[1]) for i in mheight_set]
     return sequences, labels
 
 
