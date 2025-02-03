@@ -75,9 +75,9 @@ The Sage notebook within this directory gives the code used to generate these da
 
 | Size | Logistic regression | MLP | Transformer | Guessing majority class | 
 |----------|----------|-----------|------------|------------|
-| $n= 4$ | $64.4\\%$ | $89.5\\% \pm 2.6\\%$ | $96.7\\% \pm 3.5\\%$| $47.7\\%$ |
-| $n= 5$ | $66.7\\%$ | $99.8\\% \pm 0.0\\%$ | $81.0\\% \pm 22.1\\%$| $49.9\\%$ |
-| $n= 6$ | $65.5\\%$ | $99.8\\% \pm 0.0\\%$ | $85.0\\% \pm 10.9\\%$| $50.1\\%$ |
+| $n= 4$ | $88.8\\%$ | $93.1\\% \pm 2.6\\%$ | $96.7\\% \pm 1.0\\%$| $52.3\\%$ |
+| $n= 5$ | $90.6\\%$ | $97.5\\% \pm 0.2\\%$ | $96.2\\% \pm 1.1\\%$| $49.9\\%$ |
+| $n= 6$ | $89.7\\%$ | $99.8\\% \pm 0.0\\%$ | $91.3\\% \pm 8.0\\%$| $50.1\\%$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
