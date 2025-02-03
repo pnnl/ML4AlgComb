@@ -182,7 +182,7 @@ The associated macro F1-scores are:
 |----------|----------|-----------|
 | $1$ | $99.9\% \pm 0.0\%$ | $100.0\% \pm 0.0\%$ | 
 | $q$ | $99.0\% \pm 1.5$ | $98.0\% \pm 3.7\%$ | 
-| $q^2$ | $97.4\% \pm 5.2\% | 98.0\% \pm 3.7\%$ | 
+| $q^2$ | $97.4\% \pm 5.2\%$ | $98.0\% \pm 3.7\%$ | 
 | $q^3$ | $87.9\% \pm 4.5\%$ | $88.3\% \pm 17.1\%$ | 
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
