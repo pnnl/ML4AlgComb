@@ -33,10 +33,12 @@ See the work [\[2\]](https://arxiv.org/abs/2411.07467) for an example of how a m
 
 ## Small model performance
 
-| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
-|----------|----------|-----------|------------|------------|
-| $n= 5$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 6$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+|  | Accuracy | 
+|----------|----------|
+| Logistic regression | $40.3\%$ |
+| MLP | $86.5\% \pm 1.9\%$ | 
+| Transformer | $92.9\% \pm 0.5\%$ |
+| Guessing largest class | $17.7\% |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
