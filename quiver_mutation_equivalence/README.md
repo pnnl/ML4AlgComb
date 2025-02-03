@@ -13,6 +13,14 @@ The test set consists of quivers on 11 nodes. We use the full mutation classes o
 
 Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPIgciuGG9HfvrKWC/view?usp=sharing)
 
+Dataset statistics are as follows:
+
+| | $A_{11}$ | $B_{11}$ | $BD_{11}$ | $BE_{11}$ | $D_{11}$ | $DE_{11}$ | $E_{11}$ | Total |
+|---|---|--|---|---|---|----|----|---|
+| Training | 11,940 | 27,410 | 23,651 | 22,615 | 25,653 | 23,528 | 28,998 | 163,795 |
+| Test | 2,984 | 6,852 | 5,912 | 5,653 | 6,413 | 5,881 | 7,249 | 40,944 |
+
+
 ## Data generation
 
 ## Task
