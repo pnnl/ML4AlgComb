@@ -16,14 +16,23 @@ Permutations of size $n$ labeled by their mHeight. We provide datasets for $n = 
 
 The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4KzR9dVUaDhNtUPnumeuX/view?usp=sharing)
 
+### Permutations of size $8$
+
+For $n = 8$, mHeight takes values 0, 1, 2, 3, 4, 5. 
+
+| mHeight value  | 0 | 1 | 2 | 3 | 4 |   Total number of instances | 
+|----------|----------|----------|----------|----------|----------|----------|
+| Train | 6,716 | 508 | 78 | 9 | 1 | 7,312 |
+| Test  | 1,672 | 136 | 18 | 3 | 0 | 1,829 |
+
 ### Permutations of size $9$
 
 For $n = 9$, mHeight takes values 0, 1, 2, 3, 4, 5. 
 
 | mHeight value  | 0 | 1 | 2 | 3 | 4 | 5 |  Total number of instances | 
 |----------|----------|----------|----------|----------|----------|----------|----------|
-| Train | 49,166 | 3,107 | 500 | 80 | 10 | 1 | |
-| Test  | 12,243 | 813 | 142 | 16 | 2 | 0 | |
+| Train | 49,092 | 3,161 | 524 | 77 | 9 | 1 | 52,864 |
+| Test  | 12,317 | 759 | 118 | 19 | 3 | 0 | 13,216 |
 
 ### Permutations of size $10$
 
@@ -31,8 +40,8 @@ For $n = 10$, mHeight takes values 0, 1, 2, 3, 4, 5, 6.
 
 | mHeight value  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | Total number of instances | 
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| Train | 352,428 | 17,934 | 3,140 | 524 | 75 | 10 | 1 | |
-| Test  | 88,124 |  4,521 | 742 | 118 | 21 | 2 | 0 | |
+| Train | 352,494 | 17,952 | 3,079 | 502 | 74 | 10 | 1 | 374,112 |
+| Test  | 88,058 |  4,503 | 803 | 140 | 22 | 2 | 0 | 93,528 |
 
 ## Data Generation
 
@@ -44,10 +53,11 @@ For $n = 10$, mHeight takes values 0, 1, 2, 3, 4, 5, 6.
 
 ## Small model performance
 
-| Size | Logistic regression | MLP | Transformer | TODO | 
+| Size | Logistic regression | MLP | Transformer | Guessing 0 | 
 |----------|----------|-----------|------------|------------|
-| $n= 9$ | $70.8\\%$ | $92.1\\% \pm 0.3\\%$ | $82.8\\% \pm 1.1\\%$| $0.0$ |
-| $n= 10$ | $94.2\\%$ | $99.9\\% \pm 0.0\\%$ | $99.9\\% \pm 0.0\\%$| $0.0$ |
+| $n= 8$ | $91.4\\%$ | $99.4\\% \pm 0.3\\%$ | $99.7\\% \pm 0.4\\%$| $91.4\%$ |
+| $n= 9$ | $93.2\\%$ | $99.8\\% \pm 0.6\\%$ | $99.9\\% \pm 0.4\\%$| $93.2\%$ |
+| $n= 10$ | $94.2\\%$ | $99.9\\% \pm 0.0\\%$ | $99.9\\% \pm 0.6\\%$| $94.2\%$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
