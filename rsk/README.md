@@ -13,10 +13,6 @@ The permutation $213$, inverts $(1, 2)$ but not $(1, 3)$ or $(2, 3)$, so we woul
 
 The datasets can be downloaded [here](https://drive.google.com/file/d/1CfuxD_XgTefbEduxJnXgXoUOt-GY-smq/view?usp=sharing). 
 
-Dataset statistics are as follows
-
-
-
 ## Data generation
 
 ## Task
