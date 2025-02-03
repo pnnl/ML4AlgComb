@@ -13,6 +13,10 @@ The permutation $213$, inverts $(1, 2)$ but not $(1, 3)$ or $(2, 3)$, so we woul
 
 The datasets can be downloaded [here](https://drive.google.com/file/d/1CfuxD_XgTefbEduxJnXgXoUOt-GY-smq/view?usp=sharing). 
 
+Dataset statistics are as follows
+
+
+
 ## Data generation
 
 ## Task
@@ -25,11 +29,10 @@ The RSK algorithm is non-trivial. It would be a powerful proof-of-concept in the
 
 ## Small model performance
 
-| Size | Logistic regression | MLP | Transformer | Guessing majority class | 
+| Size | Logistic regression | MLP | Transformer | Guessing target mean | 
 |----------|----------|-----------|------------|------------|
-| $n= 8$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 9$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
-| $n= 10$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $0.0$ |
+| $n= 8$ | $0.21$ | $0.43 \pm 0.05$ | $1.51 \pm 0.02$| $0.21$ |
+| $n= 9$ | $0.21$ | $0.96 \pm 0.07$ | $3.85 \pm 0.09$| $0.21$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
