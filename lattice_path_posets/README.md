@@ -47,32 +47,33 @@ X = load_datasets.get_dataset('lattice_paths', n=10, folder = folder)
 
 Dataset statistics are as follows
 
-### Lattice paths of size $?$
-
-For $n = ?$. 
+### Lattice paths from $(0,0)$ to $(10,9)$ 
 
 |  | Lagrange | Matching | Total number of instances | 
 |----------|----------|----------|----------|
-| Train | ? | ? | ? |
-| Test  | ? | ? | ? | 
+| Train | 7,589 | 3,875 | 11,433 |
+| Test  | 1,895 | 968 | 2,863 | 
 
-### Lattice paths of size $?$
-
-For $n = ?$. 
+### Lattice paths from $(0,0)$ to $(11,10)$ 
 
 |  | Lagrange | Matching | Total number of instances | 
 |----------|----------|----------|----------|
-| Train | ? | ? | ? |
-| Test  | ? | ? | ? | 
+| Train | 26,427 | 13,424 | 39,851 |
+| Test  | 6,601 | 3,355 | 9,956 | 
 
-### Lattice paths of size $?$
-
-For $n = ?$. 
+### Lattice paths from $(0,0)$ to $(12,11)$ 
 
 |  | Lagrange | Matching | Total number of instances | 
 |----------|----------|----------|----------|
-| Train | ? | ? | ? |
-| Test  | ? | ? | ? | 
+| Train | 93,218 | 46,976 | 140,194 |
+| Test  | 23,324 | 11,749 | 35,073 | 
+
+### Lattice paths from $(0,0)$ to $(13,12)$ 
+
+|  | Lagrange | Matching | Total number of instances | 
+|----------|----------|----------|----------|
+| Train | 331,065 | 166,304 | 497,369 |
+| Test  | 82,789 | 41,580 | 124,369 | 
 
 ## Data Generation
 
