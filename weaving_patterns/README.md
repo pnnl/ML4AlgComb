@@ -7,7 +7,10 @@ The enumeration of reduced decompositions up to commutation equivalence has been
 ## Dataset 
 Each $n \times n − 1$ matrix is stored on single line. For instance, the matrix
 
-$\begin{bmatrix} 1 & 2 \\ \end{bmatrix}$
+
+$\begin{bmatrix} 1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \end{bmatrix}$
 | 1 | 2 | 3 | 4 | 5 ||
 | Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
 
