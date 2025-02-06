@@ -1,4 +1,4 @@
-# Weaving patterns (open problem)
+# Finding a Concise Description of Weaving Pattern Matrices (Open Problem)
 
 Weaving patterns are $n \times n-1$-matrices with $\{0,1\}$-entries introduced by Felsner \[1\] to study the number of reduced decompositions of the permutation $\sigma = n \; n-1 \; \ldots 1$ up to commutation equivalence. The number of such objects also counts the number of parallel sorting networks, the number of rhombic tilings of regular polygons, and is connected to the study of the higher Bruhat orders. Weaving patterns can be enriched by replacing the $\{0,1\}$ entries to the matrix with $\{1,2,\dots,n\}$ entries that track the element being swapped. An $O(n^2)$ algorithm for determining if a given 0-1 matrix is a valid weaving pattern exists but gives no additional insight into the structure of weaving patterns and correspondingly the asymptotics of reduced decompositions.
 
