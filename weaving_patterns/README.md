@@ -7,10 +7,15 @@ The enumeration of reduced decompositions up to commutation equivalence has been
 ## Dataset 
 Each $n \times n − 1$ matrix is stored on single line. For instance, the matrix
 
-| Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
+$$
+\begin{bmatrix}
+1 & 2 \\
+\end{bmatrix}
+$$
+| 1 | 2 | 3 | 4 | 5 ||
 | Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
 
-`2,1,2,3,4,3,4,5,4,5,2,3,4,5,4,5,4,3,2,3,4,5,4,3,2`
+`1,2,3,4,5,1,2,3,4,6,1,2,3,5,6,1,2,4,5,6,1,3,4,5,6,2,3,4,5,6`
 
 where the matrix is represented in row-major format. An integer representing whether the matrix corresponds to a weaving pattern ‘0’ or not ‘1’ is listed after the matrix.
 
