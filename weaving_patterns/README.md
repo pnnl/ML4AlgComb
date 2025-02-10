@@ -30,8 +30,8 @@ The datasets can be loaded by: (1) unzipping the file found [here](https://drive
 import numpy as np
 import load_datasets 
 
-folder = # provide the file path to the directory you chose here
-X = load_datasets.get_dataset('weaving', n=7, folder = folder)
+directory = # provide the file path to the directory you chose here
+X = load_datasets.get_dataset('weaving', n=7, folder = directory)
 ```
 
 The task is formulated as binary classification. Class statistics are as follows:
