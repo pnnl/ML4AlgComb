@@ -70,3 +70,6 @@ The $\pm$ signs indicate 95% confidence intervals from random weight initializat
 ## References
 
 \[1\] Felsner, Stefan. "On the number of arrangements of pseudolines." Proceedings of the twelfth annual Symposium on Computational Geometry. 1996.
+
+\[2\] Chau, Herman. "On Enumerating Higher Bruhat Orders Through Deletion and Contraction." arXiv preprint arXiv:2412.10532 (2024).
+
