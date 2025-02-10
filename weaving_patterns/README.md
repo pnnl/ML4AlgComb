@@ -22,7 +22,7 @@ is represented as
 
 ``1,2,3,4,5,1,2,3,4,6,1,2,3,5,6,1,2,4,5,6,1,3,4,5,6,2,3,4,5,6``
 
-note that the matrix is represented in row-major format. An integer representing whether the matrix corresponds to a weaving pattern ‘0’ or not ‘1’ is listed at the same index in the corresponding labels file.
+note that the matrix is represented in row-major format. An integer representing whether the matrix corresponds to a weaving pattern (‘0’) or not (‘1’) is listed at the same index in the corresponding labels file.
 
 The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1HsWuHpTkCOtpyTG2dFH49jzkKIZYwKG8/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (6, 7), and then (3) running the following commands (here we choose $n = 7$)
 
@@ -50,13 +50,13 @@ The task is formulated as binary classification. Class statistics are as follows
 
 ## Data generation
 
-A Java file that generates all weaving patterns for a given value of $n$ can be found above. To sample negatives ($\{1,2,\dots,n\}$-entry matrices that are not weaving patterns) we simply took true weaving patterns and randomly permuted two of the entries in a random row. We checked that the result matrix was not a weaving pattern by comparing it to all true weaving patterns that we had already found. 
+A Java file that generates all weaving patterns for a given value of $n$ can be found above. To sample negatives ($\\{1,2,\dots,n\\}$-entry matrices that are not weaving patterns) we simply took true weaving patterns and randomly permuted two of the entries in a random row. We checked that the resulting matrix was not a weaving pattern by comparing it to all true weaving patterns that we had already found. 
 
 ## Task
 
 **Math question:** Find a concise characterization of those $\{1,2,\dots,n\}$-valued $n \times n-1$ matrices that correspond to weaving patterns.
 
-**ML task:** Train a model that can predict whether a $\{1,2,\dots,n\}$-valued $n \times n-1$ matrices corresponds to a weaving pattern or not. 
+**ML task:** Train a model that can predict whether a $\{1,2,\dots,n\}$-valued $n \times n-1$ matrix corresponds to a weaving pattern or not. 
 
 ## Small model performance
 
