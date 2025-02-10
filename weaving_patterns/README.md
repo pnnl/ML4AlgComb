@@ -22,7 +22,7 @@ is represented as
 
 ``1,2,3,4,5,1,2,3,4,6,1,2,3,5,6,1,2,4,5,6,1,3,4,5,6,2,3,4,5,6``
 
-note that the matrix is represented in row-major format. An integer representing whether the matrix corresponds to a weaving pattern ‘0’ or not ‘1’ is listed after the matrix.
+note that the matrix is represented in row-major format. An integer representing whether the matrix corresponds to a weaving pattern ‘0’ or not ‘1’ is listed at the same index in the corresponding labels file.
 
 The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1HsWuHpTkCOtpyTG2dFH49jzkKIZYwKG8/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (6, 7), and then (3) running the following commands (here we choose $n = 7$)
 
