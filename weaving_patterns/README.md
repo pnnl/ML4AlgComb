@@ -50,7 +50,7 @@ The task is formulated as binary classification. Class statistics are as follows
 
 ## Data generation
 
-A Java file that generates all weaving patterns for a given value of $n$ can be found above. To sample negatives ($\\{1,2,\dots,n\\}$-entry matrices that are not weaving patterns) we simply took true weaving patterns and randomly permuted two of the entries in a random row. We checked that the resulting matrix was not a weaving pattern by comparing it to all true weaving patterns that we had already found. 
+A Java file that generates all weaving patterns for a given value of $n$ can be found above. To sample negatives ($\\{1,2,\dots,n\\}$-entry matrices that are not weaving patterns) we simply took true weaving patterns and shuffled the numbers within each row using numpy's shuffle method, and checked that the resulting matrix is not a positive example. This enforces the same row-level statistics (each row contains exactly one occurrence of each number), so there is no simple 'counting feature' for a neural network to use to differentiate between positive and negative examples.
 
 ## Task
 
