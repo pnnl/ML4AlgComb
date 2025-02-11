@@ -4,7 +4,7 @@ Quivers and quiver mutations are central to the combinatorial study of cluster a
 
 ## Dataset 
 
-The task associated with this dataset is identifying whether two quivers are mutation equivalent. Thus, the inputs are quivers (directed multigraphs) with $11$ nodes that are encoded by their $11 \times 11$ adjacency matrices and the labels are one of $7$ different equivalence classes: $A_{11},BB_{11},BD_{11},BE_{11},D_{11},DE_{11},E_{11}$. The files are organized by train and test for each of these classes. For the quiver mutation classes that are not mutation finite, the datasets contain quivers generated up to a certain depth, which is the distance from the original quiver, measured by number of mutations. The depth is specified in the filename and was chosen to achieve as close to a balanced dataset as possible. 
+The task associated with this dataset involves identifying whether two quivers are mutation equivalent. Thus, the inputs are quivers (directed multigraphs) with $11$ nodes that are encoded by their $11 \times 11$ adjacency matrices and the labels are one of $7$ different equivalence classes: $A_{11},BB_{11},BD_{11},BE_{11},D_{11},DE_{11},E_{11}$. The files are organized by train and test for each of these classes. For the quiver mutation classes that are not mutation finite (that is, the mutation equivalence class has an infinite number of elements), the datasets contain quivers generated up to a certain depth, which is the distance from the original quiver, measured by number of mutations. The depth is specified in the filename and was chosen to achieve as close to a balanced dataset as possible. 
 
 Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPIgciuGG9HfvrKWC/view?usp=sharing)
 
