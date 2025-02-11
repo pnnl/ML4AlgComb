@@ -12,7 +12,7 @@ ADD Figure
 
 This dataset contains permutations labeled by their mHeight. Permutations are written in 1-line notation followed by a ``;`` and then the value of the mHeight function on the permutation. So 
 ``(6, 8, 7, 5, 4, 9, 3, 0, 1, 2);1``
-can be read as saying that the permutation $6\;8\;7\;5\;4\;9\;3\;0\;1\;2$ has mHeight 1. 
+can be read as saying that the permutation $6\\;8\\;7\\;5\\;4\\;9\\;3\\;0\\;1\\;2$ has mHeight 1. 
 
 We provide datasets for permutations of size $n = 8,9,10$. The files are called:
 - ``mHeight_8_train.txt`` 
