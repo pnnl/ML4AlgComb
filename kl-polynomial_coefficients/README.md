@@ -1,5 +1,7 @@
 # The Coefficients of Kazhdan-Lusztig Polynomials (Open Problem)
 
+![KL polynomial task](fig-kl-polynomial.png)
+
 Kazhdan-Lusztig (KL) polynomials are polynomials in a variable $q$ and with integer coefficients that (for our purposes) are indexed by a pair of permutations \[1\]. We will write the KL polynomial associated with permutations $\sigma$ and $\nu$ as $P_{\sigma,\nu}(q)$. For example, the KL polynomial associated with permutations $\sigma = 1$ $4$ $3$ $2$ $7$ $6$ $5$ $10$ $9$ $8$ $11$ and $\nu = 4$ $6$ $7$ $8$ $9$ $10$ $1$ $11$ $2$ $3$ $5$ is
 
 $P_{\sigma,\nu}(q) = 1 + 16q + 103q^2 + 337q^3 + 566q^4 + 529q^5 + 275q^6 + 66q^7 + 3q^8.$
