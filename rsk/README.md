@@ -1,5 +1,7 @@
 # The Robinson-Schensted-Knuth Correspondence (Foundational Result)
 
+![RSK task graphic](fig-rsk.png)
+
 The Robinson-Schensted-Knuth (RSK) algorithm \[1,2\] gives a bijection between pairs of semistandard Young tableau of the same shape and matrices with non-negative integer entries. The special case we consider (which is sometimes called the Robinson-Schensted algorithm) restricts to a bijection between pairs of standard Young tableaux and permutations in $S_n$. This correspondence is significant in algebraic combinatorics because it connects two of the most fundamental objects in the field, permutations and standard Young tableaux (see \cite{stanley-1984} for additional history and context). 
 
 The goal of this benchmark is to see whether a model can learn the RSK algorithm. That is, for a fixed $n$ the model is provided with a permutation $\pi \in S_n$ and required to predict pairs of standard Young tableaux. Although the algorithm is known, it would be significant for a model to learn this correspondence due to the the intricate combinatorial rules involved. Notably, the RSK correspondence can be used to find the length of the longest increasing subsequence, so a model that learns this algorithm implicitly must also learn to solve the increasing subsequence problem. Additionally, given the numerous generalizations of the RSK correspondence, a model that performs well on this benchmark could potentially be investigated for its ability to generalize to other related combinatorial settings. 
