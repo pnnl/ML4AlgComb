@@ -1,15 +1,10 @@
-# Mutation equivalence of quivers (open problem)
+# Mutation Equivalence of Quivers (Open Problem)
 
-Quivers and quiver mutations are central to the combinatorial study of cluster algebras, algebraic structures with connections to Poisson Geometry, string theory, and Teichmuller theory. Quivers are directed graphs, and a quiver mutation is a local transformation of the graph involving certain vertices and arrows that produces a new quiver. A fundamental open problem in this area is to find an algorithm that determines whether two quivers are mutation equivalent. Currently, no such algorithm exists for quivers on more than three vertices.  
+Quivers and quiver mutations are central to the combinatorial study of cluster algebras, algebraic structures with connections to Poisson Geometry, string theory, and Teichmuller theory. Quivers are directed (multi)graphs, and a quiver mutation is a local transformation centered at a chosen node of the graph that involves adding, deleting, and reversing the orientation of specific edges based on a set of combinatorial rules. A fundamental open problem in this area is finding an algorithm that determines whether two quivers are mutation equivalent (one can traverse from one quiver to another by applying mutations). Currently, such algorithms only exist for special cases (including types $A$ \[1\], $D$ \[2\], and $\tilde{D}$ \[3\]). To our knowledge, the remaining classes in this dataset ($E$, $DE$, $BE$, and $B$) lack charaterizations. Recent work has explored whether deep learning models can learn to correctly predict if two quivers are mutation equivalent \[4\]. \[5\] utilized a subset of this dataset to re-discover known charcterization theorems. The dataset consists of adjacency matrices for quivers drawn from 7 different mutation equivalence classes.
 
-Recent work has explored whether deep learning models can learn to correctly predict if two quivers are mutation equivalent \[1\]. Our dataset aims to facilitate continuation of this work. In \[1\] and in our dataset, quivers are represented using adjacency matrices. 
+## Dataset 
 
-**Dataset:** The dataset consists of djacency matrices for 6 different equivalence classes of quivers (types $A$, $D$, $\tilde{A}$, $E$, $\tilde{E}$. In more detail, the training set consists of
-- All quivers of types $A$, $D$, $\tilde{A}$, and $\tilde{D}$ on 7, 8, 9, and 10 nodes.
-- All quivers of type $\tilde{E}$. (Type $\tilde{E}$ is only defined for 7, 8, and 9 nodes, corresponding to extended versions of $E\_6$, $E\_7$, and $E\_8$, respectively). All quivers of type $\tilde{E}$ are mutation-finite.)
-- All quivers of type $E$ for $n = 6, 7, 8$. (The Dynkin diagram $E\_9$ is the same as the extended diagram $\tilde{E}\_8$.) Type $E$ is only mutation-finite for $n = 6, 7, 8$ and coincides with $\tilde{E}$ for $n = 9$.
-- Quivers of type $E\_{10}$ up to a mutation depth of 8, with respect to Sage’s standard orientation for $E\_{10}$ (Fig. 9). (While type $E$ is mutation finite for $n \leq 9$, $E_{10}$ is mutation-infinite).
-The test set consists of quivers on 11 nodes. We use the full mutation classes of $A\_{11}$, $\tilde{A\_{10}}$, $D\_{11}$ and $\tilde{D}\_{10}$, and again generate quivers up to a mutation depth of 8 for $E\_{11}$.
+The task associated with this dataset is identifying whether two quivers are mutation equivalent. Thus, the inputs are quivers (directed multigraphs) with $11$ nodes that are encoded by their $11 \times 11$ adjacency matrices and the labels are one of $7$ different equivalence classes: $A_{11},BB_{11},BD_{11},BE_{11},D_{11},DE_{11},E_{11}$. The files are organized by train and test for each of these classes. For the quiver mutation classes that are not mutation finite, the datasets contain quivers generated up to a certain depth, which is the distance from the original quiver, measured by number of mutations. The depth is specified in the filename and was chosen to achieve as close to a balanced dataset as possible. 
 
 Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPIgciuGG9HfvrKWC/view?usp=sharing)
 
@@ -23,13 +18,15 @@ Dataset statistics are as follows:
 
 ## Data generation
 
+All mutation classes were generated using Sage \[6\], and the script we used to generate the data is available above.
+
 ## Task
 
-**Math question:** Find simple rules to determine whether or not a quiver belongs to a specific mutation equivalence class (out of classes $A$, $D$, $\tilde{A}$, $\tilde{D}$, $E$, and $\tilde{E}$).
+**Math question:** Find simple rules to determine whether or not a quiver belongs to a specific mutation equivalence class (out of classes $A_{11},BB_{11},BD_{11},BE_{11},D_{11},DE_{11},E_{11}$).
 
-**ML task:** Train a model that can predict a quiver's mutation equivalence class out of the 6 options above.
+**ML task:** Train a model that can predict a quiver's mutation equivalence class out of the 7 options above.
 
-See the work [\[2\]](https://arxiv.org/abs/2411.07467) for an example of how a model trained on this dataset can be used to re-discover known theorems.
+See the work [\[2\]](https://arxiv.org/abs/2411.07467) for an example of how a model trained on a variant of this dataset was used to re-discover known theorems.
 
 ## Small model performance
 
@@ -42,6 +39,12 @@ See the work [\[2\]](https://arxiv.org/abs/2411.07467) for an example of how a m
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
-\[1\] Bao, Jiakang, et al. "Machine learning algebraic geometry for physics." arXiv preprint arXiv:2204.10334 (2022).
+\[1\] Buan, Aslak Bakke, and Dagfinn F. Vatne. "Derived equivalence classification for cluster-tilted algebras of type $A_n$." Journal of Algebra 319.7 (2008): 2723-2738.
 
-\[2\] He, Jesse, et al. "Machines and Mathematical Mutations: Using GNNs to Characterize Quiver Mutation Classes." arXiv preprint arXiv:2411.07467 (2024).
+\[2\] Vatne, Dagfinn F. "The mutation class of D n quivers." Communications in Algebra 38.3 (2010): 1137-1146.
+
+\[3\] Henrich, Thilo. "Mutation classes of diagrams via infinite graphs." Mathematische Nachrichten 284.17‐18 (2011): 2184-2205.
+
+\[4\] Bao, Jiakang, et al. "Machine learning algebraic geometry for physics." arXiv preprint arXiv:2204.10334 (2022).
+
+\[5\] He, Jesse, et al. "Machines and Mathematical Mutations: Using GNNs to Characterize Quiver Mutation Classes." arXiv preprint arXiv:2411.07467 (2024).
