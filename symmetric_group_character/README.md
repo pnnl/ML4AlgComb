@@ -80,7 +80,7 @@ The data was generated using Sage \[2\]. The
 |----------|----------|-----------|------------|------------|
 | $n= 18$ | $1.5920 \times 10^{10}$ | $2.7447 \times 10^{8} \pm 8.8602 \times 10^8$ | $2.4913 \times 10^{10} \pm 1.4350 \times 10^7$| $1.5920 \times 10^{10}$ |
 | $n= 20$ | $4.2007 \times 10^{12}$ | $4.2254 \times 10^{11} \pm 5.1236 \times 10^{11}$ | $5.3897 \times 10^{12} \pm 3.6464 \times 10^{11}$ | $4.2007 \times 10^{12}$ |
-| $n= 22$ | $8.0395 \times 10^{14}$ | $1.1192 \times 10^{12} \pm 4.9321 \times 10^{12}$ | $1.3797 \times 10^{14} \pm 6.2799 \times 10^{12}$| $8.0395 \times 10^{14}$ |
+| $n= 22$ | $8.0395 \times 10^{14}$ | $1.1192 \times 10^{14} \pm 4.9321 \times 10^{12}$ | $1.3797 \times 10^{14} \pm 6.2799 \times 10^{12}$| $8.0395 \times 10^{14}$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
