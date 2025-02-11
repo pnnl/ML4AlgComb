@@ -1,10 +1,10 @@
-# Schubert polynomial structure constants (open problem)
+# A Combinatorial Interpretation of Schubert Polynomial Structure Constants (Open Problem)
 
 Schubert polynomials \[1,2,3\] are a family of polynomials indexed by permutations of $S_n$. Developed to study the cohomology ring of the flag variety, they have deep connections to algebraic geometry, Lie theory, and representation theory. Despite their geometric origins, Schubert polynomials can be described combinatorially \[4,5\], making them a well-studied object in algebraic combinatorics. An important open problem in the study of Schubert polynomials is understanding their *structure constants*. 
 
-When two Schubert polynomials are multiplied, their product can be written as a linear combination of Schubert polynomials
-$\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma} = \sum\_{\alpha} c^{\alpha}\_{\beta \gamma} \mathfrak{S}\_{\alpha}$.
-The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the *structure constants*) have a combinatorial interpretation. To give an example of what we mean by combinatorial interpretation, when Schur polynomials (which can be viewed as specific case of Schubert polynomials) are multiplied together, the coefficients in the resulting product are equal to the number of semistandard tableaux satisfying certain properties.
+When two Schubert polynomials $\mathfrak{S}\_{\beta}$ and $\mathfrak{S}\_{\gamma}$ (indexed by permutations $\beta \in S_n$ and $\gamma \in S_m$) are multiplied, their product can be written as a linear combination of Schubert polynomials
+$\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma} = \sum\_{\alpha} c^{\alpha}\_{\beta \gamma} \mathfrak{S}\_{\alpha}$. Where the sum runs over permutations in $S_{n+m}$.
+The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the *structure constants*) have a combinatorial interpretation. To give an example of what we mean by combinatorial interpretation, when Schur polynomials (which can be viewed as a specific case of Schubert polynomials) are multiplied together, the coefficients in the resulting product are equal to the number of semistandard tableaux satisfying certain properties.
 
 ## Example
 
@@ -75,7 +75,7 @@ The Sage notebook within this directory gives the code used to generate these da
 
 | Size | Logistic regression | MLP | Transformer | Guessing majority class | 
 |----------|----------|-----------|------------|------------|
-| $n= 4$ | $88.8\\%$ | $93.1\\% \pm 2.6\\%$ | $96.7\\% \pm 1.0\\%$| $52.3\\%$ |
+| $n= 4$ | $88.8\\%$ | $93.1\\% \pm 2.6\\%$ | $94.6\\% \pm 1.0\\%$| $52.3\\%$ |
 | $n= 5$ | $90.6\\%$ | $97.5\\% \pm 0.2\\%$ | $96.2\\% \pm 1.1\\%$| $49.9\\%$ |
 | $n= 6$ | $89.7\\%$ | $99.8\\% \pm 0.0\\%$ | $91.3\\% \pm 8.0\\%$| $50.1\\%$ |
 
