@@ -48,3 +48,6 @@ The $\pm$ signs indicate 95% confidence intervals from random weight initializat
 \[4\] Bao, Jiakang, et al. "Machine learning algebraic geometry for physics." arXiv preprint arXiv:2204.10334 (2022).
 
 \[5\] He, Jesse, et al. "Machines and Mathematical Mutations: Using GNNs to Characterize Quiver Mutation Classes." arXiv preprint arXiv:2411.07467 (2024).
+
+\[6\] Stein, William. "Sage: Open source mathematical software." (2008).
+
