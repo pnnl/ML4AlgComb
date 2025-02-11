@@ -165,7 +165,7 @@ The associated macro F1-scores are:
 |----------|----------|-----------|
 | $1$ | $99.7\\% \pm 0.1\\%$ | $99.9\\% \pm 0.4\\%$ | 
 | $q$ | $93.9\\% \pm 3.7\\%$ | $92.7\\% \pm 7.6\\%$ | 
-| $q^2$ | $50.0\\%$ | $100.0\\% \pm 0.0\\%$ | 
+| $q^2$ | $50.0\\% \pm 0.0\\%$ | $100.0\\% \pm 0.0\\%$ | 
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $6$ elements
 
