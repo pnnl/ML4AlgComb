@@ -1,6 +1,6 @@
 # Finding a Concise Description of Weaving Pattern Matrices (Open Problem)
 
-![Weaving patterns task graphic](![Alt text](image_url))
+![Weaving patterns task graphic](fig-weaving-pattern.png)
 
 Enriched weaving patterns are $n \times n-1$-matrices with $\\{1,2,\dots,n\\}$-entries. They are a modification of a construction introduced by Felsner \[1\] to study the number of reduced decompositions of the permutation $\sigma = n \; n-1 \; \ldots 1$ up to commutation equivalence. This type of combinatorics appears in diverse areas, appearing as the number of parallel sorting networks and the number of rhombic tilings of regular polygons. It is also connected to the study of the higher Bruhat orders \[2\]. The $\{1,2,\dots,n\}$-entries to the matrix track the adjacent elements being swapped in the particular permutation representation. An $O(n^2)$ algorithm for determining if a given matrix is a valid weaving pattern exists but gives no additional insight into the structure of weaving patterns and correspondingly the asymptotics of reduced decompositions.
 
