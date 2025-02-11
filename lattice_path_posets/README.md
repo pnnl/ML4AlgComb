@@ -8,7 +8,7 @@ NE lattice paths from $(0, 0)$ to $(a, b)$ are paths starting at $(0,0)$ and end
 
 We provide two different pairs of lattice paths below. The example on the left is a cover pair in Lagrange order. The example on the right is a covering pair in matching order. 
 
-<img src="fig-lattice.png" alt="Lattice path task" width="300">
+<img src="fig-lagrange.png" alt="Lattice path task, Lagrange" width="300"> <img src="fig-matching.png" alt="Lattice path task, Matching" width="300">
 
 ## Dataset
 
