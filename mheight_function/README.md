@@ -1,4 +1,4 @@
-# The mHeight function of a permutation (intermediary result)
+# The mHeight Function of a Permutation (Key Tool in the Solution to a Recently Solved Conjecture)
 
 Truly challenging open problems in mathematics often require the development of new mathematical constructions (or even entire new areas of mathematics). This dataset represents a modest example of this. The mHeight function is a statistic associated with a permutation that relates to all $3412$-patterns in the permutation. It was developed and plays a crucial role in the proof by Gaetz and Gao \[1\] which resolved a long-standing conjecture of Billey and Postnikov \[2\] about the coefficients on Kazhdan-Lusztig polynomials (see our [Kazhdan-Lusztig polynomial dataset](https://github.com/pnnl/ML4AlgComb/tree/master/kl-polynomial_coefficients)) which carry important geometric information about certain spaces, Schubert varieties, that are of interest both to mathematicians and physicists. The task of predicting the mHeight function represents an interesting opportunity to understand whether a non-trivial intermediate step in an important proof can be learned by machine learning. 
 
@@ -6,19 +6,29 @@ Let $\sigma  = a_1 \ldots a_n \in S_n$ be a permutation containing at least one 
 
 ## An Example
 
-
+ADD Figure
 
 ## Dataset 
 
-Permutations of size $n$ labeled by their mHeight. We provide datasets for $n = 10,11,12$.
+This dataset contains permutations labeled by their mHeight. Permutations are written in 1-line notation followed by a ``;`` and then the value of the mHeight function on the permutation. So 
+``(6, 8, 7, 5, 4, 9, 3, 0, 1, 2);1``
+can be read as saying that the permutation $6\;8\;7\;5\;4\;9\;3\;0\;1\;2$ has mHeight 1. 
 
-**Task:** Predict the mHeight of a permutation. 
+We provide datasets for permutations of size $n = 8,9,10$. The files are called:
+- ``mHeight_8_train.txt`` 
+- ``mHeight_8_test.txt`` 
+- ``mHeight_9_train.txt`` 
+- ``mHeight_9_test.txt`` 
+- ``mHeight_10_train.txt`` 
+- ``mHeight_10_test.txt`` 
+
+Permutations of size $n$ labeled by their mHeight. We provide datasets for $n = 8,9,10$.
 
 The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4KzR9dVUaDhNtUPnumeuX/view?usp=sharing)
 
 ### Permutations of size $8$
 
-For $n = 8$, mHeight takes values 0, 1, 2, 3, 4, 5. 
+For $n = 8$, mHeight takes values 0, 1, 2, 3, 4. 
 
 | mHeight value  | 0 | 1 | 2 | 3 | 4 |   Total number of instances | 
 |----------|----------|----------|----------|----------|----------|----------|
@@ -45,11 +55,11 @@ For $n = 10$, mHeight takes values 0, 1, 2, 3, 4, 5, 6.
 
 ## Data Generation
 
+The datasets were generated using a Python script which can be found above.
+
 ## Task
 
-**Math question (solved):** Re-discover the notion of mheight.
-
-**ML task:** Given a permutation, predict the mheight. Since for small permutations mheight can only take a limited number of values (for instance it is easy to see that it must be less that $n$ for permutations of $n$ elemets), we frame this as a classification problem.
+**ML task:** Given a permutation, predict the mHeight. Since for small permutations mHeight can only take a limited number of values (for instance it is easy to see that it must be less that $n$ for permutations of $n$ elements), we frame this as a classification problem.
 
 ## Small model performance
 
