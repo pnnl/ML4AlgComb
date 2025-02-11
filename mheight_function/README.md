@@ -8,7 +8,7 @@ Let $\sigma  = a_1 \ldots a_n \in S_n$ be a permutation containing at least one 
 
 ## An Example
 
-![An example of an mHeight calculation](fig-mheight-picture.png)
+<img src="fig-mheight-picture.png" alt="An example of an mHeight calculation" width="300" height="200"> 
 
 ## Dataset 
 
