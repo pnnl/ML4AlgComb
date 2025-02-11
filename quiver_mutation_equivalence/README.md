@@ -41,7 +41,7 @@ The $\pm$ signs indicate 95% confidence intervals from random weight initializat
 
 \[1\] Buan, Aslak Bakke, and Dagfinn F. Vatne. "Derived equivalence classification for cluster-tilted algebras of type $A_n$." Journal of Algebra 319.7 (2008): 2723-2738.
 
-\[2\] Vatne, Dagfinn F. "The mutation class of D n quivers." Communications in Algebra 38.3 (2010): 1137-1146.
+\[2\] Vatne, Dagfinn F. "The mutation class of $D_n$ quivers." Communications in Algebra 38.3 (2010): 1137-1146.
 
 \[3\] Henrich, Thilo. "Mutation classes of diagrams via infinite graphs." Mathematische Nachrichten 284.17‐18 (2011): 2184-2205.
 
