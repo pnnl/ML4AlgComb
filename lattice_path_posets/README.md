@@ -1,6 +1,6 @@
 # Partial Orders on Lattice Paths (Open Problem)
 
-<img src="fig-lattice.png" alt="Lattice path task" width="300">
+![Lattice path task](fig-lattice.png)
 
 NE lattice paths from $(0, 0)$ to $(a, b)$ are paths starting at $(0,0)$ and ending at $(a,b)$ which consist of a sequence of single unit steps either north or east  that never pass below the diagonal (see example below). These turn out to have deep connections to a number of topics in algebra, geometry, and number theory. In \[1\], Schiffler defines two order relations on such paths called *matching ordering* ($\leq_M$) and *Lagrange ordering* ($\leq_L$) that are motivated by constructions in the algebraic theory of cluster algebras and number theory. Matching ordering assigns a number to each lattice path based on the number of perfect matchings of an associated snake graph, while the Lagrange ordering assigns a number to each lattice path equal to the Lagrange number of a continued fraction. These numbers each define their respective partial order. In many ways, these orders are still poorly understood. 
 
@@ -8,7 +8,7 @@ NE lattice paths from $(0, 0)$ to $(a, b)$ are paths starting at $(0,0)$ and end
 
 We provide two different pairs of lattice paths below. The example on the left is a cover pair in Lagrange order. The example on the right is a covering pair in matching order. 
 
-ADD ME
+<img src="fig-lattice.png" alt="Lattice path task" width="300">
 
 ## Dataset
 
