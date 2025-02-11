@@ -8,7 +8,7 @@ The idea to apply machine learning to this problem was first posed by [\[2\]](ht
 
 ## Details and an example
 
-In the cluster algebra associated with Grassmann manifold $\text{Gr}(k,n)$, each cluster variable is indexed by a rectangular SSYT with $k$ rows with entries drawn from $\{1,\dots,n\}$ (because this is a SSYT, the entries need to weakly increase as one moves left to right in the rows and strictly increase as one moves down each column). The *rank* of these rectangular SSYT (and the rank of the associated cluster algebras) is given by their number of columns. Following [\[2\]](https://arxiv.org/abs/2212.09771), in this dataset we focus on $\text{Gr}(3,12)$ and hence look at rectangular SSYT with 3 rows filled with entries drawn from $\{1,\dots,12\}$. We further restrict to rank 4 SSYT. This leaves us with a collection of $3 \times 4$ arrays whose entries increase weakly across rows and strictly down columns. 
+In the cluster algebra associated with Grassmann manifold $\text{Gr}(k,n)$, each cluster variable is indexed by a rectangular SSYT with $k$ rows with entries drawn from $\\{1,\dots,n\\}$ (because this is a SSYT, the entries need to weakly increase as one moves left to right in the rows and strictly increase as one moves down each column). The *rank* of these rectangular SSYT (and the rank of the associated cluster algebras) is given by their number of columns. Following [\[2\]](https://arxiv.org/abs/2212.09771), in this dataset we focus on $\text{Gr}(3,12)$ and hence look at rectangular SSYT with 3 rows filled with entries drawn from $\\{1,\dots,12\\}$. We further restrict to rank 4 SSYT. This leaves us with a collection of $3 \times 4$ arrays whose entries increase weakly across rows and strictly down columns. 
 
 To give two examples, the SSYT below corresponds to a cluster variable
 
@@ -18,7 +18,7 @@ but this one does not
 
 <img src="ssyt_invalid.png" alt="drawing" width="200"/>
 
-Note that both are genuine SSYT of shape $3 \times 4$ with entries from $\{1, \dots, 12\}$.
+Note that both are genuine SSYT of shape $3 \times 4$ with entries from $\\{1, \dots, 12\\}$.
 
 ## Dataset
 
