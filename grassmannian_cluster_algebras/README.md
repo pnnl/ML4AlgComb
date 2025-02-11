@@ -82,4 +82,3 @@ The $\pm$ signs indicate 95% confidence intervals from random weight initializat
 
 \[2\] Cheung, Man-Wai, et al. "Clustering cluster algebras with clusters." arXiv preprint arXiv:2212.09771 (2022).
 
-![image](https://github.com/user-attachments/assets/384d06f0-9052-45a3-a9c8-d81f084fdad2)
