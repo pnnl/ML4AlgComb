@@ -1,5 +1,7 @@
 # Grassmannian Cluster Algebras and Semistandard Young Tableau (Open Problem)
 
+![Grassmannian task](fig-cluster-grassmannian.png)
+
 The Grassmann manifold $\text{Gr}(k,n)$ is the set of full-rank $k \times n$ matrices up to equivalence of elementary row operations (equivalently the space whose points are $k$-dimensional subspaces in $\mathbb{R}^n$). Grassmannians are of fundamental geometric importance and are a central tool in a model of quantum field theory known as supersymmetric Yang-Mills theory. 
 
 Among the many algebraic-combinatorial properties of Grassmannians is an algebraic structure on its coordinate ring making it into an algebraic object called a cluster algebra. A recent result of [Chang, Duan, Fraser, and Li \[1\]](https://arxiv.org/abs/1907.13575) parameterize cluster variables of the Grassmannian coordinate ring in terms of equivalence classes of semistandard Young tableaux (SSYT). Not every SSYT indexes a cluster variable and a natural question to ask is whether there is a naive combinatorial rule that specifies whether a particular SSYT indexes a cluster variable. One necessary condition is that the tableaux is of rectangular shape. 
