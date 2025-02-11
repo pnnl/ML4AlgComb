@@ -1,14 +1,14 @@
-# Calculating the characters of irreducible representations of the symmetric group (classic result)
+# Combinatorial Algorithms to Calculate the Characters of Irreducible Representations of the Symmetric Group (Foundational Result)
 
 One way to understand the algebraic structure of permutations (symmetric groups, $S\_n$) is through their representation theory \[1\], which converts algebraic questions into linear algebra questions that are often easier to solve. 
-A *representation* of group $G$ on vector space $V$, is a map $\phi:G \rightarrow GL(V)$ converts elements of $g$ to invertible matrices on vector space $V$ and which respects the compositional structure of the group. A basic result in representation theory says that all representations of a finite group can be decomposed into atomic building blocks called *irreducible representations*. Amazingly, irreducible representations are themselves uniquely determined by the value of the trace, $\text{Tr}(\phi(g))$, where $g$ ranges over subsets of $G$ called conjugacy classes. These value are called *characters*. 
+A *representation* of group $G$ on vector space $V$, is a map $\phi:G \rightarrow GL(V)$ that converts elements of $g$ to invertible matrices on vector space $V$ which respect the compositional structure of the group. A basic result in representation theory says that all representations of a finite group can be decomposed into atomic building blocks called *irreducible representations*. Amazingly, irreducible representations are themselves uniquely determined by the value of the trace, $\text{Tr}(\phi(g))$, where $g$ ranges over subsets of $G$ called conjugacy classes. These values are called *characters*. 
 
-The representation theory of symmetric groups has rich combinatorial interpretations. Both irreducible representations of $S\_n$ and the conjugacy classes of $S\_n$ are indexed by partitions of $n$ and thus the characters of irreducible representations of $S\_n$ are indexed by pairs of partitions of $n$. For $\lambda,\mu \vdash n$ we write $\chi^\lambda\_\mu$. This combinatorial connection is not superficial, some of the most famous algorithms for computation of irreducible characters (e.g., the [Murnaghan-Nakayama rule](https://en.wikipedia.org/wiki/Murnaghan–Nakayama_rule)) are completely combinatorial in nature.
+The representation theory of symmetric groups has rich combinatorial interpretations. Both irreducible representations of $S\_n$ and the conjugacy classes of $S\_n$ are indexed by partitions of $n$ and thus the characters of irreducible representations of $S\_n$ are indexed by pairs of partitions of $n$. For $\lambda,\mu \vdash n$ we write $\chi^\lambda\_\mu$ for the associated character. This combinatorial connection is not superficial, some of the most famous algorithms for computation of irreducible characters (e.g., the [Murnaghan-Nakayama rule](https://en.wikipedia.org/wiki/Murnaghan–Nakayama_rule)) are completely combinatorial in nature).
 
 ## Dataset 
 Since the conjugacy classes of the symmetric group $S_n$ are indexed by integer partitions of $n$, characters are constant on conjugacy classes, and the irreducible representations of $S_n$ are also indexed by integer partitions of $n$, the task is to use a pair of integer partitions of $n$ to predict the character of the corresponding irreducible representation of the symmetric group.
 
-Within each file, two integer partitions are provided followed by an integer corresponding to the character. For instance the line
+Within each file, two integer partitions are provided followed by an integer corresponding to the character. For instance, the line
 
 `[3,1,1],[2,2,1],-2`  
 
@@ -72,15 +72,16 @@ If a successful model is trained, it would be interesting to understand whether 
 
 ## Data generation
 
-
+The data was generated using Sage \[2\]. The 
 
 ## Small model performance
 
-| Size | Logistic regression | MLP | Transformer | Constant prediction of zero | 
+| Size | Linear regression | MLP | Transformer | Guessing training label mean | 
 |----------|----------|-----------|------------|------------|
-| $n= 18$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $26,451,200,738.0$ |
-| $n= 20$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $6,133,318,404,306.3$ |
-| $n= 22$ | $0.0$ | $0.0 \pm 0.0$ | $0.0 \pm 0.0$| $508,765,704,145,379.9$ |
+| $n= 18$ | $1.5920 \times 10^{10}$ | $2.7447 \times 10^{8} \pm 8.8602 \times 10^8$ | $2.4913 \times 10^{10} \pm 1.4350 \times 10^7$| $26,451,200,738.0$ |
+| $n= 20$ | $4.2007 \times 10^{12}$ | $4.2254 \times 10^{11} \pm 5.1236 \times 10^{11}$ | $5.3897 \times 10^{12} \pm 3.6464 
+times 10^{11}$| $1.5920 \times 10^{12}$ |
+| $n= 22$ | $8.0395 \times 10^{14}$ | $1.1192 \times 10^{12} \pm 4.9321 \times 10^{12}$ | $1.3797 \times 10^{14} \pm 6.2799 \times 10^{12}$| $8.0395 \times 10^{14}$ |
 
 The $\pm$ signs indicate 95% confidence intervals from random weight initialization and training.
 
