@@ -22,14 +22,13 @@ Note that both are genuine SSYT of shape $3 \times 4$ with entries from $\{1, \d
 
 ## Dataset
 
-The dataset consists of a collection of rectangular SSYT each with a label indicating whether it indexes a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. Tableau have shape $3 \times 4$, and are filled with values drawn from $\{1,2,\dots,12\}$. 
+The dataset consists of a collection of rectangular SSYT each with a label indicating whether it indexes a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. Tableaux have shape $3 \times 4$, and are filled with values drawn from $\{1,2,\dots,12\}$. 
 
 The data can be found here [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing). The files are named: 
 - ``3_4_12_invalid_train.txt``
 - ``3_4_12_invalid_test.txt``
 - ``3_4_12_valid_test.txt``
 - ``3_4_12_valid_train.txt``
-The code used to produce the positive examples can [\[2\]](https://arxiv.org/abs/2212.09771)) be obtained from [https://github.com/edhirst/GrassmanniansML/](https://github.com/edhirst/GrassmanniansML/). 
 
 In the files we use braces $[$ and $]$ to demarcate rows of the dataset, so that
 
@@ -39,7 +38,7 @@ corresponds to the tableau pictured in the Figure below
 
 <img src="fig-grassmannian-tableau-example.png" alt="drawing" width="200"/>
 
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing) in your chosen `directory` and then running the following commands (here we choose $n = 5$)
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing) in your chosen `directory` and then running the following commands 
 
 ```
 import numpy as np
@@ -83,3 +82,4 @@ The $\pm$ signs indicate 95% confidence intervals from random weight initializat
 
 \[2\] Cheung, Man-Wai, et al. "Clustering cluster algebras with clusters." arXiv preprint arXiv:2212.09771 (2022).
 
+![image](https://github.com/user-attachments/assets/384d06f0-9052-45a3-a9c8-d81f084fdad2)
