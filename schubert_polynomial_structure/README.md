@@ -1,5 +1,7 @@
 # A Combinatorial Interpretation of Schubert Polynomial Structure Constants (Open Problem)
 
+![Schubert polynomial task graphic](fig-schubert-polynomials.png)
+
 Schubert polynomials \[1,2,3\] are a family of polynomials indexed by permutations of $S_n$. Developed to study the cohomology ring of the flag variety, they have deep connections to algebraic geometry, Lie theory, and representation theory. Despite their geometric origins, Schubert polynomials can be described combinatorially \[4,5\], making them a well-studied object in algebraic combinatorics. An important open problem in the study of Schubert polynomials is understanding their *structure constants*. 
 
 When two Schubert polynomials $\mathfrak{S}\_{\alpha}$ and $\mathfrak{S}\_{\beta}$ (indexed by permutations $\alpha \in S_n$ and $\beta \in S_m$) are multiplied, their product can be written as a linear combination of Schubert polynomials
