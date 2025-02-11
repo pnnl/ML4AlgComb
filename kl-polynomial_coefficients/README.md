@@ -1,4 +1,4 @@
-# The coefficients of Kazhdan-Lusztig polynomials (open problem)
+# The Coefficients of Kazhdan-Lusztig Polynomials (Open Problem)
 
 Kazhdan-Lusztig (KL) polynomials are polynomials in a variable $q$ and with integer coefficients that (for our purposes) are indexed by a pair of permutations \[1\]. We will write the KL polynomial associated with permutations $\sigma$ and $\nu$ as $P_{\sigma,\nu}(q)$. For example, the KL polynomial associated with permutations $\sigma = 1$ $4$ $3$ $2$ $7$ $6$ $5$ $10$ $9$ $8$ $11$ and $\nu = 4$ $6$ $7$ $8$ $9$ $10$ $1$ $11$ $2$ $3$ $5$ is
 
@@ -6,9 +6,11 @@ $P_{\sigma,\nu}(q) = 1 + 16q + 103q^2 + 337q^3 + 566q^4 + 529q^5 + 275q^6 + 66q^
 
 KL polynomials have deep connections throughout several areas of mathematics. For example, KL polynomials are related to the dimensions of intersection homology in Schubert calculus, the study of the Hecke algebra, and representation theory of the symmetric group. They can be computed via a recursive formula [\[1\]](https://link.springer.com/article/10.1007/BF01390031), nevertheless, in many ways they remain mysterious. For instance, there is no known closed formula for the degree of $P_{\sigma,\nu}(q)$.
 
-One family of questions revolve around the coefficients of $P_{\sigma,\nu}(q)$. For instance, it has been hypothesized that the coefficient on the term $q^{\ell(\sigma) - \ell(\nu)-1/2}$ (where $\ell(x)$ is a statistic of permutation  $x$ called the *length* of the permutation), which is known as the $\mu$-coefficient, has a combinatorial interpretation but currently this is not known. Better understanding of this and other coefficients would be of significant interest to mathematicians from a range of fields.
+One family of questions revolve around the coefficients of $P_{\sigma,\nu}(q)$. For instance, it has been hypothesized that the coefficient on the term $q^{\ell(\sigma) - \ell(\nu)-1/2}$ (where $\ell(x)$ is a statistic of the permutation $x$ called the *length* of the permutation), which is known as the $\mu$-coefficient, has a combinatorial interpretation but currently this is not known. Better understanding of this and other coefficients would be of significant interest to mathematicians from a range of fields.
 
-**Dataset:** Each instance in this dataset consists of a pair of permutations of $n$, $x$ and $w$, along with the coefficients of the polynomial $P_{x,w}(q)$. We provide full datasets for $n = 5,6,7$. Each instance corresponds to a line in the train/test files. So if $x =$ $1$ $2$ $3$ $4$ $5$ $6$ and $w=4$ $5$ $6$ $1$ $2$ $3$ and $P_{v,w}(q) = 1 + 4q + 4q^2 + q^3$ then this is written as the line
+## Dataset 
+
+Each instance in this dataset consists of a pair of permutations of $n$, $x$ and $w$, along with the coefficients of the polynomial $P_{x,w}(q)$. We provide full datasets for $n = 5,6,7$. Each instance corresponds to a line in the train/test files. So if $x =$ $1$ $2$ $3$ $4$ $5$ $6$ and $w=4$ $5$ $6$ $1$ $2$ $3$ and $P_{v,w}(q) = 1 + 4q + 4q^2 + q^3$ then this is written as the line
 
 ``123456, 456123, 1, 4, 4, 1``
 
@@ -36,7 +38,7 @@ The basic statistics of the datasets are as follows
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $5$ elements
 
-We summarize the limited number of different values coefficients on $P_{x,w}(q)$ take when $x, w \in S_5$. 
+We summarize the limited number of values coefficients on $P_{x,w}(q)$ take when $x, w \in S_5$. 
 
 **Constant Terms:**
 
@@ -61,7 +63,7 @@ We summarize the limited number of different values coefficients on $P_{x,w}(q)$
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $6$ elements
 
-We summarize the limited number of different values coefficients on $P_{x,w}(q)$ take when $x, w \in S_6$.
+We summarize the limited number of values coefficients on $P_{x,w}(q)$ take when $x, w \in S_6$.
 
 **Constant Terms:**
 
@@ -93,7 +95,7 @@ We summarize the limited number of different values coefficients on $P_{x,w}(q)$
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $7$ elements
 
-We summarize the limited number of different values coefficients on $P_{x,w}(q)$ take when $x, w \in S_7$. 
+We summarize the limited number of values coefficients on $P_{x,w}(q)$ take when $x, w \in S_7$. 
 
 **Constant Terms:**
 
@@ -145,7 +147,7 @@ While the classification task as framed does not capture the broader math questi
 
 ## Small model performance
 
-Since there are many possible tasks here, we did not run exhaustive hyperparameter searches, instead opting for the larger network sizes for our 
+Since there are many possible tasks here, we did not run exhaustive hyperparameter searches. Instead, we ran ReLU MLPs with depth 4, width 256, and learning rate 0.0005.
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $5$ elements
 
@@ -167,7 +169,7 @@ The associated macro F1-scores are:
 
 ### Kazhdan-Lusztig Polynomials for Permutations of $6$ elements
 
-Accuracy predicting coefficients for permutations of 5 elements:
+Accuracy predicting coefficients for permutations of 6 elements:
 
 | Coefficient | MLP | Transformer | Guessing largest class | 
 |----------|----------|-----------|------------|
@@ -192,3 +194,4 @@ The $\pm$ signs indicate 95% confidence intervals from random weight initializat
 \[1\] Kazhdan, David, and George Lusztig. "Representations of Coxeter groups and Hecke algebras." Inventiones mathematicae 53.2 (1979): 165-184.
 
 \[2\] Warrington, Gregory S. "Equivalence classes for the μ-coefficient of Kazhdan–Lusztig polynomials in Sn." Experimental Mathematics 20.4 (2011): 457-466.
+![Uploading image.png…]()
