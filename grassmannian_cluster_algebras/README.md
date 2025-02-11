@@ -22,7 +22,7 @@ Note that both are genuine SSYT of shape $3 \times 4$ with entries from $\\{1, \
 
 ## Dataset
 
-The dataset consists of a collection of rectangular SSYT each with a label indicating whether it indexes a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. Tableaux have shape $3 \times 4$, and are filled with values drawn from $\{1,2,\dots,12\}$. 
+The dataset consists of a collection of rectangular SSYT each with a label indicating whether it indexes a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. Tableaux have shape $3 \times 4$, and are filled with values drawn from $\\{1,2,\dots,12\\}$. 
 
 The data can be found here [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing). The files are named: 
 - ``3_4_12_invalid_train.txt``
