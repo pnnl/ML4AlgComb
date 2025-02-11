@@ -2,23 +2,23 @@
 
 Schubert polynomials \[1,2,3\] are a family of polynomials indexed by permutations of $S_n$. Developed to study the cohomology ring of the flag variety, they have deep connections to algebraic geometry, Lie theory, and representation theory. Despite their geometric origins, Schubert polynomials can be described combinatorially \[4,5\], making them a well-studied object in algebraic combinatorics. An important open problem in the study of Schubert polynomials is understanding their *structure constants*. 
 
-When two Schubert polynomials $\mathfrak{S}\_{\beta}$ and $\mathfrak{S}\_{\gamma}$ (indexed by permutations $\beta \in S_n$ and $\gamma \in S_m$) are multiplied, their product can be written as a linear combination of Schubert polynomials
-$\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma} = \sum\_{\alpha} c^{\alpha}\_{\beta \gamma} \mathfrak{S}\_{\alpha}$. Where the sum runs over permutations in $S_{n+m}$.
-The question is whether the $c^{\alpha}\_{\beta \gamma}$ (the *structure constants*) have a combinatorial interpretation. To give an example of what we mean by combinatorial interpretation, when Schur polynomials (which can be viewed as a specific case of Schubert polynomials) are multiplied together, the coefficients in the resulting product are equal to the number of semistandard tableaux satisfying certain properties.
+When two Schubert polynomials $\mathfrak{S}\_{\alpha}$ and $\mathfrak{S}\_{\beta}$ (indexed by permutations $\alpha \in S_n$ and $\beta \in S_m$) are multiplied, their product can be written as a linear combination of Schubert polynomials
+$\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta} = \sum\_{\gamma} c^{\gamma}\_{\alpha \beta} \mathfrak{S}\_{\gamma}$. Where the sum runs over permutations in $S_{n+m}$.
+The question is whether the $c^{\gamma}\_{\alpha \beta}$ (the *structure constants*) have a combinatorial interpretation. To give an example of what we mean by combinatorial interpretation, when Schur polynomials (which can be viewed as a specific case of Schubert polynomials) are multiplied together, the coefficients in the resulting product are equal to the number of semistandard tableaux satisfying certain properties.
 
 ## Example
 
-We multiply Schubert polynomials corresponding to permutations of $\{1,2,3\}$, $\beta = 2 1 3$ and $\gamma = 1 3 2$. Writing these in terms of indeterminants $x_1$, $x_2$, and $x_3$, we have $\mathfrak{S}\_{\beta} = x_1 + x_2$ and $\mathfrak{S}\_{\gamma} = x_1$. Multiplying these together we get
-$\mathfrak{S}_{\beta}\mathfrak{S}\_{\gamma} = x_1^2 + x_1x_2$. As $\mathfrak{S}\_{2 3 1} = x\_1x\_2$ and $\mathfrak{S}\_{3 1 2} = x\_1^2$. Hence $\mathfrak{S}\_{\beta}\mathfrak{S}\_{\gamma} = \mathfrak{S}\_{2 3 1} + \mathfrak{S}\_{3 1 2}$. It follows that $c\_{\beta,\gamma}^{\alpha} = 1$ if $\alpha = 2 3 1$ or $\alpha = 3 1 2$ and otherwise $c\_{\beta,\gamma}^{\alpha} = 0$.
+We multiply Schubert polynomials corresponding to permutations of $\\{1,2,3\\}$, $\alpha = 2 1 3$ and $\beta = 1 3 2$. Writing these in terms of indeterminants $x_1$, $x_2$, and $x_3$, we have $\mathfrak{S}\_{\alpha} = x_1 + x_2$ and $\mathfrak{S}\_{\beta} = x_1$. Multiplying these together we get
+$\mathfrak{S}_{\alpha}\mathfrak{S}\_{\beta} = x_1^2 + x_1x_2$. As $\mathfrak{S}\_{2 3 1} = x\_1x\_2$ and $\mathfrak{S}\_{3 1 2} = x\_1^2$ we can write $\mathfrak{S}\_{\alpha}\mathfrak{S}\_{\beta} = \mathfrak{S}\_{2 3 1} + \mathfrak{S}\_{3 1 2}$. It follows that $c\_{\alpha,\beta}^{\gamma} = 1$ if $\gamma = 2 3 1$ or $\gamma = 3 1 2$ and otherwise $c\_{\alpha,\beta}^{\gamma} = 0$.
 
 ## Dataset 
-Each instance in this dataset is a triple of permutations $(\beta, \gamma, \alpha)$, labeled by its coefficient $c^{\alpha}\_{\beta \gamma}$ in the expansion of the product $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}$. The datasets are organized so that $\beta$ and $\gamma$ are always drawn from the symmetric group on $n$ elements (we provide datasets for $n = 3$, $4$, and $5$), but $\alpha$ may belong to a strictly larger symmetric group. Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients (but they are not balanced between quantities of non-zero coefficients). We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing). 
+Each instance in this dataset is a triple of permutations $(\alpha,\beta,\gamma)$, labeled by its coefficient $c^{\gamma}\_{\alpha \beta}$ in the expansion of the product $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$. The datasets are organized so that $\alpha$ and $\beta$ are always drawn from the symmetric group on $n$ elements (we provide datasets for $n = 3$, $4$, and $5$), but $\gamma$ may belong to a strictly larger symmetric group. Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients (but they are not balanced between quantities of non-zero coefficients). We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing). 
 
 Each line in the file corresponds to a structure constant so that 
 `([1,2,3,5,4],[1,2,3,5,4],[1,2,3,6,4,5];1)`
-means that $c^{1 2 3 6 4 5}_{1 2 3 5 4,1 2 3 5 4} = 1$ or that in the expansion of the product $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$, $\mathfrak{S}\_{\gamma}$ has a coefficient of 1. To the point above, this instance is from $n = 5$ but note that the third permutation actually belongs to $S_6$. 
+means that $c^{1 2 3 6 4 5}_{1 2 3 5 4,1 2 3 5 4} = 1$ or that in the expansion of the product $\mathfrak{S}\_{1 2 3 5 4} \mathfrak{S}\_{1 2 3 5 4}$, $\mathfrak{S}\_{1 2 3 6 4 5}$ has a coefficient of 1. To the point above, this instance is from $n = 5$ but note that the third permutation actually belongs to $S_6$. 
 
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (18, 20, or 22), and then (3) running the following commands (here we choose $n = 5$)
+The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (4, 5, 6), and then (3) running the following commands (here we choose $n = 5$)
 
 ```
 import numpy as np
@@ -61,15 +61,15 @@ All structure constants in this case are either 0, 1, 2, 3, 4, or 5.
 
 The Sage notebook within this directory gives the code used to generate these datasets. The process involves:
 
-- For a chosen $n$, compute the products $\mathfrak{S}\_{\beta} \mathfrak{S}\_{\gamma}$ for $\beta,\gamma \in S_n$.
-- For each of these pairs, extract and add to the dataset all non-zero structure constants $c^{\alpha_1}\_{\beta,\gamma}, \dots, c^{\alpha_k}\_{\beta,\gamma}$
-- Furthermore, for each $c^{\alpha_i}\_{\beta,\gamma} \neq 0$, randomly permute $\alpha_i \mapsto \alpha_i'$ to find $c^{\alpha_i'}\_{\beta,\gamma} = 0$ and $c^{\alpha_i'}\_{\beta,\gamma}$ is not already in the dataset.
+- For a chosen $n$, compute the products $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$ for $\alpha,\beta \in S_n$.
+- For each of these pairs, extract and add to the dataset all non-zero structure constants $c^{\gamma_1}\_{\alpha,\beta}, \dots, c^{\gamma_k}\_{\alpha,\beeta}$
+- Furthermore, for each $c^{\gamma_i}\_{\alpha,\beta} \neq 0$, randomly permute $\gamma_i \mapsto \gamma_i'$ to find $c^{\gamma_i'}\_{\alpha,\beta} = 0$ and $c^{\gamma_i'}\_{\alpha,\beta}$ is not already in the dataset.
 
 ## Task 
 
-**Math question:** The math question is better understanding the structure constants of Schubert polynomials, especially combinatorial interpretations in terms of the permutations that index them.
+**Math question:** Develop a better understanding of the structure constants of Schubert polynomials paying special attention to combinatorial interpretations by focusing on the triples of permutations that index them.
 
-**ML task:** Train a model that can given three permutations $\alpha, \beta, \gamma$, can predict the associated structure constant $c^{\alpha}\_{\beta,\gamma}$.
+**ML task:** Train a model that, given three permutations $\alpha, \beta, \gamma$, can predict the associated structure constant $c^{\gamma}\_{\alpha,\beta}$.
 
 ## Small model performance
 
