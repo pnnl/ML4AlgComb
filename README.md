@@ -15,6 +15,10 @@ Along with the data, we provide official train/test splits, background informati
 <img src="fig-data-visualization.png" alt="Alt text" width="750" height="762" style="display: block; margin-left: auto; margin-right: auto;">
 </center>
 
+### Updates
+- July 17, 2025: A paper for the ACD Repo was presented as an oral at ICML 2025
+- July 10, 2025: We are in the process of also uploading our datasets onto HuggingFace for more convenient usage
+
 **Contributors:**
 - [Herman Chau](https://sites.math.washington.edu/~hchau/) (University of Washington)
 - [Helen Jenne](https://hjenne.github.io) (Pacific Northwest National Laboratory)
