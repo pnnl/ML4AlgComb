@@ -12,42 +12,27 @@ We provide two different pairs of lattice paths below. The example on the left i
 
 ## Dataset
 
-Lattice paths from $(0,0)$ to $(n+1) \times n$ are encoded by a sequence of $1$'s (for steps east) and $0$'s (for steps north) of length $(n+1) + n = 2n+1$. Each pair of lattice paths is a covering pair in exactly one of the two partial orders, the Lagrange order or the matching order.
+Lattice paths from $(0,0)$ to $(n+1,n)$ are encoded by a sequence of $1$'s (for steps east) and $0$'s (for steps north) of length $(n+1) + n = 2n+1$. Each pair of lattice paths is a covering pair in exactly one of the two partial orders, the Lagrange order or the matching order. Covering pairs for both orders were few and were thrown out.
 
-Each line in a file is the concatenation of two 0-1 sequences (one for each path) for a length $4n+2$ row of $0$'s and $1$'s. The two lattice paths are separated by ``;``. For example, on a $3 \times 2$ grid, the sequence:
-``1,1,1,0,0;1,1,0,1,0``
-corresponds to the two lattice paths in the figure above. The first is in red and second is in blue, with segments traversed by both paths colored red. 
+Each instance in the dataset contains two lattice paths, 'Lattice path 1' and 'Lattice path 2' which form a covering relation (lattice path 2 covers lattice path 1). A label of `0` corresponding to matching order and a label of `1` corresponds to Lagrange order.
 
-The file names are:
+We provide datasets for $n = 10 \times 9, 11 \times 10, 12 \times 11$.
+- [10 x 9](https://huggingface.co/datasets/ACDRepo/partial_orders_on_lattice_paths_10x9)
+- [11 x 10](https://huggingface.co/datasets/ACDRepo/partial_orders_on_lattice_paths_11x10)
+- [12 x 11](https://huggingface.co/datasets/ACDRepo/partial_orders_on_lattice_paths_12x11)
 
-- ``lagrange_covers_train_10_9.txt``
-- ``lagrange_covers_train_11_10.txt``
-- ``lagrange_covers_train_12_11.txt``
-- ``lagrange_covers_train_13_12.txt``
-- ``lagrange_covers_test_10_9.txt``
-- ``lagrange_covers_test_11_10.txt``
-- ``lagrange_covers_test_12_11.txt``
-- ``lagrange_covers_test_13_12.txt``
-- ``matching_covers_train_10_9.txt``
-- ``matching_covers_train_11_10.txt``
-- ``matching_covers_train_12_11.txt``
-- ``matching_covers_train_13_12.txt``
-- ``matching_covers_test_10_9.txt``
-- ``matching_covers_test_11_10.txt``
-- ``matching_covers_test_12_11.txt``
-- ``matching_covers_test_13_12.txt``
-
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1Wm9mtZQjXXQ4rl0TU9KtJ1T4RQaGsJNz/view?usp=sharing) in your chosen `directory` and then running the following commands (here we choose $n = 10$)
+This data can be easily downloaded and used via transformers datasets. 
 
 ```
-import numpy as np
-import load_datasets 
+from datasets import load_dataset
 
-folder = # provide the file path to the directory you chose here
-X = load_datasets.get_dataset('lattice_paths', n=10, folder = folder)
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset(DATASET_NAME)
 ```
-
-Dataset statistics are as follows
+In the code snippet above, just replace `DATASET_NAME` with one of the following:
+- `'ACDRepo/partial_orders_on_lattice_paths_10x9'`
+- `'ACDRepo/partial_orders_on_lattice_paths_11x10'`
+- `'ACDRepo/partial_orders_on_lattice_paths_12x11'`
 
 ### Lattice paths from $(0,0)$ to $(10,9)$ 
 
