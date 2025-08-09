@@ -6,7 +6,24 @@ Quivers and quiver mutations are central to the combinatorial study of cluster a
 
 ## Dataset 
 
-The task associated with this dataset involves identifying whether two quivers are mutation equivalent. Thus, the inputs are quivers (directed multigraphs) with $11$ nodes that are encoded by their $11 \times 11$ adjacency matrices and the labels are one of $7$ different equivalence classes: $A_{11},BB_{11},BD_{11},BE_{11},D_{11},DE_{11},E_{11}$. The files are organized by train and test for each of these classes. For the quiver mutation classes that are not mutation finite (that is, the mutation equivalence class has an infinite number of elements), the datasets contain quivers generated up to a certain depth, which is the distance from the original quiver, measured by number of mutations. The depth is specified in the filename and was chosen to achieve as close to a balanced dataset as possible. 
+The task associated with this dataset involves identifying whether two quivers are mutation equivalent. Thus, the inputs are quivers (directed multigraphs) with $11$ nodes that are encoded by their $11 \times 11$ adjacency matrices and the labels are one of $7$ different equivalence classes: $A_{11},BB_{11},BD_{11},BE_{11},D_{11},DE_{11},E_{11}$. The files are organized by train and test for each of these classes. For the quiver mutation classes that are not mutation finite (that is, the mutation equivalence class has an infinite number of elements), the datasets contain quivers generated up to a certain depth, which is the distance from the original quiver, measured by number of mutations. The depth is specified in the table below and was chosen to achieve as close to a balanced dataset as possible. 
+
+This data can be easily downloaded and used via transformers datasets. 
+
+```
+from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset("ACDRepo/quiver_mutation_equivalence")
+```
+
+| Mutation equivalance class | Sampling depth |
+|---|---|
+| \\(B_{11}\\) | 10 |
+| \\(BD_{11}\\) | 9 |
+| \\(BE_{11}\\) | 8 |
+| \\(DE_{11}\\) | 9 |
+| \\(E_{11}\\) | 9 |
 
 Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPIgciuGG9HfvrKWC/view?usp=sharing)
 
