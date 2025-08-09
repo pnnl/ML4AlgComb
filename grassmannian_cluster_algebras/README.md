@@ -26,11 +26,16 @@ Note that both are genuine SSYT of shape $3 \times 4$ with entries from $\\{1, \
 
 The dataset consists of a collection of rectangular SSYT each with a label indicating whether it indexes a cluster variable or not. Those that do not index a cluster variable are labeled with a `0` and those that do are labeled with a `1`. Tableaux have shape $3 \times 4$, and are filled with values drawn from $\\{1,2,\dots,12\\}$. 
 
-The data can be found here [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing). The files are named: 
-- ``3_4_12_invalid_train.txt``
-- ``3_4_12_invalid_test.txt``
-- ``3_4_12_valid_test.txt``
-- ``3_4_12_valid_train.txt``
+Data can be found [here](https://huggingface.co/datasets/ACDRepo/grassmannian_cluster_algebras).
+
+This data can be easily downloaded and used via transformers datasets. 
+
+```
+from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset('ACDRepo/grassmannian_cluster_algebras')
+```
 
 In the files we use braces $[$ and $]$ to demarcate rows of the dataset, so that
 
@@ -39,16 +44,6 @@ In the files we use braces $[$ and $]$ to demarcate rows of the dataset, so that
 corresponds to the tableau pictured in the Figure below
 
 <img src="fig-grassmannian-tableau-example.png" alt="drawing" width="200"/>
-
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1Dd4PAOgm7bAtXSGmQW81OE-O_7dS7qU_/view?usp=sharing) in your chosen `directory` and then running the following commands 
-
-```
-import numpy as np
-import load_datasets 
-
-folder = # provide the file path to the directory you chose here
-X = load_datasets.get_dataset('grassmannian_cluster_algebras', n=6, folder = folder)
-```
 
 Dataset statistics are as follows
 
@@ -65,7 +60,7 @@ The positive examples sampled for this dataset were generated using code from th
 
 **Math question:** Find a concise characterization of those SSYT that index cluster variables.
 
-**ML task:** Train a model that can predict whether a SSYT indexes a cluster variable or not. 
+**Narrow ML task:** Train a model that can predict whether a SSYT indexes a cluster variable or not. 
 
 ## Small model performance
 
