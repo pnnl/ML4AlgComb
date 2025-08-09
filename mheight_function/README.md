@@ -12,30 +12,24 @@ Let $\sigma  = a_1 \ldots a_n \in S_n$ be a permutation containing at least one 
 
 ## Dataset 
 
-This dataset contains permutations labeled by their mHeight. Permutations are written in 1-line notation followed by a ``;`` and then the value of the mHeight function on the permutation. So 
-``(6, 8, 7, 5, 4, 9, 3, 0, 1, 2);1``
-can be read as saying that the permutation $6\\;8\\;7\\;5\\;4\\;9\\;3\\;0\\;1\\;2$ has mHeight 1. 
+This dataset contains permutations labeled by their mHeight. Each instance is a permutation written in 1-line notation and
+its mHeight. We provide datasets for $n = 8,9,10$.
+- [n = 8](https://huggingface.co/datasets/ACDRepo/mheight_function_8)
+- [n = 9](https://huggingface.co/datasets/ACDRepo/mheight_function_9)
+- [n = 10](https://huggingface.co/datasets/ACDRepo/mheight_function_10)
 
-We provide datasets for permutations of size $n = 8,9,10$. The files are called:
-- ``mHeight_8_train.txt`` 
-- ``mHeight_8_test.txt`` 
-- ``mHeight_9_train.txt`` 
-- ``mHeight_9_test.txt`` 
-- ``mHeight_10_train.txt`` 
-- ``mHeight_10_test.txt`` 
+This data can be easily downloaded and used via transformers datasets. 
 
-Permutations of size $n$ labeled by their mHeight. We provide datasets for $n = 8,9,10$.
-- [$n = 8$](https://huggingface.co/datasets/ACDRepo/mheight_function_8)
-- [$n = 9$](https://huggingface.co/datasets/ACDRepo/mheight_function_9)
-- [$n = 10$](https://huggingface.co/datasets/ACDRepo/mheight_function_10)
-
-This data can be easily downloaded and used using the commands
-
-```from datasets import load_dataset
+```
+from datasets import load_dataset
 
 # Login using e.g. `huggingface-cli login` to access this dataset
-ds = load_dataset("ACDRepo/mheight_function_10")
+ds = load_dataset(DATASET_NAME)
 ```
+In the code snippet above, just replace `DATASET_NAME` with one of the following:
+- `'ACDRepo/mheight_function_8'`
+- `'ACDRepo/mheight_function_9'`
+- `'ACDRepo/mheight_function_10'`
 
 ### Permutations of size $8$
 
