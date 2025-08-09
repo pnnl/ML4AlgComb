@@ -12,29 +12,25 @@ One family of questions revolve around the coefficients of $P_{\sigma,\nu}(q)$. 
 
 ## Dataset 
 
-Each instance in this dataset consists of a pair of permutations of $n$, $x$ and $w$, along with the coefficients of the polynomial $P_{x,w}(q)$. We provide full datasets for $n = 5,6,7$. Each instance corresponds to a line in the train/test files. So if $x =$ $1$ $2$ $3$ $4$ $5$ $6$ and $w=4$ $5$ $6$ $1$ $2$ $3$ and $P_{v,w}(q) = 1 + 4q + 4q^2 + q^3$ then this is written as the line
+Each instance in this dataset consists of a pair of permutations of $n$, $x$ and $w$, along with the coefficients of the polynomial $P_{x,w}(q)$. We provide full datasets for $n = 5,6,7$. Each instance corresponds to a line in the train/test files. So if $x =$ $1$ $2$ $3$ $4$ $5$ $6$ and $w=4$ $5$ $6$ $1$ $2$ $3$ and $P_{x,w}(q) = 1 + 4q + 4q^2 + q^3$ then the corresponding entry contains $x$ for 'Permutation 1', $w$ for 'Permutation 2' (both written in 1-line notation), and `1, 4, 4, 1' in the 'Coefficients' field. Note that coefficients are listed by increasing degree of the power of $q$ (e.g., the coefficient on $1$ comes first, then the coefficient on $q$, then the coefficient on $q^2$, etc.)
 
-``123456, 456123, 1, 4, 4, 1``
+We provide datasets for $n = 8,9,10$.
+- [n = 5](https://huggingface.co/datasets/ACDRepo/coefficients_of_kl_polynomials_5)
+- [n = 6](https://huggingface.co/datasets/ACDRepo/coefficients_of_kl_polynomials_6)
+- [n = 7](https://huggingface.co/datasets/ACDRepo/coefficients_of_kl_polynomials_7)
 
-Note that coefficients are listed by increasing degree of the power of $q$ (e.g., the coefficient on $1$ comes first, then the coefficient on $q$, then the coefficient on $q^2$, etc.)
-
-The files we provide are: 
-- ``kl_polynomials_5_train.txt``
-- ``kl_polynomials_5_test.txt``
-- ``kl_polynomials_6_train.txt``
-- ``kl_polynomials_6_test.txt``
-- ``kl_polynomials_7_train.txt``
-- ``kl_polynomials_7_test.txt``
-
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1A9swYSBVM4Y5KAFC52AzVRMVshVz4yyR/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (5, 6, or 7), and then (3) running the following commands (here we choose $n = 6$)
+This data can be easily downloaded and used via transformers datasets. 
 
 ```
-import numpy as np
-import load_datasets 
+from datasets import load_dataset
 
-folder = # provide the file path to the directory you chose here
-X = load_datasets.get_dataset('schubert', n=6, folder = folder)
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset(DATASET_NAME)
 ```
+In the code snippet above, just replace `DATASET_NAME` with one of the following:
+- `'ACDRepo/coefficients_of_kl_polynomials_5'`
+- `'ACDRepo/coefficients_of_kl_polynomials_6'`
+- `'ACDRepo/coefficients_of_kl_polynomials_7'`
 
 The basic statistics of the datasets are as follows
 
