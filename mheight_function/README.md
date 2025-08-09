@@ -1,4 +1,4 @@
-# The mHeight Function of a Permutation (Key Tool in the Solution to a Recently Solved Conjecture)
+# The mHeight Function of a Permutation
 
 ![mheight task graphic](fig-mheight.png)
 
@@ -25,8 +25,16 @@ We provide datasets for permutations of size $n = 8,9,10$. The files are called:
 - ``mHeight_10_test.txt`` 
 
 Permutations of size $n$ labeled by their mHeight. We provide datasets for $n = 8,9,10$.
+- [$n = 8](https://huggingface.co/datasets/ACDRepo/mheight_function_8)
+- [$n = 9](https://huggingface.co/datasets/ACDRepo/mheight_function_9)
+- [$n = 10](https://huggingface.co/datasets/ACDRepo/mheight_function_10)
 
-The datasets can be found [here](https://drive.google.com/file/d/1NteiP494xpQ4KzR9dVUaDhNtUPnumeuX/view?usp=sharing)
+This data can be easily downloaded and used using the commands
+
+``from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset("ACDRepo/mheight_function_10")``
 
 ### Permutations of size $8$
 
