@@ -19,11 +19,11 @@ ds = load_dataset("ACDRepo/quiver_mutation_equivalence")
 
 | Mutation equivalance class | Sampling depth |
 |---|---|
-| \\(B_{11}\\) | 10 |
-| \\(BD_{11}\\) | 9 |
-| \\(BE_{11}\\) | 8 |
-| \\(DE_{11}\\) | 9 |
-| \\(E_{11}\\) | 9 |
+| $B_{11}$ | 10 |
+| $BD_{11}$ | 9 |
+| $BE_{11}$ | 8 |
+| $DE_{11}$ | 9 |
+| $E_{11}$ | 9 |
 
 Datasets can be found [here](https://drive.google.com/file/d/1UmRLOhNq2mX6s4NQPIgciuGG9HfvrKWC/view?usp=sharing)
 
