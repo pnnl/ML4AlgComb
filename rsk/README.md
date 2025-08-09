@@ -2,19 +2,41 @@
 
 ![RSK task graphic](fig-rsk.png)
 
-The Robinson-Schensted-Knuth (RSK) algorithm \[1,2\] gives a bijection between pairs of semistandard Young tableau of the same shape and matrices with non-negative integer entries. The special case we consider (which is sometimes called the Robinson-Schensted algorithm) restricts to a bijection between pairs of standard Young tableaux and permutations in $S_n$. This correspondence is significant in algebraic combinatorics because it connects two of the most fundamental objects in the field, permutations and standard Young tableaux (see \cite{stanley-1984} for additional history and context). 
+The Robinson-Schensted-Knuth (RSK) algorithm \[1,2\] gives a bijection between pairs of semistandard Young tableau of the same shape and matrices with non-negative integer entries. The special case we consider (which is sometimes called the Robinson-Schensted algorithm) restricts to a bijection between pairs of standard Young tableaux and permutations in $S_n$. This correspondence is significant in algebraic combinatorics because it connects two of the most fundamental objects in the field, permutations and standard Young tableaux. 
 
 The goal of this benchmark is to see whether a model can learn the RSK algorithm. That is, for a fixed $n$ the model is provided with a permutation $\pi \in S_n$ and required to predict pairs of standard Young tableaux. Although the algorithm is known, it would be significant for a model to learn this correspondence due to the the intricate combinatorial rules involved. Notably, the RSK correspondence can be used to find the length of the longest increasing subsequence, so a model that learns this algorithm implicitly must also learn to solve the increasing subsequence problem. Additionally, given the numerous generalizations of the RSK correspondence, a model that performs well on this benchmark could potentially be investigated for its ability to generalize to other related combinatorial settings. 
 
 ## Dataset 
 
-The dataset consists of triples: two standard Young tableau of size $n$ and their corresponding permutation (obtained via the RSK algorithm). We include datasets for $n = 8,9,10$. 
+The dataset consists of triples: two standard Young tableaux of size $n$ and their corresponding 
+permutation (obtained via the RSK algorithm).  Standard Young tableaux are written as a list of lists so that
+`[ [ 1, 4, 7 ], [ 2, 6, 8 ], [ 3 ], [ 5 ] ]` is a tableaux of shape $(3,3,1,1)$ whose first row has
+entries 1, 4, 7. 
 
-Unlike some of the other datasets where permutations are written in one-line notation, in this dataset we write them in terms of their inversion set. For a permutation $\sigma$ on $n$ elements, the inversion set gives all pairs of numbers $1 \leq i < j \leq n$ such that $\sigma(j) < \sigma(i)$. There are $\binom{n}{2}$ possible inversions for $\sigma$. We represent the inversion set as a binary code where $1$ means that $\sigma$ inverts $(i, j)$ and $0$ means that it does not. Note that an inversion set completely characterizes a permutation.
+Unlike some of the other datasets where permutations are written in 1-line notation, in this dataset 
+we write permutations in terms of their inversion set. For a permutation $\sigma$ on $n$ elements, 
+the inversion set gives all pairs of integers $1 \leq i < j \leq n$ such that $\sigma(j) < \sigma(i)$. 
+There are $\binom{n}{2}$ possible inversions for $\sigma$. We represent the inversion set as a 
+binary code where $1$ means that $\sigma$ inverts $(i, j)$ and $0$ means that it does 
+not. Note that an inversion set completely characterizes a permutation.
 
-The entries of the inversion vector are written in lexicographical order. The lexicographical order on transpositions of the set $\{1, 2, 3\}$ ($n=3$) is $(1,2)$, $(1,3)$, $(2,3)$. Since the permutation $213$ inverts $(1, 2)$ but not $(1, 3)$ or $(2, 3)$, its binary code would be written as ``1, 0, 0``.
+The entries of the inversion vector are written in lexicographical order. The lexicographical order 
+on transpositions of the set $\{1, 2, 3\}$ is $(1,2)$, $(1,3)$, $(2,3)$. 
+Since the permutation $213$ inverts $(1, 2)$ but not $(1, 3)$ or $(2, 3)$, its binary 
+code would be written as `1, 0, 0`.
 
-The datasets can be downloaded [here](https://drive.google.com/file/d/1CfuxD_XgTefbEduxJnXgXoUOt-GY-smq/view?usp=sharing). 
+This data can be easily downloaded and used via transformers datasets. 
+
+```
+from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset(DATASET_NAME)
+```
+In the code snippet above, just replace `DATASET_NAME` with one of the following:
+- `'ACDRepo/robinson_schensted_knuth_correspondence_8'`
+- `'ACDRepo/robinson_schensted_knuth_correspondence_9'`
+- `'ACDRepo/robinson_schensted_knuth_correspondence_10'`
 
 ## Data generation
 
