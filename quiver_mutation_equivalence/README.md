@@ -2,7 +2,29 @@
 
 ![Quiver task graphic](fig-quiver.png)
 
-Quivers and quiver mutations are central to the combinatorial study of cluster algebras, algebraic structures with connections to Poisson Geometry, string theory, and Teichmuller theory. Quivers are directed (multi)graphs, and a quiver mutation is a local transformation centered at a chosen node of the graph that involves adding, deleting, and reversing the orientation of specific edges based on a set of combinatorial rules. A fundamental open problem in this area is finding an algorithm that determines whether two quivers are mutation equivalent (one can traverse from one quiver to another by applying mutations). Currently, such algorithms only exist for special cases (including types $A$ \[1\], $D$ \[2\], and $\tilde{D}$ \[3\]). To our knowledge, the remaining classes in this dataset ($E$, $DE$, $BE$, and $B$) lack characterizations. Recent work has explored whether deep learning models can learn to correctly predict if two quivers are mutation equivalent \[4\]. \[5\] utilized a subset of this dataset to re-discover known characterization theorems. 
+Quivers and quiver mutations are central to the combinatorial study of cluster algebras, 
+algebraic structures with connections to Poisson Geometry, string theory, and 
+Teichmuller theory. Quivers are directed (multi)graphs, and a quiver mutation 
+is a local transformation centered at a chosen node of the graph that involves 
+adding, deleting, and reversing the orientation of specific edges based on 
+a set of combinatorial rules. A fundamental open problem in this area is 
+finding an algorithm that determines whether two quivers are mutation equivalent 
+(one can traverse from one quiver to another by applying mutations). Currently, 
+such algorithms only exist for special cases, including types $A$ 
+[1], $D$ [2], and $\tilde{B}$, 
+$\tilde{C}$, and $\tilde{D}$ [3]. The $\tilde{B}$ 
+and $\tilde{C}$ types correspond to the classes $BD$ and $BB$ in 
+our dataset, respectively. Consistent with Sage we use the naive notation, 
+which specifies a quiver by indicating the two ends of the diagram, which 
+are joined by a path [7]. To our knowledge, the remaining 
+classes in this dataset ($E$, $DE$, $BE$) lack characterizations. 
+
+Recent work has explored whether deep learning models can learn to correctly 
+predict if two quivers are mutation equivalent [4]. 
+[5] utilized an alternative version of this dataset to re-discover 
+known characterization theorems. The dataset consists of adjacency matrices for 
+quivers drawn from 7 different mutation equivalence classes ($A$, $D$, 
+$E$, $DE$, $BE$, $BD$, and $BB$). 
 
 ## Dataset 
 
@@ -10,7 +32,7 @@ The task associated with this dataset involves identifying whether two quivers a
 
 | Mutation equivalance class | Sampling depth |
 |---|---|
-| $B_{11}$ | 10 |
+| $BB_{11}$ | 10 |
 | $BD_{11}$ | 9 |
 | $BE_{11}$ | 8 |
 | $DE_{11}$ | 9 |
@@ -27,7 +49,7 @@ ds = load_dataset("ACDRepo/quiver_mutation_equivalence")
 
 Dataset statistics are as follows:
 
-| | $A_{11}$ | $B_{11}$ | $BD_{11}$ | $BE_{11}$ | $D_{11}$ | $DE_{11}$ | $E_{11}$ | Total |
+| | $A_{11}$ | $BB_{11}$ | $BD_{11}$ | $BE_{11}$ | $D_{11}$ | $DE_{11}$ | $E_{11}$ | Total |
 |---|---|--|---|---|---|----|----|---|
 | Training | 11,940 | 27,410 | 23,651 | 22,615 | 25,653 | 23,528 | 28,998 | 163,795 |
 | Test | 2,984 | 6,852 | 5,912 | 5,653 | 6,413 | 5,881 | 7,249 | 40,944 |
