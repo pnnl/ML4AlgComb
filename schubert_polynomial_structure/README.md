@@ -15,8 +15,8 @@ $\mathfrak{S}_{\alpha}\mathfrak{S}\_{\beta} = x_1^2 + x_1x_2$. As $\mathfrak{S}\
 
 ## Dataset 
 Each instance in this dataset is a triple of permutations $(\alpha,\beta,\gamma)$, 
-labeled by its coefficient $c^{\gamma}_{\alpha \beta}$ in the expansion of the product 
-$\mathfrak{S}_{\alpha} \mathfrak{S}_{\beta}$. We call permutations $\alpha$ and $\beta$
+labeled by its coefficient $c^{\gamma}\_{\alpha \beta}$ in the expansion of the product 
+$\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$. We call permutations $\alpha$ and $\beta$
 *lower index permutations 1* and *2* respectively. We call $\gamma$ the *upper index 
 permutation*. The datasets are organized so that 
 $\alpha$ and $\beta$ are always drawn from the symmetric group on $n$ elements 
