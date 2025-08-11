@@ -26,17 +26,21 @@ is represented as
 
 note that the matrix is represented in row-major format. An integer representing whether the matrix corresponds to a weaving pattern (‘0’) or not (‘1’) is listed at the same index in the corresponding labels file.
 
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/1HsWuHpTkCOtpyTG2dFH49jzkKIZYwKG8/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (6, 7), and then (3) running the following commands (here we choose $n = 7$)
+We provide datasets for $n = 8,9,10$.
+- [n = 6](https://huggingface.co/datasets/ACDRepo/weaving_patterns_6)
+- [n = 7](https://huggingface.co/datasets/ACDRepo/weaving_patterns_7)
+
+This data can be easily downloaded and used via transformers datasets. 
 
 ```
-import numpy as np
-import load_datasets 
+from datasets import load_dataset
 
-directory = # provide the file path to the directory you chose here
-X = load_datasets.get_dataset('weaving', n=7, folder = directory)
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset(DATASET_NAME)
 ```
-
-The task is formulated as binary classification. Class statistics are as follows:
+In the code snippet above, just replace `DATASET_NAME` with one of the following:
+- `'ACDRepo/weaving_patterns_6'`
+- `'ACDRepo/weaving_patterns_7'`
 
 ### Weaving patterns of size $6$
 || # Weaving patterns | # Non-weaving patterns | Total instances |
