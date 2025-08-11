@@ -10,8 +10,12 @@ The question is whether the $c^{\gamma}\_{\alpha \beta}$ (the *structure constan
 
 ## Example
 
-We multiply Schubert polynomials corresponding to permutations of $\\{1,2,3\\}$, $\alpha = 2 1 3$ and $\beta = 1 3 2$. Writing these in terms of indeterminants $x_1$, $x_2$, and $x_3$, we have $\mathfrak{S}\_{\alpha} = x_1 + x_2$ and $\mathfrak{S}\_{\beta} = x_1$. Multiplying these together we get
-$\mathfrak{S}_{\alpha}\mathfrak{S}\_{\beta} = x_1^2 + x_1x_2$. As $\mathfrak{S}\_{2 3 1} = x\_1x\_2$ and $\mathfrak{S}\_{3 1 2} = x\_1^2$ we can write $\mathfrak{S}\_{\alpha}\mathfrak{S}\_{\beta} = \mathfrak{S}\_{2 3 1} + \mathfrak{S}\_{3 1 2}$. It follows that $c\_{\alpha,\beta}^{\gamma} = 1$ if $\gamma = 2 3 1$ or $\gamma = 3 1 2$ and otherwise $c\_{\alpha,\beta}^{\gamma} = 0$.
+We multiply Schubert polynomials corresponding to permutations of $\\{1,2,3\\}$, 
+$\alpha = 2 1 3$ and $\beta = 1 3 2$. Writing these in terms of indeterminants $x_1$, $x_2$, and $x_3$, we have $\mathfrak{S}\_{\alpha} = x_1 + x_2$ and $\mathfrak{S}\_{\beta} = x_1$. Multiplying these together we get
+$\mathfrak{S}_{\alpha}\mathfrak{S}\_{\beta} = x_1^2 + x_1x_2$. As $\mathfrak{S}\_{2 3 1} 
+= x\_1x\_2$ and $\mathfrak{S}\_{3 1 2} = x\_1^2$ we can write $\mathfrak{S}\_{\alpha}\mathfrak{S}\_{\beta} 
+= \mathfrak{S}\_{2 3 1} + \mathfrak{S}\_{3 1 2}$. It follows that $c\_{\alpha,\beta}^{\gamma} = 1$ 
+if $\gamma = 2 3 1$ or $\gamma = 3 1 2$ and otherwise $c\_{\alpha,\beta}^{\gamma} = 0$.
 
 ## Dataset 
 Each instance in this dataset is a triple of permutations $(\alpha,\beta,\gamma)$, 
