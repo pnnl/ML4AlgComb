@@ -30,7 +30,7 @@ since the vast majority of these would be zero. The dataset consists of an appro
 equal number of zero and nonzero coefficients (but they are not balanced between quantities 
 of non-zero coefficients). 
 
-The basic statistics of the datasets are as follows
+The basic statistics of the datasets are as follows:
 
 ### Permutations of size $4$
 
