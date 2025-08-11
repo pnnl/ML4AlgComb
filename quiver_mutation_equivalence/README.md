@@ -90,3 +90,5 @@ The $\pm$ signs indicate 95% confidence intervals from random weight initializat
 
 \[6\] Stein, William. "Sage: Open source mathematical software." (2008).
 
+\[7\] Musiker, Gregg, and Christian Stump. "A compendium on the cluster algebra and quiver package in Sage." arXiv preprint arXiv:1102.4844 (2011).
+
