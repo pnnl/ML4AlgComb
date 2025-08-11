@@ -14,21 +14,17 @@ We multiply Schubert polynomials corresponding to permutations of $\\{1,2,3\\}$,
 $\mathfrak{S}_{\alpha}\mathfrak{S}\_{\beta} = x_1^2 + x_1x_2$. As $\mathfrak{S}\_{2 3 1} = x\_1x\_2$ and $\mathfrak{S}\_{3 1 2} = x\_1^2$ we can write $\mathfrak{S}\_{\alpha}\mathfrak{S}\_{\beta} = \mathfrak{S}\_{2 3 1} + \mathfrak{S}\_{3 1 2}$. It follows that $c\_{\alpha,\beta}^{\gamma} = 1$ if $\gamma = 2 3 1$ or $\gamma = 3 1 2$ and otherwise $c\_{\alpha,\beta}^{\gamma} = 0$.
 
 ## Dataset 
-Each instance in this dataset is a triple of permutations $(\alpha,\beta,\gamma)$, labeled by its coefficient $c^{\gamma}\_{\alpha \beta}$ in the expansion of the product $\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$. The datasets are organized so that $\alpha$ and $\beta$ are always drawn from the symmetric group on $n$ elements (we provide datasets for $n = 3$, $4$, and $5$), but $\gamma$ may belong to a strictly larger symmetric group. Not all possible triples of permutations are included since the vast majority of these would be zero. The dataset consists of an approximately equal number of zero and nonzero coefficients (but they are not balanced between quantities of non-zero coefficients). We provide datasets for $n = 4, 5, 6$ [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing). 
-
-Each line in the file corresponds to a structure constant so that 
-`([1,2,3,5,4],[1,2,3,5,4],[1,2,3,6,4,5];1)`
-means that $c^{1 2 3 6 4 5}_{1 2 3 5 4,1 2 3 5 4} = 1$ or that in the expansion of the product $\mathfrak{S}\_{1 2 3 5 4} \mathfrak{S}\_{1 2 3 5 4}$, $\mathfrak{S}\_{1 2 3 6 4 5}$ has a coefficient of 1. To the point above, this instance is from $n = 5$ but note that the third permutation actually belongs to $S_6$. 
-
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15bERRWWue-3gKSir3hVhfejNTeZJgsl9/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (4, 5, 6), and then (3) running the following commands (here we choose $n = 5$)
-
-```
-import numpy as np
-import load_datasets 
-
-folder = # provide the file path to the directory you chose here
-X = load_datasets.get_dataset('schubert', n=5, folder = folder)
-```
+Each instance in this dataset is a triple of permutations $(\alpha,\beta,\gamma)$, 
+labeled by its coefficient $c^{\gamma}_{\alpha \beta}$ in the expansion of the product 
+$\mathfrak{S}_{\alpha} \mathfrak{S}_{\beta}$. We call permutations $\alpha$ and $\beta$
+*lower index permutations 1* and *2* respectively. We call $\gamma$ the *upper index 
+permutation*. The datasets are organized so that 
+$\alpha$ and $\beta$ are always drawn from the symmetric group on $n$ elements 
+(we provide datasets for $n = 3$, $4$, and $5$), but $\gamma$ may belong to a 
+strictly larger symmetric group. Not all possible triples of permutations are included 
+since the vast majority of these would be zero. The dataset consists of an approximately 
+equal number of zero and nonzero coefficients (but they are not balanced between quantities 
+of non-zero coefficients). 
 
 The basic statistics of the datasets are as follows
 
