@@ -8,25 +8,34 @@ A *representation* of group $G$ on vector space $V$, is a map $\phi:G \rightarro
 The representation theory of symmetric groups has rich combinatorial interpretations. Both irreducible representations of $S\_n$ and the conjugacy classes of $S\_n$ are indexed by partitions of $n$ and thus the characters of irreducible representations of $S\_n$ are indexed by pairs of partitions of $n$. For $\lambda,\mu \vdash n$ we write $\chi^\lambda\_\mu$ for the associated character. This combinatorial connection is not superficial, some of the most famous algorithms for computation of irreducible characters (e.g., the [Murnaghan-Nakayama rule](https://en.wikipedia.org/wiki/Murnaghan–Nakayama_rule)) are completely combinatorial in nature).
 
 ## Dataset 
-Since the conjugacy classes of the symmetric group $S_n$ are indexed by integer partitions of $n$, characters are constant on conjugacy classes, and the irreducible representations of $S_n$ are also indexed by integer partitions of $n$, the task is to use a pair of integer partitions of $n$ to predict the character of the corresponding irreducible representation of the symmetric group.
+Each instance of the dataset consists of two integer partitions of $22$ (one 
+corresponding to the irreducible
+representation and one corresponding to the conjugacy class) and the
+corresponding character (which is always an integer). For a small $n = 5$ example, 
+if the first partition is `[3,1,1]`, the second partition is `[2,2,1]`, and the character
+is `-2`, then this says that the character $\chi^{3,1,1}_{2,2,1} = −2$. 
 
-Within each file, two integer partitions are provided followed by an integer corresponding to the character. For instance, the line
+In all cases the characters are heavily concentrated around 0 with very long tails. 
+This likely contributes to the difficulty of the task and could be overcome with some 
+simple pre- and post-processing. We have not chosen to do this in our baselines.
 
-`[3,1,1],[2,2,1],-2`  
+We provide datasets for $n = 18,20,22$.
+- [n = 18](https://huggingface.co/datasets/ACDRepo/symmetric_group_characters_18)
+- [n = 20](https://huggingface.co/datasets/ACDRepo/symmetric_group_characters_20)
+- [n = 22](https://huggingface.co/datasets/ACDRepo/symmetric_group_characters_22)
 
-says that the character $\chi^{3,1,1}_{2,2,1} = −2$. 
-
-The datasets can be loaded by: (1) unzipping the file found [here](https://drive.google.com/file/d/15AHAn9NnC7crzG_8BnaH3pp1aOGUUniV/view?usp=sharing) in your chosen `directory`, (2) choosing a value for $n$ (18, 20, or 22), and then (3) running the following commands (here we choose $n = 22$)
+This data can be easily downloaded and used via transformers datasets. 
 
 ```
-import numpy as np
-import load_datasets 
+from datasets import load_dataset
 
-folder = # provide the file path to the directory you chose here
-X = load_datasets.get_dataset('symmetric_group_char', n=22, folder = folder)
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset(DATASET_NAME)
 ```
-
-In all cases the characters are heavily concentrated around 0 with very long tails. This likely contributes to the difficulty of the task and could be overcome with some simple pre- and post-processing. We have not chosen to do this in our baselines.
+In the code snippet above, just replace `DATASET_NAME` with one of the following:
+- `'ACDRepo/symmetric_group_characters_18'`
+- `'ACDRepo/symmetric_group_characters_20'`
+- `'ACDRepo/symmetric_group_characters_22'`
 
 ### Characters of $S_{18}$
 
