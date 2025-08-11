@@ -20,11 +20,11 @@ if $\gamma = 2 3 1$ or $\gamma = 3 1 2$ and otherwise $c\_{\alpha,\beta}^{\gamma
 ## Dataset 
 Each instance in this dataset is a triple of permutations $(\alpha,\beta,\gamma)$, 
 labeled by its coefficient $c^{\gamma}\_{\alpha \beta}$ in the expansion of the product 
-$\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}$. We call permutations $\alpha$ and $\beta$
+$\mathfrak{S}\_{\alpha} \mathfrak{S}\_{\beta}.$ We call permutations $\alpha$ and $\beta$
 *lower index permutations 1* and *2* respectively. We call $\gamma$ the *upper index 
 permutation*. The datasets are organized so that 
 $\alpha$ and $\beta$ are always drawn from the symmetric group on $n$ elements 
-(we provide datasets for $n = 3$, $4$, and $5$), but $\gamma$ may belong to a 
+(we provide datasets for $n = 3,4,5$), but $\gamma$ may belong to a 
 strictly larger symmetric group. Not all possible triples of permutations are included 
 since the vast majority of these would be zero. The dataset consists of an approximately 
 equal number of zero and nonzero coefficients (but they are not balanced between quantities 
