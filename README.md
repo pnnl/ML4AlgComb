@@ -26,7 +26,7 @@ Along with the data, we provide official train/test splits, background informati
 - [Davis Brown](https://davisrbrown.com) (Pacific Northwest National Laboratory)
 - [Sara Billey](https://sites.math.washington.edu/~billey/) (University of Washington)
 - Jackson Warley (Pacific Northwest National Laboratory)
-- [Jesse He](https://he-jesse.github.io) (UCSB)
+- [Jesse He](https://he-jesse.github.io) (UCSD)
 
 **Point of contact:** Henry Kvinge, acbenchdataset@gmail.com
 
