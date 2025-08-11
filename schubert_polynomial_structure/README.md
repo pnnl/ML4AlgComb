@@ -30,6 +30,24 @@ since the vast majority of these would be zero. The dataset consists of an appro
 equal number of zero and nonzero coefficients (but they are not balanced between quantities 
 of non-zero coefficients). 
 
+We provide datasets for $n = 4,5,6$.
+- [n = 4](https://huggingface.co/datasets/ACDRepo/schubert_polynomial_structure_constants_4)
+- [n = 5](https://huggingface.co/datasets/ACDRepo/schubert_polynomial_structure_constants_5)
+- [n = 6](https://huggingface.co/datasets/ACDRepo/schubert_polynomial_structure_constants_6)
+
+This data can be easily downloaded and used via transformers datasets. 
+
+```
+from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset(DATASET_NAME)
+```
+In the code snippet above, just replace `DATASET_NAME` with one of the following:
+- `'ACDRepo/schubert_polynomial_structure_constants_4'`
+- `'ACDRepo/schubert_polynomial_structure_constants_5'`
+- `'ACDRepo/schubert_polynomial_structure_constants_6'`
+
 The basic statistics of the datasets are as follows:
 
 ### Permutations of size $4$
