@@ -23,7 +23,7 @@ to lead to substantial improvements in the upper bound.
 The enumeration of reduced decompositions up to commutation equivalence has been studied by many including Knuth and Stanley. An exact formula is likely out of reach, so asymptotic upper and lower bounds are of great interest. ML models that can detect necessary or sufficient conditions for a matrix to be a valid weaving pattern have the potential to lead to substantial improvements in the upper bound.
 
 ## Dataset 
-Each $n \times n − 1$ matrix is stored on single line. For instance, the matrix
+Each $n \times (n − 1)$ matrix is stored on single line. For instance, the matrix
 
 $$
 \begin{bmatrix}
@@ -76,9 +76,9 @@ A Java file that generates all weaving patterns for a given value of $n$ can be 
 
 ## Task
 
-**Math question:** Find a concise characterization of those $\{1,2,\dots,n\}$-valued $n \times n-1$ matrices that correspond to weaving patterns.
+**Math question:** Find a concise characterization of those $\{1,2,\dots,n\}$-valued $n \times (n-1)$ matrices that correspond to weaving patterns.
 
-**ML task:** Train a model that can predict whether a $\{1,2,\dots,n\}$-valued $n \times n-1$ matrix corresponds to a weaving pattern or not. 
+**ML task:** Train a model that can predict whether a $\{1,2,\dots,n\}$-valued $n \times (n-1)$ matrix corresponds to a weaving pattern or not. 
 
 ## Small model performance
 
