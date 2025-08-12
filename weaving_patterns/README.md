@@ -2,7 +2,7 @@
 
 ![Weaving patterns task graphic](fig-weaving-pattern.png)
 
-*Weaving patterns* are size $n \times (n−1)$ matrices with $\{1, 2, \dots , n\}$-
+*Weaving patterns* are size $n \times (n−1)$ matrices with $\\{1, 2, \dots , n\\}$-
 entries introduced by \[1\] to study the number of reduced decompositions of the longest
 permutation (which swaps $n$ and $1$, $n$ - $1$ and $2$, etc.) up 
 to commutation equivalence. The number
