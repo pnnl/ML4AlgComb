@@ -16,6 +16,9 @@ Along with the data, we provide official train/test splits, background informati
 </center>
 
 ### Updates
+- January 15, 2026: We updated both the train and test files to eliminate an error where weaving
+  patterns and non-weaving patterns had slightly different representations. This difference led to artificially high accuracy in models
+  who learned this short cut rather than mathematically meaningful differences.
 - July 17, 2025: A paper for the ACD Repo was presented as an oral at ICML 2025
 - July 10, 2025: We are in the process of also uploading our datasets onto HuggingFace for more convenient usage
 
